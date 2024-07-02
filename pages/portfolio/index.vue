@@ -4,7 +4,7 @@
       backgroundColor="var(--color-black)"
       title="Portfolio"
       subtitle="Previous Work"
-      headerClass="header-small">
+      headerClass="header-large">
       <template #description> </template>
     </Header>
 
@@ -37,6 +37,7 @@ if (!isMobile.value) {
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 7.5vh;
+  padding-top: 0;
 }
 
 @media (max-width: 767px) {

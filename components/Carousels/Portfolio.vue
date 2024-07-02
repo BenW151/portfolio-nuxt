@@ -18,14 +18,14 @@
     </div>
     <swiper
       v-else
-      :modules="[SwiperNavigation, SwiperMousewheel, SwiperFreeMode]"
+      ref="swiperRef"
+      :modules="[Navigation, Mousewheel, FreeMode]"
       :slides-per-view="3.2"
       :space-between="10"
       :navigation="true"
       :mousewheel="{
-        forceToAxis: false,
+        forceToAxis: true,
         sensitivity: 0.1,
-        releaseOnEdges: true,
       }"
       :free-mode="true"
       :free-mode-momentum="true"
@@ -42,70 +42,31 @@
         </NuxtLink>
       </swiper-slide>
     </swiper>
-    <div class="custom-scrollbar">
-      <div
-        class="custom-scrollbar-progress"
-        :style="{ width: `${progress}%` }"></div>
-    </div>
-    <div v-if="hoverDescription" class="image-description">
+    <div v-if="hoverDescription && !isMobile" class="image-description">
       <p>{{ hoverDescription }}</p>
       <p>{{ hoverSubDescription }}</p>
     </div>
     <div v-else-if="!isMobile" class="image-description">
       <p>Scroll to Explore</p>
-      <p>10 Items</p>
+      <p>4 Items</p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, watch, nextTick } from "vue";
 import { Navigation, Mousewheel, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-const images = [
-  {
-    src: "/images/why-not-adventures/why-not-adventures-header.png",
-    alt: "Why Not Adventures",
-    subDescription: "Tour Provider",
-    link: "/portfolio/why-not-adventures",
-  },
-  {
-    src: "/images/node-one-office.png",
-    alt: "Node One",
-    subDescription: "IT Services",
-    link: "/portfolio/node-one",
-  },
-  {
-    src: "/images/node-one-office.png",
-    alt: "Node Three",
-    subDescription: "Mobile Development",
-    link: "/portfolio/node-one",
-  },
-  {
-    src: "/images/travel-blog.png",
-    alt: "Node Four",
-    subDescription: "Cloud Services",
-    link: "/portfolio/node-one",
-  },
-  {
-    src: "/images/node-one-office.png",
-    alt: "Node Five",
-    subDescription: "Consulting",
-    link: "/portfolio/node-one",
-  },
-  {
-    src: "/images/travel-blog.png",
-    alt: "Node Six",
-    subDescription: "Support",
-    link: "/portfolio/node-one",
-  },
-];
 
 const hoverDescription = ref("");
 const hoverSubDescription = ref("");
 const progress = ref(0);
 const isMobile = ref(window.innerWidth < 768);
+const swiperRef = ref(null);
+
+const updateIsMobile = () => {
+  isMobile.value = window.innerWidth < 768;
+};
 
 const onSwiper = (swiper) => {
   swiper.on("progress", (progressValue) => {
@@ -126,6 +87,56 @@ const clearHoverDescription = () => {
   hoverDescription.value = "";
   hoverSubDescription.value = "";
 };
+
+const images = [
+  {
+    src: "/images/why-not-adventures/background-image.png",
+    alt: "Why Not Adventures",
+    subDescription: "Tour Provider",
+    link: "/portfolio/why-not-adventures",
+  },
+  {
+    src: "/images/node-one-office.png",
+    alt: "Node One",
+    subDescription: "IT Services",
+    link: "/portfolio/node-one",
+  },
+  {
+    src: "/images/why-not-adventures/background-image.png",
+    alt: "Why Not Adventures",
+    subDescription: "Tour Provider",
+    link: "/portfolio/why-not-adventures",
+  },
+  {
+    src: "/images/node-one-office.png",
+    alt: "Node One",
+    subDescription: "IT Services",
+    link: "/portfolio/node-one",
+  },
+];
+
+watch(isMobile, async (newVal, oldVal) => {
+  if (newVal !== oldVal && swiperRef.value && swiperRef.value.swiper) {
+    await nextTick();
+    swiperRef.value.swiper.destroy(true, true);
+    nextTick(() => {
+      swiperRef.value.swiper = new Swiper(".swiper", {
+        modules: [Navigation, Mousewheel, FreeMode],
+        slidesPerView: 3.2,
+        spaceBetween: 10,
+        navigation: true,
+        mousewheel: {
+          forceToAxis: true,
+          sensitivity: 0.1,
+        },
+        freeMode: true,
+        freeModeMomentum: true,
+      });
+    });
+  }
+});
+
+window.addEventListener("resize", updateIsMobile);
 </script>
 
 <style>
@@ -154,12 +165,15 @@ const clearHoverDescription = () => {
 }
 
 .image-description {
-  margin-top: 10px;
-  font-size: 1.2em;
+  margin-top: 0.5vw;
+  height: 5vw;
 }
 
 .image-description p:first-child {
   font-weight: bold;
+}
+
+.image-description p {
   margin-bottom: 0;
 }
 
@@ -172,35 +186,46 @@ const clearHoverDescription = () => {
 
 .custom-scrollbar-progress {
   height: 1px;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   transition: width 0.1s ease;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  bottom: 0;
-  width: 10%;
-  height: 4vw;
+  top: 5%;
+  width: 5%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  z-index: 10;
+  color: var(--color-white);
+  z-index: 1000;
   cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
 }
 
 .swiper-button-next {
   right: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMmYzZjQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLXJpZ2h0Ij48cGF0aCBkPSJtOSAxOCA2LTYtNi02Ii8+PC9zdmc+");
 }
 
 .swiper-button-prev {
   left: 0;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmMmYzZjQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaGV2cm9uLWxlZnQiPjxwYXRoIGQ9Im0xNSAxOC02LTYgNi02Ii8+PC9zdmc+");
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none;
+}
+
+.carousel .container {
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 @media (max-width: 767px) {
@@ -223,12 +248,21 @@ const clearHoverDescription = () => {
     height: auto;
   }
 
-  .image-info .image-subtitle {
-    margin-bottom: var(--spacing-5);
-  }
-
   .custom-scrollbar {
     display: none;
+  }
+
+  .image-title {
+    font-weight: bold;
+  }
+
+  .image-info p {
+    margin: 0;
+  }
+
+  .carousel .container {
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
   }
 }
 </style>

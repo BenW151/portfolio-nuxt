@@ -8,7 +8,7 @@
       buttonText="Contact Me"
       buttonUrl="/contact"
       buttonDescription="Contact Me"
-      headerClass="header-medium">
+      headerClass="header-large">
       <template #description>
         <p>Building sleek, scalable, and interactive web experiences.</p>
       </template>

@@ -4,7 +4,7 @@
       backgroundColor="var(--color-black)"
       title="Contact"
       subtitle="Have a question? Let me know"
-      headerClass="header-medium">
+      headerClass="header-large">
       <template #description>
         <ListsLinkList
           class="contact"

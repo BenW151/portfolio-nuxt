@@ -91,7 +91,7 @@ onBeforeUnmount(() => {
   height: 120lvh;
 }
 .header-large {
-  height: 140lvh;
+  height: auto;
 }
 
 header,
@@ -150,6 +150,10 @@ header a.link::after {
   margin-top: var(--spacing-1);
 }
 
+.paragraph.medium {
+  margin-top: 10vw;
+}
+
 header .container {
   background: none;
 }
@@ -157,7 +161,6 @@ header .container {
 header .item:nth-child(2) {
   grid-column: 10 / 16;
   grid-row-start: 2;
-  margin-top: auto;
 }
 
 header .item:nth-child(3) {
@@ -185,7 +188,7 @@ header .item:nth-child(3) {
   .hero-text {
     grid-column: span 6;
     grid-row-start: 1;
-    margin-top: 30vh;
+    height: auto;
   }
 
   header .item:nth-child(2) {
