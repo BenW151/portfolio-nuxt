@@ -20,7 +20,7 @@
               description: 'GitHub',
             },
             {
-              url: 'mailto:myemail@email.com',
+              url: 'mailto:contact@benward.io',
               label: 'Email',
               description: 'Email',
             },

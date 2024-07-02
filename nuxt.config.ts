@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in", appear: true },
     head: {
-      title: "Ben Ward",
+      title: "Ben Ward - Web Development Services",
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
