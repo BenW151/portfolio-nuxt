@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio">
     <Header
-      imageUrl="/images/why-not-adventures/why-not-adventures-header.png"
+      imageUrl="/images/why-not-adventures/background-image.png"
       imageAlt="Mountains of Pakistan"
       title="Why Not Adventures"
       subtitle="Tour Operator"
@@ -44,8 +44,8 @@
             </p>
             <a
               class="link underline-out-icon"
-              href="https://www.nodeone.co.uk/"
-              aria-label="Node One Website"
+              href="https://whynotadventures.co.uk"
+              aria-label="Why Not Adventures Website"
               target="_blank"
               ><LucideExternalLink />View Website</a
             >
@@ -74,7 +74,7 @@
     <section>
       <LayoutGridContainer>
         <ImageDefault
-          imageUrl="/images/node-one-header.PNG"
+          imageUrl="/images/why-not-adventures/header.png"
           altText="Celestial Relaxation Room"
           class="portfolio-header"
           rellaxPercentage="0"
@@ -85,8 +85,8 @@
     <section class="logo">
       <LayoutGridContainer>
         <ImageDefault
-          imageUrl="/images/node-one-logo.png"
-          imageAlt="Office"
+          imageUrl="/images/why-not-adventures/logo.svg"
+          imageAlt="Why Not Adventures Logo"
           class="portfolio-logo"
           rellaxPercentage="0"
           rellaxSpeed="0" />
@@ -111,7 +111,7 @@
     <section class="team">
       <LayoutGridContainer>
         <ImageDefault
-          imageUrl="/images/node-one-team.png"
+          imageUrl="/images/why-not-adventures/image-1.png"
           altText="Celestial Relaxation Room"
           class="portfolio-team"
           rellaxPercentage="0"
@@ -152,7 +152,7 @@
           </template>
         </TextParagraphWithTitle>
         <ImageDefault
-          imageUrl="/images/node-one-services.png"
+          imageUrl="/images/why-not-adventures/image-1.png"
           altText="Celestial Relaxation Room"
           class="portfolio-services"
           rellaxPercentage="0"
@@ -196,13 +196,13 @@
     <section class="end">
       <LayoutGridContainer>
         <TextCard
-          name="Ben Ward"
-          position="Managing Director"
+          name="Tia Thomas"
+          position="Founder"
           quote="Working with this team has been a game-changer for our business. The web development service provided was top-notch, with a keen attention to detail and a clear focus on our objectives. Our new website is not only visually stunning but also highly functional and user-friendly. The continuous support we receive ensures our site remains up-to-date and continues to perform excellently."
           imgSrc="/images/person.png" />
         <NuxtLink
           class="underline-out"
-          to="/portfolio"
+          to="/portfolio/node-one"
           aria-label="Portfolio Page"
           >View Next Project</NuxtLink
         >
@@ -218,7 +218,7 @@ useHead({
 });
 </script>
 
-<style>
+<style scoped>
 .image.image-default img {
   object-fit: contain;
 }
@@ -301,6 +301,10 @@ useHead({
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 16vw;
+  }
+
   #carousel .container {
     padding-left: var(--spacing-5);
     padding-right: var(--spacing-5);
