@@ -81,7 +81,13 @@
 <script setup>
 useHead({
   title: "Ben Ward - Privacy Policy",
-  meta: [{ name: "description", content: "My amazing site." }],
+  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://benward.io/privacy-policy",
+    },
+  ],
 });
 </script>
 

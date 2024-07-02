@@ -338,8 +338,14 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward - Home",
-  meta: [{ name: "description", content: "My amazing site." }],
+  title: "Ben Ward",
+  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://benward.io/",
+    },
+  ],
 });
 </script>
 

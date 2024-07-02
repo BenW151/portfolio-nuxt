@@ -213,8 +213,14 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward - Portfolio",
-  meta: [{ name: "description", content: "My amazing site." }],
+  title: "Ben Ward - Why Not Adventures",
+  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://benward.io/portfolio/why-not-adventures",
+    },
+  ],
 });
 </script>
 
