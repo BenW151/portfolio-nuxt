@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { resolve } from "path";
 export default defineNuxtConfig({
+  site: {
+    url: 'https://benward.io',
+  },
   devtools: { enabled: true },
   alias: {
     assets: "/<rootDir>/assets",
@@ -11,6 +14,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/image",
     'nuxt-swiper',
+    "@nuxtjs/sitemap"
   ],
   image: {
     format: ["webp"],
