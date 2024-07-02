@@ -65,16 +65,16 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 const images = [
   {
+    src: "/images/why-not-adventures/why-not-adventures-header.png",
+    alt: "Why Not Adventures",
+    subDescription: "Tour Provider",
+    link: "/portfolio/why-not-adventures",
+  },
+  {
     src: "/images/node-one-office.png",
     alt: "Node One",
     subDescription: "IT Services",
     link: "/portfolio/node-one",
-  },
-  {
-    src: "/images/travel-blog.png",
-    alt: "Tee Travels",
-    subDescription: "Tour Provider",
-    link: "/portfolio/tias-tours",
   },
   {
     src: "/images/node-one-office.png",

@@ -10,7 +10,7 @@
 
     <section id="carousel">
       <div class="container">
-        <SwiperSlider />
+        <CarouselsPortfolio />
       </div>
     </section>
   </div>
