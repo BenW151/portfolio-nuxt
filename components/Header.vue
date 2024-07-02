@@ -19,13 +19,24 @@
       </div>
       <TextParagraph paragraphSize="medium">
         <slot name="description"></slot>
-        <NuxtLink
-          v-if="buttonUrl"
-          :to="buttonUrl"
-          :aria-label="buttonDescription"
-          class="item link underline-out">
-          {{ buttonText }}
-        </NuxtLink>
+        <template v-if="buttonUrl">
+          <NuxtLink
+            v-if="isInternalLink(buttonUrl)"
+            :to="buttonUrl"
+            :aria-label="buttonDescription"
+            class="item link underline-out">
+            {{ buttonText }}
+          </NuxtLink>
+          <a
+            v-else
+            :href="buttonUrl"
+            :aria-label="buttonDescription"
+            class="item link underline-out"
+            target="_blank"
+            rel="noopener noreferrer">
+            {{ buttonText }}
+          </a>
+        </template>
       </TextParagraph>
     </LayoutGridContainer>
   </header>
@@ -56,6 +67,10 @@ const checkScroll = () => {
   } else {
     document.body.classList.remove("scrolled-past-header");
   }
+};
+
+const isInternalLink = (url) => {
+  return url.startsWith("/") || url.startsWith(window.location.origin);
 };
 
 onMounted(() => {
@@ -123,7 +138,11 @@ header a.link::after {
 .hero-text {
   grid-column: 1 / 17;
   grid-row-start: 1;
-  margin-top: 40vh;
+  height: 80vh;
+}
+
+.hero-text h1 {
+  margin-top: auto;
 }
 
 .hero-text h2 {
