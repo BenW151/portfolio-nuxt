@@ -177,7 +177,7 @@ header .item:nth-child(3) {
     height: 110lvh;
   }
   .header-large {
-    height: 130lvh;
+    height: auto;
   }
 
   .background-image img {
@@ -188,13 +188,16 @@ header .item:nth-child(3) {
   .hero-text {
     grid-column: span 6;
     grid-row-start: 1;
-    height: auto;
+    height: 50vh;
+  }
+
+  header .paragraph.medium {
+    margin-top: 35vh;
   }
 
   header .item:nth-child(2) {
     grid-column: 1 / 7;
     grid-row-start: 2;
-    margin-top: auto;
   }
 
   header .item:nth-child(3) {

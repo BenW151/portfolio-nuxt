@@ -10,7 +10,11 @@
       buttonDescription="Contact Me"
       headerClass="header-large">
       <template #description>
-        <p>Building sleek, scalable, and interactive web experiences.</p>
+        <p>
+          Building sleek, scalable, and interactive web experiences. Empowering
+          businesses through engaging and practical designs, built for
+          outstanding performance and significant reach.
+        </p>
       </template>
     </Header>
 
@@ -339,7 +343,13 @@
 <script setup>
 useHead({
   title: "Ben Ward",
-  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  meta: [
+    {
+      name: "description",
+      content:
+        "Offering top-notch web development services to help businesses succeed online.",
+    },
+  ],
   link: [
     {
       rel: "canonical",

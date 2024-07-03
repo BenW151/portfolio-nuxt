@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio">
+  <div class="portfolio why-not-adventures">
     <Header
       imageUrl="/images/why-not-adventures/background-image.png"
       imageAlt="Mountains of Pakistan"
@@ -214,7 +214,13 @@
 <script setup>
 useHead({
   title: "Ben Ward - Why Not Adventures",
-  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  meta: [
+    {
+      name: "description",
+      content:
+        "Offering top-notch web development services to help businesses succeed online.",
+    },
+  ],
   link: [
     {
       rel: "canonical",
@@ -307,10 +313,6 @@ useHead({
 }
 
 @media (max-width: 767px) {
-  h1 {
-    font-size: 16vw;
-  }
-
   #carousel .container {
     padding-left: var(--spacing-5);
     padding-right: var(--spacing-5);
@@ -328,6 +330,14 @@ useHead({
   .portfolio-item .item.list {
     grid-column: span 2;
     grid-row: auto;
+  }
+}
+</style>
+
+<style>
+@media (max-width: 767px) {
+  h1 {
+    font-size: 16vw;
   }
 }
 </style>
