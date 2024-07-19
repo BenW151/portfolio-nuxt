@@ -11,13 +11,11 @@
     </TextParagraphWithTitle>
     <div class="item contact-form">
       <div>
-        <form
-          action="https://formspree.io/f/xdoqplga"
-          method="POST"
-          autocomplete="on">
+        <form @submit.prevent="submitForm" autocomplete="on">
           <label class="form-name">
             <input
               type="text"
+              v-model="formData.name"
               name="name"
               autocomplete="name"
               placeholder="Name"
@@ -26,6 +24,7 @@
           <label class="form-email">
             <input
               type="email"
+              v-model="formData.email"
               name="email"
               autocomplete="email"
               placeholder="Email"
@@ -34,13 +33,13 @@
           <label class="form-project">
             <input
               type="text"
-              name="project-title"
-              placeholder="Project Title"
-              required />
+              v-model="formData.project"
+              name="project"
+              placeholder="Project" />
           </label>
           <label class="form-message">
             <textarea
-              type="text"
+              v-model="formData.message"
               name="message"
               placeholder="Message"
               required></textarea>
@@ -50,10 +49,51 @@
             Submit
           </button>
         </form>
+        <p>{{ message }}</p>
       </div>
     </div>
   </LayoutGridContainer>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const formData = ref({
+  name: '',
+  email: '',
+  project: '',
+  message: ''
+})
+
+const message = ref('')
+
+const submitForm = async () => {
+  message.value = 'Submitting...'
+
+  try {
+    const response = await fetch('https://contact-form.benward.io/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData.value)
+    })
+
+    const result = await response.json()
+
+    if (response.ok) {
+      message.value = `Form submitted, I'll get back to you as soon as possible.`
+    } else {
+      message.value = `Failed to submit form: ${result.message}`
+      console.error('Error response from server:', result.message)
+    }
+  } catch (error) {
+    message.value = `An error occurred: ${error.message}`
+    console.error('Fetch error:', error)
+  }
+}
+</script>
+
 
 <style scoped>
 input,
