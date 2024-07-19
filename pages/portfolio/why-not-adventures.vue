@@ -308,7 +308,7 @@ useHead({
   grid-column: 10 / 16;
 }
 
-.end a {
+.container .end a {
   grid-column: 10 / 15;
 }
 
@@ -325,6 +325,11 @@ useHead({
   .portfolio-item .item.list {
     grid-column: span 2;
     grid-row: auto;
+  }
+
+  .end .container a {
+    margin-right: auto;
+    margin-top: var(--spacing-5);
   }
 }
 </style>
