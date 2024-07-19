@@ -1,6 +1,6 @@
 <template>
   <footer ref="footer">
-    <div class="footer">
+    <LayoutGridContainer class="footer">
       <p class="item">Copyright ©2024</p>
       <NuxtLink
         class="item footer-contact"
@@ -23,13 +23,13 @@
         aria-label="Terms and Conditions Page"
         >Terms + Conditions</NuxtLink
       >
-      <button
+      <!--<button
         class="item back-to-top"
         @click="scrollToTop"
         aria-label="Back to Top">
         <LucideArrowUp />
-      </button>
-    </div>
+      </button>-->
+    </LayoutGridContainer>
   </footer>
 </template>
 
@@ -60,12 +60,9 @@ footer .container {
 }
 
 .footer {
-  display: flex;
   width: 100%;
   padding-bottom: 5px;
   margin: 0;
-  margin-left: var(--spacing-3);
-  margin-right: var(--spacing-3);
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -73,9 +70,9 @@ footer .container {
 
 .footer .item {
   font-size: var(--font-size-XXS);
-  margin: 0 var(--spacing-3);
   color: var(--color-white);
   pointer-events: all;
+  margin-right: auto;
 }
 
 .footer .footer-contact {
@@ -94,6 +91,26 @@ footer .container {
 .back-to-top:hover {
   transform: translateY(-4px);
   cursor: pointer;
+}
+
+.footer .item:nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.footer .item:nth-child(2) {
+  grid-column: 6 / 8;
+  grid-row: 1;
+}
+
+.footer .item:nth-child(3) {
+  grid-column: 11 / 13;
+  grid-row: 1;
+}
+
+.footer .item:nth-child(4) {
+  grid-column: 15 / 17;
+  grid-row: 1;
 }
 
 @media (max-width: 767px) {

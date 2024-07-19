@@ -80,8 +80,8 @@ nav.nav-hidden a {
   width: 100%;
   padding-bottom: 5px;
   margin: 0;
-  margin-left: var(--spacing-3);
-  margin-right: var(--spacing-3);
+  margin-left: var(--spacing-5);
+  margin-right: var(--spacing-5);
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -105,6 +105,14 @@ nav a {
 
 nav a::after {
   background-color: var(--color-white);
+}
+
+.nav .nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav .nav-item:last-child {
+  margin-right: 0;
 }
 
 @media (max-width: 767px) {
