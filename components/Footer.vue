@@ -121,12 +121,30 @@ footer .container {
   .footer {
     align-items: start;
     margin: 0;
-    text-align: center;
   }
 
   .footer .item {
     font-size: var(--font-size-XS);
-    margin: 0 var(--spacing-3);
+  }
+
+  .footer .item:nth-child(1) {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .footer .item:nth-child(2) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .footer .item:nth-child(3) {
+    grid-column: 5 / 7;
+    grid-row: 1;
+  }
+
+  .footer .item:nth-child(4) {
+    grid-column: 5 / 7;
+    grid-row: 2;
   }
 }
 
