@@ -36,9 +36,11 @@
             rel="noopener noreferrer">
             {{ buttonText }}
           </a>
+          <ListsPageIndex v-if="pageIndexLabels" :labels="pageIndexLabels" />
         </template>
       </TextParagraph>
     </LayoutGridContainer>
+    <ListsPageIndex v-if="pageIndexLabels" :labels="pageIndexLabels" />
   </header>
 </template>
 
@@ -55,6 +57,7 @@ const props = defineProps({
   buttonDescription: String,
   headerClass: String,
   backgroundColor: String,
+  pageIndexLabels: Array,
 });
 
 const headerRef = ref(null);
@@ -87,8 +90,8 @@ onBeforeUnmount(() => {
 .header-small {
   height: 100lvh;
 }
-.header-medium {
-  height: 120lvh;
+.header-fixed {
+  height: 105lvh;
 }
 .header-large {
   height: auto;
@@ -169,15 +172,27 @@ header .item:nth-child(3) {
   margin-top: auto;
 }
 
+.page-index {
+  position: absolute;
+  bottom: var(--spacing-4);
+  right: var(--spacing-5);
+  z-index: 100;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  opacity: var(--opacity);
+}
+
 @media (max-width: 767px) {
   .header-small {
     height: 80lvh;
   }
-  .header-medium {
+  .header-fixed {
     height: 110lvh;
   }
   .header-large {
     height: auto;
+    min-height: 100lvh;
   }
 
   .background-image img {
@@ -204,6 +219,12 @@ header .item:nth-child(3) {
     grid-column: 5 / 7;
     grid-row-start: 2;
     margin-top: auto;
+  }
+
+  .page-index {
+    font-size: var(--font-size-XS);
+    right: 0;
+    width: 100%;
   }
 }
 </style>

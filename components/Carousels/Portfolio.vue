@@ -260,6 +260,10 @@ window.addEventListener("resize", updateIsMobile);
     margin: 0;
   }
 
+  .image-info {
+    margin-bottom: var(--spacing-5);
+  }
+
   .carousel .container {
     padding-left: var(--spacing-4);
     padding-right: var(--spacing-4);

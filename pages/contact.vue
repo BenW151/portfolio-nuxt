@@ -4,28 +4,13 @@
       backgroundColor="var(--color-black)"
       title="Contact"
       subtitle="Have a question? Let me know"
-      headerClass="header-large">
-      <template #description>
-        <ListsLinkList
-          class="contact"
-          :links="[
-            {
-              url: 'https://www.linkedin.com/in/benw151/',
-              label: 'LinkedIn',
-              description: 'LinkedIn',
-            },
-            {
-              url: 'https://github.com/BenW151/',
-              label: 'GitHub',
-              description: 'GitHub',
-            },
-            {
-              url: 'mailto:contact@benward.io',
-              label: 'Email',
-              description: 'Email',
-            },
-          ]" />
-      </template>
+      headerClass="header-large"
+      :pageIndexLabels="[
+        { title: 'Email', link: 'mailto:contact@benward.io' },
+        { title: 'GitHub', link: 'https://github.com/BenW151' },
+        { title: 'LinkedIn', link: 'https://www.linkedin.com/in/benw151' },
+      ]">
+      <template #description> </template>
     </Header>
 
     <section id="contact-form">
@@ -37,7 +22,13 @@
 <script setup>
 useHead({
   title: "Ben Ward - Contact",
-  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  meta: [
+    {
+      name: "description",
+      content:
+        "Offering top-notch web development services to help businesses succeed online.",
+    },
+  ],
   link: [
     {
       rel: "canonical",
@@ -63,6 +54,10 @@ useHead({
 
 #contact-form .item-inner {
   margin: 0;
+}
+
+.contact .paragraph.medium {
+  display: none;
 }
 
 @media (max-width: 767px) {
