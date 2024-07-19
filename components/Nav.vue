@@ -126,7 +126,8 @@ nav a::after {
   }
 
   .nav {
-    margin: 0;
+    margin-left: var(--spacing-4);
+    margin-right: var(--spacing-4);
   }
 }
 </style>
