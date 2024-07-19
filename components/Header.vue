@@ -36,7 +36,6 @@
             rel="noopener noreferrer">
             {{ buttonText }}
           </a>
-          <ListsPageIndex v-if="pageIndexLabels" :labels="pageIndexLabels" />
         </template>
       </TextParagraph>
     </LayoutGridContainer>

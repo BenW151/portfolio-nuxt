@@ -68,7 +68,9 @@ ul li:last-child {
 
   ul {
     width: 100%;
-    justify-content: space-around
+    justify-content: space-between;
+    margin-right: var(--spacing-5);
+    margin-left: var(--spacing-5);
   }
 }
 </style>

@@ -8,7 +8,13 @@
       buttonText="Contact Me"
       buttonUrl="/contact"
       buttonDescription="Contact Me"
-      headerClass="header-large">
+      headerClass="header-large"
+      :pageIndexLabels="[
+        { title: 'About', link: 'about' },
+        { title: 'Services', link: 'services' },
+        { title: 'Skills', link: 'skills' },
+        { title: 'Experience', link: 'experience' },
+      ]">
       <template #description>
         <p>
           Building sleek, scalable, and interactive web experiences. Empowering
