@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="portfolio">
     <Header
       backgroundColor="var(--color-black)"
       title="Portfolio"
@@ -45,6 +45,11 @@ if (!isMobile.value) {
   padding-bottom: 7.5vh;
   padding-top: 0;
 }
+
+.portfolio .paragraph.medium {
+  display: none;
+}
+
 
 @media (max-width: 767px) {
   #carousel .container {
