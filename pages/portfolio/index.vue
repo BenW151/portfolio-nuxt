@@ -53,8 +53,8 @@ if (!isMobile.value) {
 
 @media (max-width: 767px) {
   #carousel .container {
-    padding-left: var(--spacing-5);
-    padding-right: var(--spacing-5);
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
   }
 }
 </style>

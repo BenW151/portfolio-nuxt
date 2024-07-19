@@ -234,6 +234,7 @@ window.addEventListener("resize", updateIsMobile);
     height: auto;
     max-width: 100%;
     max-height: 100%;
+    margin-bottom: var(--spacing-3);
   }
 
   .image-list {

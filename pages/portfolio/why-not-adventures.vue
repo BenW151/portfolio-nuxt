@@ -313,11 +313,6 @@ useHead({
 }
 
 @media (max-width: 767px) {
-  #carousel .container {
-    padding-left: var(--spacing-5);
-    padding-right: var(--spacing-5);
-  }
-
   .portfolio .item.paragraph-with-title,
   .portfolio .item.image,
   .portfolio .item.card,
