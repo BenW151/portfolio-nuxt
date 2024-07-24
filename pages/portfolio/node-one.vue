@@ -22,7 +22,7 @@
       </template>
     </Header>
 
-    <section class="portfolio-item">
+    <section class="overview">
       <LayoutGridContainer>
         <TextSectionLabel labelText="IT Services" />
         <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
@@ -73,7 +73,7 @@
       </LayoutGridContainer>
     </section>
 
-    <section class="logo">
+    <section class="branding">
       <LayoutGridContainer>
         <ImageDefault
           imageUrl="/images/node-one-logo.png"
@@ -177,7 +177,7 @@
               href="https://pagespeed.web.dev/analysis/https-portfolio-nuxt-6c3-pages-dev-portfolio-node-one/15ywm0w7vd?hl=en-GB&form_factor=desktop"
               aria-label="Node One Website"
               target="_blank"
-              ><LucideExternalLink/>View Full Report</a
+              ><LucideExternalLink />View Full Report</a
             >
           </template>
         </TextParagraphWithTitle>
@@ -218,25 +218,25 @@ useHead({
   overflow: visible;
 }
 
-.portfolio-item .paragraph-with-title {
+.overview .paragraph-with-title {
   grid-column: 6 / 14;
 }
 
-.portfolio-item .list {
+.overview .list {
   margin-top: 2vw;
 }
 
-.portfolio-item .list:nth-child(3) {
+.overview .list:nth-child(3) {
   grid-column: 6 / 9;
   grid-row-start: 2;
 }
 
-.portfolio-item .list:nth-child(4) {
+.overview .list:nth-child(4) {
   grid-column: 9 / 12;
   grid-row-start: 2;
 }
 
-.portfolio-item .list:nth-child(5) {
+.overview .list:nth-child(5) {
   grid-column: 12 / 15;
   grid-row-start: 2;
 }
@@ -249,7 +249,7 @@ useHead({
   grid-column: 11 / 14;
 }
 
-.logo .paragraph-with-title {
+.branding .paragraph-with-title {
   grid-column: 3 / 9;
   grid-row-start: 1;
 }
@@ -284,11 +284,11 @@ useHead({
 }
 
 .portfolio .card {
-  grid-column:10 / 16;
+  grid-column: 10 / 16;
 }
 
 .end a {
-  grid-column:10 / 15;
+  grid-column: 10 / 15;
 }
 
 @media (max-width: 767px) {
@@ -301,7 +301,7 @@ useHead({
     margin: 0;
   }
 
-  .portfolio-item .item.list {
+  .overview .item.list {
     grid-column: span 2;
     grid-row: auto;
   }

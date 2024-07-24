@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio why-not-adventures">
     <Header
-      imageUrl="/images/why-not-adventures/background-image.png"
+      imageUrl="/images/why-not-adventures/background-image.webp"
       imageAlt="Mountains of Pakistan"
       title="Why Not Adventures"
       subtitle="Tour Operator"
@@ -23,7 +23,7 @@
       </template>
     </Header>
 
-    <section class="portfolio-item">
+    <section class="overview">
       <LayoutGridContainer>
         <TextSectionLabel labelText="IT Services" />
         <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
@@ -82,116 +82,92 @@
       </LayoutGridContainer>
     </section>
 
-    <section class="logo">
-      <LayoutGridContainer>
-        <ImageDefault
-          imageUrl="/images/why-not-adventures/why-not-adventures-logo-square.svg"
-          imageAlt="Why Not Adventures Logo"
-          class="portfolio-logo"
-          rellaxPercentage="0"
-          rellaxSpeed="0" />
-        <TextParagraphWithTitle subtitleTag="h4">
-          <template #title>A Fresh, Modern Appearance</template>
-          <template #body>
-            <p>
-              An IT services company offering best in class service and support.
-              For this project, I designed and developed a professional website
-              that effectively communicates the firm's expertise in IT
-              solutions. The site features a robust, informative layout that
-              includes service descriptions, client testimonials, and a live
-              chat feature for instant customer support. Strategic SEO practices
-              were also implemented to enhance online visibility and attract
-              more business clientele.
-            </p>
-          </template>
-        </TextParagraphWithTitle>
-      </LayoutGridContainer>
-    </section>
+    <PortfolioSection
+      sectionID="branding"
+      imageUrl="/images/why-not-adventures/logo.svg"
+      imageAlt="Why Not Adventures Logo"
+      :imageCustomClass="['portfolio-logo',]"
+      textPosition="left"
+      title="A Fresh, Modern Appearance">
+      <template #body>
+        <p>
+          An IT services company offering best in class service and support. For
+          this project, I designed and developed a professional website that
+          effectively communicates the firm's expertise in IT solutions. The
+          site features a robust, informative layout that includes service
+          descriptions, client testimonials, and a live chat feature for instant
+          customer support. Strategic SEO practices were also implemented to
+          enhance online visibility and attract more business clientele.
+        </p>
+      </template>
+    </PortfolioSection>
 
-    <section class="team">
-      <LayoutGridContainer>
-        <ImageDefault
-          imageUrl="/images/why-not-adventures/image-1.png"
-          altText="Celestial Relaxation Room"
-          class="portfolio-team"
-          rellaxPercentage="0"
-          rellaxSpeed="0" />
-        <TextParagraphWithTitle subtitleTag="h4">
-          <template #title>A Personable, Approachable Team</template>
-          <template #body>
-            <p>
-              An IT services company offering best in class service and support.
-              For this project, I designed and developed a professional website
-              that effectively communicates the firm's expertise in IT
-              solutions. The site features a robust, informative layout that
-              includes service descriptions, client testimonials, and a live
-              chat feature for instant customer support. Strategic SEO practices
-              were also implemented to enhance online visibility and attract
-              more business clientele.
-            </p>
-          </template>
-        </TextParagraphWithTitle>
-      </LayoutGridContainer>
-    </section>
+    <PortfolioSection
+      sectionID="team"
+      imageUrl="/images/why-not-adventures/image-1.png"
+      imageAlt="TODO REPLACE TEXT"
+      :imageCustomClass="['portfolio-team', 'overflow']"
+      textPosition="right"
+      title="A Personable, Approachable Team">
+      <template #body>
+        <p>
+          An IT services company offering best in class service and support. For
+          this project, I designed and developed a professional website that
+          effectively communicates the firm's expertise in IT solutions. The
+          site features a robust, informative layout that includes service
+          descriptions, client testimonials, and a live chat feature for instant
+          customer support. Strategic SEO practices were also implemented to
+          enhance online visibility and attract more business clientele.
+        </p>
+      </template>
+    </PortfolioSection>
 
-    <section class="services">
-      <LayoutGridContainer>
-        <TextParagraphWithTitle subtitleTag="h4">
-          <template #title>A Full Spectrum Of Services On Offer</template>
-          <template #body>
-            <p>
-              An IT services company offering best in class service and support.
-              For this project, I designed and developed a professional website
-              that effectively communicates the firm's expertise in IT
-              solutions. The site features a robust, informative layout that
-              includes service descriptions, client testimonials, and a live
-              chat feature for instant customer support. Strategic SEO practices
-              were also implemented to enhance online visibility and attract
-              more business clientele.
-            </p>
-          </template>
-        </TextParagraphWithTitle>
-        <ImageDefault
-          imageUrl="/images/why-not-adventures/image-1.png"
-          altText="Celestial Relaxation Room"
-          class="portfolio-services"
-          rellaxPercentage="0"
-          rellaxSpeed="0" />
-      </LayoutGridContainer>
-    </section>
+    <PortfolioSection
+      sectionID="services"
+      imageUrl="/images/why-not-adventures/image-1.png"
+      imageAlt="TODO REPLACE TEXT"
+      :imageCustomClass="['portfolio-services', 'overflow']"
+      textPosition="left"
+      title="A Full Spectrum Of Services On Offer">
+      <template #body>
+        <p>
+          An IT services company offering best in class service and support. For
+          this project, I designed and developed a professional website that
+          effectively communicates the firm's expertise in IT solutions. The
+          site features a robust, informative layout that includes service
+          descriptions, client testimonials, and a live chat feature for instant
+          customer support. Strategic SEO practices were also implemented to
+          enhance online visibility and attract more business clientele.
+        </p>
+      </template>
+    </PortfolioSection>
 
-    <section class="lighthouse">
-      <LayoutGridContainer>
-        <ImageDefault
-          imageUrl="/images/lighthouse-score.png"
-          imageAlt="Office"
-          class="portfolio-lighthouse"
-          rellaxPercentage="0"
-          rellaxSpeed="0" />
-        <TextParagraphWithTitle subtitleTag="h4">
-          <template #title>High Performance, Available to Everyone</template>
-          <template #body>
-            <p>
-              An IT services company offering best in class service and support.
-              For this project, I designed and developed a professional website
-              that effectively communicates the firm's expertise in IT
-              solutions. The site features a robust, informative layout that
-              includes service descriptions, client testimonials, and a live
-              chat feature for instant customer support. Strategic SEO practices
-              were also implemented to enhance online visibility and attract
-              more business clientele.
-            </p>
-            <a
-              class="link underline-out-icon"
-              href="https://pagespeed.web.dev/analysis/https-portfolio-nuxt-6c3-pages-dev-portfolio-node-one/15ywm0w7vd?hl=en-GB&form_factor=desktop"
-              aria-label="Node One Website"
-              target="_blank"
-              ><LucideExternalLink />View Full Report</a
-            >
-          </template>
-        </TextParagraphWithTitle>
-      </LayoutGridContainer>
-    </section>
+    <PortfolioSection
+      sectionID="psi"
+      imageUrl="/images/why-not-adventures/psi-score.png"
+      imageAlt="TODO REPLACE TEXT"
+      :imageCustomClass="['portfolio-lighthouse',]"
+      textPosition="right"
+      title="High Performance, Available to Everyone">
+      <template #body>
+        <p>
+          An IT services company offering best in class service and support. For
+          this project, I designed and developed a professional website that
+          effectively communicates the firm's expertise in IT solutions. The
+          site features a robust, informative layout that includes service
+          descriptions, client testimonials, and a live chat feature for instant
+          customer support. Strategic SEO practices were also implemented to
+          enhance online visibility and attract more business clientele.
+        </p>
+        <a
+          class="link underline-out-icon"
+          href="https://pagespeed.web.dev/analysis/https-portfolio-nuxt-6c3-pages-dev-portfolio-node-one/15ywm0w7vd?hl=en-GB&form_factor=desktop"
+          aria-label="Node One Website"
+          target="_blank"
+          ><LucideExternalLink />View Full Report</a
+        >
+      </template>
+    </PortfolioSection>
 
     <section class="end">
       <LayoutGridContainer>
@@ -212,6 +188,8 @@
 </template>
 
 <script setup>
+import PortfolioSection from "~/components/Layout/PortfolioSection.vue";
+
 useHead({
   title: "Ben Ward - Why Not Adventures",
   meta: [
@@ -239,25 +217,25 @@ useHead({
   overflow: visible;
 }
 
-.portfolio-item .paragraph-with-title {
+.overview .paragraph-with-title {
   grid-column: 6 / 14;
 }
 
-.portfolio-item .list {
+.overview .list {
   margin-top: 2vw;
 }
 
-.portfolio-item .list:nth-child(3) {
+.overview .list:nth-child(3) {
   grid-column: 6 / 9;
   grid-row-start: 2;
 }
 
-.portfolio-item .list:nth-child(4) {
+.overview .list:nth-child(4) {
   grid-column: 9 / 12;
   grid-row-start: 2;
 }
 
-.portfolio-item .list:nth-child(5) {
+.overview .list:nth-child(5) {
   grid-column: 12 / 15;
   grid-row-start: 2;
 }
@@ -270,7 +248,7 @@ useHead({
   grid-column: 11 / 15;
 }
 
-.logo .paragraph-with-title {
+.branding .paragraph-with-title {
   grid-column: 3 / 9;
   grid-row-start: 1;
 }
@@ -286,7 +264,7 @@ useHead({
 }
 
 .portfolio .portfolio-services {
-  grid-column: 9 / 17;
+  grid-column: 10 / 17;
   margin-right: -400px;
 }
 
@@ -322,7 +300,7 @@ useHead({
     margin: 0;
   }
 
-  .portfolio-item .item.list {
+  .overview .item.list {
     grid-column: span 2;
     grid-row: auto;
   }

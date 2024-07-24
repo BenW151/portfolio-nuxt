@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="item image image-default rellax"
-    v-rellax
-    :data-rellax-percentage="rellaxPercentage"
-    :data-rellax-speed="rellaxSpeed">
+  <div :class="['item image image-default', customClass]">
     <NuxtImg format="webp" :alt="altText" :src="imageUrl" />
   </div>
 </template>
@@ -19,16 +15,13 @@ const props = defineProps({
     type: String,
     default: "Image",
   },
-  rellaxPercentage: {
-    type: String,
-    default: "0.6", // Default value for rellax effect
-  },
-  rellaxSpeed: {
-    type: String,
-    default: "2", // Default speed for rellax effect
+  customClass: {
+    type: [String, Array],
+    default: '',
   },
 });
 </script>
+
 
 <style scoped>
 .image-default {
