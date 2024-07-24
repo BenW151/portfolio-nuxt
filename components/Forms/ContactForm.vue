@@ -5,9 +5,11 @@
       <template #title>Get in Touch</template>
       <template #body>
         <p>
-          For any inquiries or to discuss your project needs, feel free to get in touch. I'm always available to provide personalized solutions and help bring your digital vision to life.
-        </p>
-      </template>
+          For any inquiries or to discuss your project needs, feel free to get
+          in touch. I'm always available to provide personalized solutions and
+          help bring your digital vision to life.
+        </p></template
+      >
     </TextParagraphWithTitle>
     <div class="item contact-form">
       <div>
@@ -35,7 +37,7 @@
               type="text"
               v-model="formData.project"
               name="project"
-              placeholder="Project" />
+              placeholder="Project Title" />
           </label>
           <label class="form-message">
             <textarea
@@ -56,44 +58,48 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const formData = ref({
-  name: '',
-  email: '',
-  project: '',
-  message: ''
-})
+const initialFormData = {
+  name: "",
+  email: "",
+  project: "",
+  message: "",
+};
 
-const message = ref('')
+const formData = ref({ ...initialFormData });
+const message = ref("");
 
 const submitForm = async () => {
-  message.value = 'Submitting...'
+  message.value = "Submitting...";
 
   try {
-    const response = await fetch('https://contact-form.benward.io/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData.value)
-    })
+    const response = await fetch(
+      "https://contact.benward.io/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData.value),
+      }
+    );
 
-    const result = await response.json()
+    const result = await response.json();
 
     if (response.ok) {
-      message.value = `Form submitted, I'll get back to you as soon as possible.`
+      message.value = `Form submitted, I'll get back to you as soon as possible.`;
+      formData.value = { ...initialFormData }; // Reset form fields
     } else {
-      message.value = `Failed to submit form: ${result.message}`
-      console.error('Error response from server:', result.message)
+      message.value = `Failed to submit form: ${result.message}. Please send us a direct email at contact@benward.io.`;
+      console.error("Error response from server:", result.message);
     }
   } catch (error) {
-    message.value = `An error occurred: ${error.message}`
-    console.error('Fetch error:', error)
+    message.value = `An error occurred: ${error.message}. Please send us a direct email at contact@benward.io.`;
+    console.error("Fetch error:", error);
   }
-}
+};
 </script>
-
 
 <style scoped>
 input,
