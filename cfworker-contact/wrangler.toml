@@ -9,7 +9,7 @@ node_compat = true
 main = "./dist/index.js"  # Path to your main script
 
 kv_namespaces = [
-  { binding = "BENWARD_CONTACT_KV", id = "f44fada6ae034e4ea5dea4efe64a43cd" }
+  { binding = "BENWARD_CONTACT_KV", id = "d4c0c9bbcbac4987a27ed41487f7bf40" }
 ]
 
 send_email = [

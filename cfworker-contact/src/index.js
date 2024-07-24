@@ -10,7 +10,7 @@ export default {
     if (request.method === 'POST') {
       try {
         const data = await request.json();
-        const { name, email, destination, message } = data;
+        const { name, email, project, message } = data;
 
         if (!name || !email || !message) {
           return new Response(JSON.stringify({ message: 'Invalid form data' }), {
@@ -37,7 +37,7 @@ export default {
         msg.setSubject("New Contact Form Submission");
         msg.addMessage({
           contentType: 'text/plain',
-          data: `Name: ${name}\nEmail: ${email}\nDestination: ${destination}\nMessage: ${message}`
+          data: `Name: ${name}\nEmail: ${email}\nProject: ${project}\nMessage: ${message}`
         });
 
         const emailMessage = new EmailMessage(
