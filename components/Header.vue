@@ -39,7 +39,6 @@
         </template>
       </TextParagraph>
     </LayoutGridContainer>
-    <ListsPageIndex v-if="pageIndexLabels" :labels="pageIndexLabels" />
   </header>
 </template>
 

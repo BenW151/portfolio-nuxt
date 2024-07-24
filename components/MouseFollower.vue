@@ -1,6 +1,8 @@
 <template>
   <div :class="circleClasses" :style="circleStyle">
-    <span class="circle-text" :class="{ 'is-visible': textVisible }">{{ hoveredText }}</span>
+    <span class="circle-text" :class="{ 'is-visible': textVisible }">{{
+      hoveredText
+    }}</span>
   </div>
 </template>
 
@@ -45,7 +47,7 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
-    } else if (classList.includes("slide-image")) {
+    } else if (classList.includes("mouse-follow-show")) {
       hoveredText.value = "View";
       hoverClass.value = "show";
       found = true;

@@ -4,7 +4,8 @@
       <li v-for="label in labels" :key="label.link">
         <a :href="getLinkHref(label.link)" 
            :target="isExternal(label.link) ? '_blank' : undefined" 
-           :rel="isExternal(label.link) ? 'noopener noreferrer' : undefined">
+           :rel="isExternal(label.link) ? 'noopener noreferrer' : undefined"
+           class="link">
           {{ label.title }}
         </a>
       </li>

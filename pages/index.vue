@@ -184,8 +184,12 @@
               { id: 2, text: 'Vue 3' },
             ]" />
           <ListsDefaultList
-            title="Design"
-            :items="[{ id: 1, text: 'Figma' }]" />
+            title="Other"
+            :items="[
+              { id: 1, text: 'Cloudflare' },
+              { id: 2, text: 'Figma' },
+              { id: 3, text: 'Web Analytics' },
+            ]" />
         </LayoutGridContainer>
       </section>
 
