@@ -4,15 +4,16 @@
       <div
         v-for="(image, index) in images"
         :key="index"
-        class="image-item"
+        :class="['image-item', image.customClass]"
         @mouseover="updateHoverDescription(image)"
         @mouseleave="clearHoverDescription">
         <NuxtLink :href="image.link">
           <img :src="image.src" :alt="image.alt" class="vertical-image" />
         </NuxtLink>
-        <div class="image-info">
+        <div class="overlay-text">
           <p class="image-title">{{ image.alt }}</p>
           <p class="image-subtitle">{{ image.subDescription }}</p>
+          <p class="image-nights-price">{{ image.nightsPrice }}</p>
         </div>
       </div>
     </div>
@@ -20,7 +21,7 @@
       v-else
       ref="swiperRef"
       :modules="[Navigation, Mousewheel, FreeMode]"
-      :slides-per-view="3.2"
+      :slides-per-view="2.2"
       :space-between="10"
       :navigation="true"
       :mousewheel="{
@@ -34,22 +35,17 @@
       <swiper-slide
         v-for="(image, index) in images"
         :key="index"
-        class="swiper-slide-custom"
-        @mouseover="updateHoverDescription(image)"
-        @mouseleave="clearHoverDescription">
-        <NuxtLink :href="image.link">
+        :class="['swiper-slide-custom', image.customClass]">
+        <NuxtLink :href="image.link" class="slide-link">
           <img :src="image.src" :alt="image.alt" class="slide-image" />
+          <div class="overlay-text">
+            <p class="image-title">{{ image.alt }}</p>
+            <p class="image-subtitle">{{ image.subDescription }}</p>
+            <p class="image-nights-price">{{ image.nightsPrice }}</p>
+          </div>
         </NuxtLink>
       </swiper-slide>
     </swiper>
-    <div v-if="hoverDescription && !isMobile" class="image-description">
-      <p>{{ hoverDescription }}</p>
-      <p>{{ hoverSubDescription }}</p>
-    </div>
-    <div v-else-if="!isMobile" class="image-description">
-      <p>Scroll to Explore</p>
-      <p>4 Items</p>
-    </div>
   </div>
 </template>
 
@@ -60,6 +56,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 const hoverDescription = ref("");
 const hoverSubDescription = ref("");
+const hoverNightsPrice = ref("");
 const progress = ref(0);
 const isMobile = ref(window.innerWidth < 768);
 const swiperRef = ref(null);
@@ -81,37 +78,34 @@ const onSlideChange = (swiper) => {
 const updateHoverDescription = (image) => {
   hoverDescription.value = image.alt;
   hoverSubDescription.value = image.subDescription;
+  hoverNightsPrice.value = image.nightsPrice;
 };
 
 const clearHoverDescription = () => {
   hoverDescription.value = "";
   hoverSubDescription.value = "";
+  hoverNightsPrice.value = "";
 };
 
 const images = [
-  {
+{
     src: "/images/why-not-adventures/background-image.png",
     alt: "Why Not Adventures",
     subDescription: "Tour Provider",
     link: "/portfolio/why-not-adventures",
+    customClass: "mouse-follow-show"
   },
   {
     src: "/images/node-one-office.png",
-    alt: "Node One",
+    alt: "Work in Progress",
     subDescription: "IT Services",
-    link: "/portfolio/node-one",
+    link: "/portfolio",
   },
   {
     src: "/images/why-not-adventures/background-image.png",
-    alt: "Why Not Adventures",
-    subDescription: "Tour Provider",
-    link: "/portfolio/why-not-adventures",
-  },
-  {
-    src: "/images/node-one-office.png",
-    alt: "Node One",
-    subDescription: "IT Services",
-    link: "/portfolio/node-one",
+    alt: "Work in Progress",
+    subDescription: "Travel Blog",
+    link: "/portfolio",
   },
 ];
 
@@ -122,7 +116,7 @@ watch(isMobile, async (newVal, oldVal) => {
     nextTick(() => {
       swiperRef.value.swiper = new Swiper(".swiper", {
         modules: [Navigation, Mousewheel, FreeMode],
-        slidesPerView: 3.2,
+        slidesPerView: 2.2,
         spaceBetween: 10,
         navigation: true,
         mousewheel: {
@@ -148,10 +142,8 @@ window.addEventListener("resize", updateIsMobile);
 }
 
 .slide-image {
-  width: 30vw;
-  height: auto;
-  max-width: 30vw;
-  max-height: 30vw;
+  width: 43.5vw;
+  height: 30vw;
   object-fit: cover;
 }
 
@@ -170,7 +162,8 @@ window.addEventListener("resize", updateIsMobile);
 }
 
 .image-description p:first-child {
-  font-weight: bold;
+  font-size: var(--font-size-S);
+  font-family: var(--font-family-primary);
 }
 
 .image-description p {
@@ -181,7 +174,7 @@ window.addEventListener("resize", updateIsMobile);
   position: relative;
   width: 20%;
   height: 1px;
-  background-color: grey;
+  background-color: var(--color-grey);
 }
 
 .custom-scrollbar-progress {
@@ -228,13 +221,50 @@ window.addEventListener("resize", updateIsMobile);
   padding-right: 1vw;
 }
 
+.coming-soon {
+  pointer-events: none;
+}
+
+.coming-soon img {
+  filter: brightness(0.3);
+}
+
+.coming-soon .image-nights-price {
+  font-weight: bold;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-4);
+  color: var(--color-white);
+  text-align: left;
+  pointer-events: none;
+}
+
+.image-title {
+  font-size: var(--font-size-M);
+  font-family: var(--font-family-primary);
+}
+
+.overlay-text p {
+  margin: 0;
+  margin-bottom: 2px;
+}
+
 @media (max-width: 767px) {
   .image-item {
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    margin-bottom: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .image-item a {
+    margin-bottom: 0;
   }
 
   .image-list {
@@ -249,20 +279,21 @@ window.addEventListener("resize", updateIsMobile);
     height: auto;
   }
 
+  .image-info .image-nights-price {
+    margin-bottom: var(--spacing-5);
+  }
+
   .custom-scrollbar {
     display: none;
   }
 
   .image-title {
-    font-weight: bold;
+    font-size: var(--font-size-M);
+    font-family: var(--font-family-primary);
   }
 
   .image-info p {
     margin: 0;
-  }
-
-  .image-info {
-    margin-bottom: var(--spacing-5);
   }
 
   .carousel .container {
