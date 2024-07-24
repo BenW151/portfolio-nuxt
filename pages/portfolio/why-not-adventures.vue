@@ -82,11 +82,44 @@
       </LayoutGridContainer>
     </section>
 
+    <section class="large-image-container">
+      <LayoutGridContainer>
+        <ImageDefault
+          imageUrl="/images/why-not-adventures/trip-long-screenshot.png"
+          altText="Celestial Relaxation Room"
+          class="portfolio-header" />
+        <TextParagraphWithTitle subtitleTag="h4">
+          <template #title>A Fresh, Modern Appearance</template>
+          <template #body>
+            <p>
+              An IT services company offering best in class service and support.
+              For this project, I designed and developed a professional website
+              that effectively communicates the firm's expertise in IT
+              solutions. The site features a robust, informative layout that
+              includes service descriptions, client testimonials, and a live
+              chat feature for instant customer support. Strategic SEO practices
+              were also implemented to enhance online visibility and attract
+              more business clientele.
+            </p>
+          </template>
+          <template #link-text>View Treatments & Packages</template>
+        </TextParagraphWithTitle>
+        <ImageDefault
+          imageUrl="/images/why-not-adventures/gallery.png"
+          altText="Celestial Relaxation Room"
+          class="portfolio-header" />
+        <ImageDefault
+          imageUrl="/images/why-not-adventures/image-1.png"
+          altText="Celestial Relaxation Room"
+          class="portfolio-header" />
+      </LayoutGridContainer>
+    </section>
+
     <PortfolioSection
       sectionID="branding"
       imageUrl="/images/why-not-adventures/logo.svg"
       imageAlt="Why Not Adventures Logo"
-      :imageCustomClass="['portfolio-logo',]"
+      :imageCustomClass="['portfolio-logo']"
       textPosition="left"
       title="A Fresh, Modern Appearance">
       <template #body>
@@ -146,7 +179,7 @@
       sectionID="psi"
       imageUrl="/images/why-not-adventures/psi-score.png"
       imageAlt="TODO REPLACE TEXT"
-      :imageCustomClass="['portfolio-lighthouse',]"
+      :imageCustomClass="['portfolio-lighthouse']"
       textPosition="right"
       title="High Performance, Available to Everyone">
       <template #body>
@@ -209,14 +242,6 @@ useHead({
 </script>
 
 <style scoped>
-.image.image-default img {
-  object-fit: contain;
-}
-
-.container.grid {
-  overflow: visible;
-}
-
 .overview .paragraph-with-title {
   grid-column: 6 / 14;
 }
@@ -244,50 +269,35 @@ useHead({
   grid-column: 2 / 16;
 }
 
-.portfolio .portfolio-logo {
-  grid-column: 11 / 15;
-}
-
-.branding .paragraph-with-title {
-  grid-column: 3 / 9;
-  grid-row-start: 1;
-}
-
-.portfolio .portfolio-team {
-  grid-column-end: 8;
-  margin-left: -500px;
-}
-
-.team .paragraph-with-title {
-  grid-column: 10 / 16;
-  grid-row-start: 1;
-}
-
-.portfolio .portfolio-services {
-  grid-column: 10 / 17;
-  margin-right: -400px;
-}
-
-.services .paragraph-with-title {
-  grid-column: 2 / 8;
-  grid-row-start: 1;
-}
-
-.portfolio .portfolio-lighthouse {
-  grid-column: 10 / 16;
-}
-
-.lighthouse .paragraph-with-title {
-  grid-column: 2 / 8;
-  grid-row-start: 1;
-}
-
 .portfolio .card {
   grid-column: 10 / 16;
 }
 
 .container .end a {
   grid-column: 10 / 15;
+}
+
+.large-image-container .container .image:nth-child(1) {
+  grid-column-end: 8;
+  grid-row: 1 / 4;
+  margin-left: -500px;
+}
+
+.large-image-container .container .paragraph-with-title:nth-child(2) {
+  grid-column: 9 / 16;
+  grid-row: 1;
+}
+
+.large-image-container .container .image:nth-child(3) {
+  grid-column: 9 / 17;
+  grid-row: 2;
+  margin-right: -500px;
+}
+
+.large-image-container .container .image:nth-child(4) {
+  grid-column: 9 / 17;
+  grid-row: 3;
+  margin-right: -500px;
 }
 
 @media (max-width: 767px) {
@@ -308,6 +318,29 @@ useHead({
   .end .container a {
     margin-right: auto;
     margin-top: var(--spacing-5);
+  }
+
+  .large-image-container .container .image:nth-child(1) {
+    grid-column-end: 5;
+    grid-row: 2 / 4;
+    margin-left: -300px;
+  }
+
+  .large-image-container .container .paragraph-with-title:nth-child(2) {
+    grid-column: 1 / 7;
+    grid-row: 1;
+  }
+
+  .large-image-container .container .image:nth-child(3) {
+    grid-column: 5 / 7;
+    grid-row: 2;
+    margin-right: -200px;
+  }
+
+  .large-image-container .container .image:nth-child(4) {
+    grid-column: 5 / 7;
+    grid-row: 3;
+    margin-right: -200px;
   }
 }
 </style>
