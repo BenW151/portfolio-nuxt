@@ -89,7 +89,7 @@ const clearHoverDescription = () => {
 
 const images = [
 {
-    src: "/images/why-not-adventures/background-image.png",
+    src: "/images/why-not-adventures/background-image.webp",
     alt: "Why Not Adventures",
     subDescription: "Tour Provider",
     link: "/portfolio/why-not-adventures",
@@ -102,7 +102,7 @@ const images = [
     link: "/portfolio",
   },
   {
-    src: "/images/why-not-adventures/background-image.png",
+    src: "/images/why-not-adventures/background-image.webp",
     alt: "Work in Progress",
     subDescription: "Travel Blog",
     link: "/portfolio",

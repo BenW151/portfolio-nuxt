@@ -143,7 +143,7 @@ const circleClasses = computed(() => {
   height: 6vw;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* For Safari */
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1000;
