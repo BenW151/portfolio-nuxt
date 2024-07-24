@@ -59,8 +59,8 @@ export default {
     },
     imageCustomClass: {
       type: [String, Array],
-      default: '',
-    }
+      default: "",
+    },
   },
   computed: {
     imageTextPosition() {
@@ -69,7 +69,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .heading {
@@ -111,16 +110,23 @@ export default {
 }
 
 @media (max-width: 767px) {
+ /* 
   .right .image,
   .left .image {
-    height: 60vw;
+    max-height: 60vw;
   }
-
+*/
   .heading,
-  #day1 .paragraph-with-title,
-  #day1 .image {
+  .right .paragraph-with-title,
+  .right .image,
+  .right .image.overflow,
+  .left .paragraph-with-title,
+  .left .image,
+  .left .image.overflow {
     grid-column: 1 / 7;
     grid-row-start: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 </style>
