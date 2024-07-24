@@ -85,7 +85,7 @@
     <section class="logo">
       <LayoutGridContainer>
         <ImageDefault
-          imageUrl="/images/why-not-adventures/logo.svg"
+          imageUrl="/images/why-not-adventures/why-not-adventures-logo-square.svg"
           imageAlt="Why Not Adventures Logo"
           class="portfolio-logo"
           rellaxPercentage="0"
@@ -267,7 +267,7 @@ useHead({
 }
 
 .portfolio .portfolio-logo {
-  grid-column: 11 / 14;
+  grid-column: 11 / 15;
 }
 
 .logo .paragraph-with-title {
