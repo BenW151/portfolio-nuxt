@@ -72,13 +72,33 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
-    } else if (classList.includes("portfolio-lighthouse")) {
+    } else if (classList.includes("portfolio-psi")) {
       hoveredText.value = "PSI Score";
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-services")) {
       hoveredText.value = "Services";
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("why-not-owner")) {
+      hoveredText.value = "Founder";
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("why-not-itinerary")) {
+      hoveredText.value = "Itinerary";
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("why-not-gallery")) {
+      hoveredText.value = "Gallery";
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("why-not-destination")) {
+      hoveredText.value = "Destination";
       hoverClass.value = "show";
       found = true;
       break;

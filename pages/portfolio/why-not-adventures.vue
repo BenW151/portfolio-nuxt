@@ -9,18 +9,7 @@
       buttonUrl="https://whynotadventures.co.uk"
       buttonDescription="View Website"
       headerClass="header-large">
-      <template #description>
-        <p>
-          Why Not Adventures, a premier travel company offering unique and
-          exciting tours worldwide. For this project, I designed and developed a
-          captivating website that effectively showcases the company's diverse
-          travel experiences. The site features an engaging, user-friendly
-          layout that includes detailed itineraries, customer testimonials, and
-          a seamless booking system for hassle-free reservations. Strategic SEO
-          practices were also implemented to enhance online visibility and
-          attract more adventure-seeking travelers.
-        </p>
-      </template>
+      <template #description> </template>
     </Header>
 
     <section class="overview">
@@ -32,15 +21,15 @@
           >
           <template #body>
             <p>
-              Why Not Adventures, a premier travel company offering unique and
+              Why Not Adventures, a new travel company offering unique and
               exciting tours worldwide. For this project, I designed and
               developed a captivating website that effectively showcases the
               company's diverse travel experiences. The site features an
               engaging, user-friendly layout that includes detailed itineraries,
-              customer testimonials, and a seamless booking system for
-              hassle-free reservations. Strategic SEO practices were also
-              implemented to enhance online visibility and attract more
-              adventure-seeking travelers.
+              immersive video, and payment integration for hassle-free
+              reservations. Strategic SEO practices were also implemented to
+              enhance online visibility and attract more adventure-seeking
+              travelers.
             </p>
             <a
               class="link underline-out-icon"
@@ -75,7 +64,7 @@
       <LayoutGridContainer>
         <ImageDefault
           imageUrl="/images/why-not-adventures/header.png"
-          altText="Celestial Relaxation Room"
+          altText="TODO Replace"
           class="portfolio-header"
           rellaxPercentage="0"
           rellaxSpeed="0" />
@@ -86,32 +75,35 @@
       <LayoutGridContainer>
         <ImageDefault
           imageUrl="/images/why-not-adventures/trip-long-screenshot.png"
-          altText="Celestial Relaxation Room"
-          class="portfolio-header" />
+          altText="TODO Replace"
+          class="why-not-destination" />
         <TextParagraphWithTitle subtitleTag="h4">
-          <template #title>A Fresh, Modern Appearance</template>
+          <template #title
+            >Visually Appealing, <br />
+            Fully Responsive
+          </template>
           <template #body>
             <p>
-              An IT services company offering best in class service and support.
-              For this project, I designed and developed a professional website
-              that effectively communicates the firm's expertise in IT
-              solutions. The site features a robust, informative layout that
-              includes service descriptions, client testimonials, and a live
-              chat feature for instant customer support. Strategic SEO practices
-              were also implemented to enhance online visibility and attract
-              more business clientele.
+              The site maintains a clean and modern design throughout, ensuring
+              a consistent and engaging user experience. The site is
+              thoughtfully designed with attention to detail, combining visually
+              appealing elements with intuitive navigation. High-quality images,
+              well-structured content, and responsive layouts work together to
+              create an inviting and seamless experience for users. This
+              approach not only enhances the site's aesthetic appeal but also
+              its functionality and usability, reflecting a commitment to
+              delivering top-notch web design.
             </p>
           </template>
-          <template #link-text>View Treatments & Packages</template>
         </TextParagraphWithTitle>
         <ImageDefault
           imageUrl="/images/why-not-adventures/gallery.png"
-          altText="Celestial Relaxation Room"
-          class="portfolio-header" />
+          altText="TODO Replace"
+          class="why-not-gallery" />
         <ImageDefault
           imageUrl="/images/why-not-adventures/image-1.png"
-          altText="Celestial Relaxation Room"
-          class="portfolio-header" />
+          altText="TODO Replace"
+          class="why-not-itinerary" />
       </LayoutGridContainer>
     </section>
 
@@ -124,33 +116,33 @@
       title="A Fresh, Modern Appearance">
       <template #body>
         <p>
-          An IT services company offering best in class service and support. For
-          this project, I designed and developed a professional website that
-          effectively communicates the firm's expertise in IT solutions. The
-          site features a robust, informative layout that includes service
-          descriptions, client testimonials, and a live chat feature for instant
-          customer support. Strategic SEO practices were also implemented to
-          enhance online visibility and attract more business clientele.
+          I designed a clean and modern logo that captures the essence of
+          exploration and adventure. The logo features a simple yet striking
+          mountain icon, symbolizing the spirit of adventure and the great
+          outdoors. Accompanying the mountain is the company name, presented in
+          a sleek, contemporary font that enhances the logo's overall appeal.
+          This minimalist design ensures the logo is versatile and easily
+          recognizable, aligning perfectly with the brand's identity and vision.
         </p>
       </template>
     </PortfolioSection>
 
     <PortfolioSection
-      sectionID="team"
+      sectionID="itinerary"
       imageUrl="/images/why-not-adventures/image-1.png"
       imageAlt="TODO REPLACE TEXT"
-      :imageCustomClass="['portfolio-team', 'overflow']"
+      :imageCustomClass="['why-not-itinerary', 'overflow']"
       textPosition="right"
-      title="A Personable, Approachable Team">
+      title="A Trip to Remember">
       <template #body>
         <p>
-          An IT services company offering best in class service and support. For
-          this project, I designed and developed a professional website that
-          effectively communicates the firm's expertise in IT solutions. The
-          site features a robust, informative layout that includes service
-          descriptions, client testimonials, and a live chat feature for instant
-          customer support. Strategic SEO practices were also implemented to
-          enhance online visibility and attract more business clientele.
+          I created an engaging and visually appealing itinerary section to
+          outline each day's activities. Each day features a large, high-quality
+          image that immerses viewers in the experience. Below the image,
+          detailed text explains the day's activities, providing a clear and
+          enticing overview of what to expect. This layout not only captures the
+          essence of the adventure but also ensures the information is
+          accessible and easy to follow, enhancing the overall user experience.
         </p>
       </template>
     </PortfolioSection>
@@ -165,31 +157,32 @@
         {
           url: '/images/why-not-adventures/gallery.png',
           alt: 'Overlay Image 1',
-          customClass: 'portfolio-header',
+          customClass: 'why-not-gallery',
         },
         {
           url: '/images/why-not-adventures/image-1.png',
           alt: 'Overlay Image 2',
-          customClass: 'portfolio-header',
+          customClass: 'why-not-itinerary',
         },
       ]" />
 
     <PortfolioSection
       sectionID="services"
-      imageUrl="/images/why-not-adventures/image-1.png"
+      imageUrl="/images/why-not-adventures/who-am-i.png"
       imageAlt="TODO REPLACE TEXT"
-      :imageCustomClass="['portfolio-services', 'overflow']"
+      :imageCustomClass="['why-not-owner', 'overflow']"
       textPosition="left"
-      title="A Full Spectrum Of Services On Offer">
+      title="A Relatable, Personable Character">
       <template #body>
         <p>
-          An IT services company offering best in class service and support. For
-          this project, I designed and developed a professional website that
-          effectively communicates the firm's expertise in IT solutions. The
-          site features a robust, informative layout that includes service
-          descriptions, client testimonials, and a live chat feature for instant
-          customer support. Strategic SEO practices were also implemented to
-          enhance online visibility and attract more business clientele.
+          I designed a dedicated section to introduce the company owner, who
+          will personally lead the tours. The aim is to make the owner relatable
+          and build a connection with potential customers. This section
+          highlights their passion for travel, personal anecdotes, and unique
+          insights, creating an inviting and trustworthy image. By showcasing
+          the owner's personality and expertise, it encourages customers to join
+          the tours, knowing they will be guided by someone genuinely passionate
+          and knowledgeable about the destinations.
         </p>
       </template>
     </PortfolioSection>
@@ -198,18 +191,20 @@
       sectionID="psi"
       imageUrl="/images/why-not-adventures/psi-score.png"
       imageAlt="TODO REPLACE TEXT"
-      :imageCustomClass="['portfolio-lighthouse']"
+      :imageCustomClass="['portfolio-psi']"
       textPosition="right"
       title="High Performance, Available to Everyone">
       <template #body>
         <p>
-          An IT services company offering best in class service and support. For
-          this project, I designed and developed a professional website that
-          effectively communicates the firm's expertise in IT solutions. The
-          site features a robust, informative layout that includes service
-          descriptions, client testimonials, and a live chat feature for instant
-          customer support. Strategic SEO practices were also implemented to
-          enhance online visibility and attract more business clientele.
+          I focused on optimizing the website to achieve a perfect 100 score
+          across all categories on Google PageSpeed Insights. This was
+          accomplished through meticulous attention to performance,
+          accessibility, best practices, and SEO. I implemented efficient coding
+          practices, optimized images, leveraged browser caching, and ensured a
+          responsive design. By prioritizing these elements, I not only enhanced
+          the site's loading speed and user experience but also improved its
+          visibility and ranking in search engines, demonstrating my commitment
+          to delivering high-quality, performant websites.
         </p>
         <a
           class="link underline-out-icon"
@@ -227,7 +222,7 @@
           name="Tia Thomas"
           position="Founder"
           quote="Working with this team has been a game-changer for our business. The web development service provided was top-notch, with a keen attention to detail and a clear focus on our objectives. Our new website is not only visually stunning but also highly functional and user-friendly. The continuous support we receive ensures our site remains up-to-date and continues to perform excellently."
-          imgSrc="/images/person.png" />
+          imgSrc="/images/why-not-adventures/tia.webp" />
         <NuxtLink
           class="underline-out"
           to="/portfolio/node-one"
@@ -288,12 +283,8 @@ useHead({
   grid-column: 1 / 17;
 }
 
-.portfolio .card {
+.portfolio .card, .end a {
   grid-column: 10 / 16;
-}
-
-.container .end a {
-  grid-column: 10 / 15;
 }
 
 .large-image-container .container .image:nth-child(1) {
