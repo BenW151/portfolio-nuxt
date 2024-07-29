@@ -1,25 +1,25 @@
 <template>
-  <div class="accordion-item" :class="{'active': isActive}">
+  <div class="accordion-item" :class="{ active: isActive }">
     <p class="accordion-title" @click="handleClick">
       {{ title }}
       <LucideArrowUpRight />
     </p>
-    <div class="accordion-content" :class="{'visible': isActive}">
+    <div class="accordion-content" :class="{ visible: isActive }">
       <slot></slot>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, inject, computed } from 'vue';
+import { ref, inject, computed } from "vue";
 
 const props = defineProps({
   title: String,
-  index: String
+  index: String,
 });
 
-const setActiveIndex = inject('setActiveIndex');
-const activeIndex = inject('activeIndex');
+const setActiveIndex = inject("setActiveIndex");
+const activeIndex = inject("activeIndex");
 
 const isActive = computed(() => props.index === activeIndex.value);
 
@@ -91,5 +91,13 @@ function handleClick() {
   max-height: 200px;
   opacity: 1;
   transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@media (max-width: 767px) {
+
+  .accordion .accordion-content {
+    width: 100%;
+  }
+  
 }
 </style>

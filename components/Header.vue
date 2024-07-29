@@ -160,14 +160,8 @@ header .container {
 }
 
 header .item:nth-child(2) {
-  grid-column: 10 / 16;
+  grid-column: 11 / 17;
   grid-row-start: 2;
-}
-
-header .item:nth-child(3) {
-  grid-column: 14 / 17;
-  grid-row-start: 1;
-  margin-top: auto;
 }
 
 .page-index {
@@ -201,7 +195,7 @@ header .item:nth-child(3) {
   .hero-text {
     grid-column: span 6;
     grid-row-start: 1;
-    height: 50vh;
+    height: 60vh;
   }
 
   header .paragraph.medium {

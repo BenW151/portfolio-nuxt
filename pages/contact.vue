@@ -10,7 +10,26 @@
         { title: 'GitHub', link: 'https://github.com/BenW151' },
         { title: 'LinkedIn', link: 'https://www.linkedin.com/in/benw151' },
       ]">
-      <template #description> </template>
+      <template #description>
+        <ListsLinkList
+          :links="[
+            {
+              url: 'https://www.instagram.com/benward.io/',
+              label: 'Instagram',
+              description: 'Instagram',
+            },
+            {
+              url: 'https://linkedin.com/in/benw151',
+              label: 'LinkedIn',
+              description: 'LinkedIn',
+            },
+            {
+              url: 'https://github.com/BenW151',
+              label: 'GitHub',
+              description: 'GitHub',
+            },
+          ]" />
+      </template>
     </Header>
 
     <section id="contact-form">
@@ -41,6 +60,8 @@ useHead({
 <style>
 .contact header .item.paragraph:nth-child(2) {
   grid-column: 15 / 16;
+  grid-row: 1;
+  margin-top: auto;
 }
 
 .contact-form {
@@ -48,16 +69,12 @@ useHead({
 }
 
 #contact-form .paragraph-with-title {
-  grid-column: 3 / 12;
+  grid-column: 3 / 11;
   grid-row: 1;
 }
 
 #contact-form .item-inner {
   margin: 0;
-}
-
-.contact .paragraph.medium {
-  display: none;
 }
 
 @media (max-width: 767px) {
