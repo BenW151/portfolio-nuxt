@@ -23,8 +23,6 @@
 </template>
 
 <script>
-import ImageDefault from "../Image/ImageDefault.vue";
-
 export default {
   name: "ItineraryDay",
   props: {

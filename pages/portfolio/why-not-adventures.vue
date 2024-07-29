@@ -117,7 +117,7 @@
 
     <PortfolioSection
       sectionID="branding"
-      imageUrl="/images/why-not-adventures/logo.svg"
+      imageUrl="/images/why-not-adventures/logo-rectangle.svg"
       imageAlt="Why Not Adventures Logo"
       :imageCustomClass="['portfolio-logo']"
       textPosition="left"
@@ -154,6 +154,25 @@
         </p>
       </template>
     </PortfolioSection>
+
+    <LayoutPortfolioImageLayover
+      :images="[
+        {
+          url: '/images/why-not-adventures/background-image.webp',
+          alt: 'Background Image',
+          customClass: 'custom-background-class',
+        },
+        {
+          url: '/images/why-not-adventures/gallery.png',
+          alt: 'Overlay Image 1',
+          customClass: 'portfolio-header',
+        },
+        {
+          url: '/images/why-not-adventures/image-1.png',
+          alt: 'Overlay Image 2',
+          customClass: 'portfolio-header',
+        },
+      ]" />
 
     <PortfolioSection
       sectionID="services"
@@ -266,7 +285,7 @@ useHead({
 }
 
 .portfolio .portfolio-header {
-  grid-column: 2 / 16;
+  grid-column: 1 / 17;
 }
 
 .portfolio .card {
@@ -321,9 +340,9 @@ useHead({
   }
 
   .large-image-container .container .image:nth-child(1) {
-    grid-column-end: 5;
-    grid-row: 2 / 4;
-    margin-left: -300px;
+    grid-column: 1 / 7;
+    grid-row: 2;
+    margin-left: 0;
   }
 
   .large-image-container .container .paragraph-with-title:nth-child(2) {
@@ -332,15 +351,15 @@ useHead({
   }
 
   .large-image-container .container .image:nth-child(3) {
-    grid-column: 5 / 7;
-    grid-row: 2;
-    margin-right: -200px;
+    grid-column: 1 / 7;
+    grid-row: auto;
+    margin-right: 0;
   }
 
   .large-image-container .container .image:nth-child(4) {
-    grid-column: 5 / 7;
-    grid-row: 3;
-    margin-right: -200px;
+    grid-column: 1 / 7;
+    grid-row: auto;
+    margin-right: 0;
   }
 }
 </style>
