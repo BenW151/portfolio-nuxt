@@ -72,6 +72,11 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
+    } else if (classList.includes("portfolio-faq")) {
+      hoveredText.value = "FAQ";
+      hoverClass.value = "show";
+      found = true;
+      break;
     } else if (classList.includes("portfolio-psi")) {
       hoveredText.value = "PSI Score";
       hoverClass.value = "show";

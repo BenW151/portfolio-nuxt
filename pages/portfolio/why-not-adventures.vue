@@ -60,6 +60,40 @@
       </LayoutGridContainer>
     </section>
 
+    <LayoutPortfolioMobile
+      :images="[
+        {
+          url: '/images/why-not-adventures/header-mobile.png',
+          alt: 'Background Image',
+          customClass: 'portfolio-header',
+        },
+        {
+          url: '/images/why-not-adventures/header-mobile.png',
+          alt: 'Overlay Image 1',
+          customClass: 'portfolio-header',
+        },
+        {
+          url: '/images/why-not-adventures/header-mobile.png',
+          alt: 'Overlay Image 2',
+          customClass: 'portfolio-header',
+        },
+      ]"
+      title="Fully Responsive, Across All Devices">
+      <template #body>
+        <p>
+          The site is fully mobile responsive, ensuring a seamless experience
+          across all devices. By employing a responsive design approach, the
+          site automatically adjusts its layout and elements to fit any screen
+          size, from desktops to smartphones. This guarantees that users can
+          easily navigate and interact with the site, no matter what device they
+          are using. The mobile-responsive design enhances accessibility and
+          usability, providing a consistent and enjoyable experience for all
+          visitors.
+        </p>
+      </template>
+      ></LayoutPortfolioMobile
+    >
+
     <section>
       <LayoutGridContainer>
         <ImageDefault
@@ -71,7 +105,7 @@
       </LayoutGridContainer>
     </section>
 
-    <section class="large-image-container">
+    <section class="large-images">
       <LayoutGridContainer>
         <ImageDefault
           imageUrl="/images/why-not-adventures/trip-long-screenshot.png"
@@ -160,9 +194,9 @@
           customClass: 'why-not-gallery',
         },
         {
-          url: '/images/why-not-adventures/image-1.png',
+          url: '/images/why-not-adventures/faq.png',
           alt: 'Overlay Image 2',
-          customClass: 'why-not-itinerary',
+          customClass: 'portfolio-faq',
         },
       ]" />
 
@@ -221,7 +255,7 @@
         <TextCard
           name="Tia Thomas"
           position="Founder"
-          quote="Working with this team has been a game-changer for our business. The web development service provided was top-notch, with a keen attention to detail and a clear focus on our objectives. Our new website is not only visually stunning but also highly functional and user-friendly. The continuous support we receive ensures our site remains up-to-date and continues to perform excellently."
+          quote="Working with Ben on this project was an absolute pleasure. The attention to detail and dedication to maintaining a clean, modern design truly brought the vision to life. The result is a stunning, user-friendly website that perfectly captures the spirit of adventure and exploration. Ben's expertise and creativity are evident in every aspect of the site, and I couldn't be happier with the outcome. I highly recommend Ben for anyone looking to create a high-quality, engaging website."
           imgSrc="/images/why-not-adventures/tia.webp" />
         <NuxtLink
           class="underline-out"
@@ -235,8 +269,6 @@
 </template>
 
 <script setup>
-import PortfolioSection from "~/components/Layout/PortfolioSection.vue";
-
 useHead({
   title: "Ben Ward - Why Not Adventures",
   meta: [
@@ -283,28 +315,29 @@ useHead({
   grid-column: 1 / 17;
 }
 
-.portfolio .card, .end a {
+.portfolio .card,
+.end a {
   grid-column: 10 / 16;
 }
 
-.large-image-container .container .image:nth-child(1) {
+.large-images .container .image:nth-child(1) {
   grid-column-end: 8;
   grid-row: 1 / 4;
   margin-left: -500px;
 }
 
-.large-image-container .container .paragraph-with-title:nth-child(2) {
+.large-images .container .paragraph-with-title:nth-child(2) {
   grid-column: 9 / 16;
   grid-row: 1;
 }
 
-.large-image-container .container .image:nth-child(3) {
+.large-images .container .image:nth-child(3) {
   grid-column: 9 / 17;
   grid-row: 2;
   margin-right: -500px;
 }
 
-.large-image-container .container .image:nth-child(4) {
+.large-images .container .image:nth-child(4) {
   grid-column: 9 / 17;
   grid-row: 3;
   margin-right: -500px;
@@ -330,24 +363,24 @@ useHead({
     margin-top: var(--spacing-5);
   }
 
-  .large-image-container .container .image:nth-child(1) {
+  .large-images .container .image:nth-child(1) {
     grid-column: 1 / 7;
     grid-row: 2;
     margin-left: 0;
   }
 
-  .large-image-container .container .paragraph-with-title:nth-child(2) {
+  .large-images .container .paragraph-with-title:nth-child(2) {
     grid-column: 1 / 7;
     grid-row: 1;
   }
 
-  .large-image-container .container .image:nth-child(3) {
+  .large-images .container .image:nth-child(3) {
     grid-column: 1 / 7;
     grid-row: auto;
     margin-right: 0;
   }
 
-  .large-image-container .container .image:nth-child(4) {
+  .large-images .container .image:nth-child(4) {
     grid-column: 1 / 7;
     grid-row: auto;
     margin-right: 0;
