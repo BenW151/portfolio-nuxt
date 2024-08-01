@@ -313,7 +313,7 @@ useHead({
 }
 
 .portfolio .card,
-.end a {
+.end a, .end h4 {
   grid-column: 10 / 16;
 }
 

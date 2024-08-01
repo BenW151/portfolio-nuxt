@@ -1,6 +1,7 @@
 <template>
   <div class="item card">
     <div class="card-text">
+      <h4>From The Client</h4>
       <p class="quote">{{ quote }}</p>
       <div class="author">
         <NuxtImg :format="'webp'" alt="ALT TEXT" :src="imgSrc" />

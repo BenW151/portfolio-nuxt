@@ -5,8 +5,7 @@
         :imageUrl="images[0].url"
         :imageAlt="images[0].alt"
         :customClass="['image-1', images[0].customClass]" />
-      <TextParagraphWithTitle
-        :subtitleTag="subtitleTag">
+      <TextParagraphWithTitle :subtitleTag="subtitleTag">
         <template #title>{{ title }}</template>
         <template #body>
           <slot name="body"></slot>
@@ -57,22 +56,40 @@ export default {
 .image-2 {
   grid-column: 11 / 16;
   grid-row: 2 / 4;
+  height: fit-content;
 }
 
 .image-3 {
   grid-column: 3 / 8;
   grid-row: 3 / 5;
-  margin-top: 30vw;
+  margin-top: 15vw;
+}
+
+.image {
+  border-radius: 2vw;
+  border: 2px solid var(--color-white);
 }
 
 @media (max-width: 767px) {
-  .background-image {
-    height: 140%;
+
+  .image-1 {
+    grid-column: 1 / 4;
   }
 
-  .image-1,
   .image-2 {
+    grid-column: 4 / 7;
+  }
+
+  .image-3 {
+    grid-column: 1 / 4;
+    margin-bottom: var(--spacing-5);
+    margin-top: var(--spacing-5);
+  }
+
+  .paragraph-with-title {
     grid-column: 1 / 7;
+    grid-row: auto;
+    margin: 0;
   }
 }
 </style>
