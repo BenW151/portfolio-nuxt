@@ -23,12 +23,6 @@
         aria-label="Terms and Conditions Page"
         >Terms + Conditions</NuxtLink
       >
-      <!--<button
-        class="item back-to-top"
-        @click="scrollToTop"
-        aria-label="Back to Top">
-        <LucideArrowUp />
-      </button>-->
     </LayoutGridContainer>
   </footer>
 </template>

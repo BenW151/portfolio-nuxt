@@ -6,6 +6,25 @@
       subtitle="Get in Touch."
       headerClass="header-large">
       <template #description>
+        <ListsLinkList
+          class="socials"
+          :links="[
+            {
+              url: 'https://www.instagram.com/benward.io/',
+              label: 'Instagram',
+              description: 'Instagram',
+            },
+            {
+              url: 'https://linkedin.com/in/benw151',
+              label: 'LinkedIn',
+              description: 'LinkedIn',
+            },
+            {
+              url: 'https://github.com/BenW151',
+              label: 'GitHub',
+              description: 'GitHub',
+            },
+          ]" />
       </template>
     </Header>
 
