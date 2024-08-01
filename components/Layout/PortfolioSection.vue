@@ -33,10 +33,6 @@ export default {
       type: String,
       required: true,
     },
-    overlayText: {
-      type: String,
-      required: true,
-    },
     textPosition: {
       type: String,
       default: "left",

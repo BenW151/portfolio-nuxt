@@ -6,8 +6,7 @@
         :imageAlt="images[0].alt"
         :customClass="['image-1', images[0].customClass]" />
       <TextParagraphWithTitle
-        :subtitleTag="subtitleTag"
-        :textPosition="textPosition">
+        :subtitleTag="subtitleTag">
         <template #title>{{ title }}</template>
         <template #body>
           <slot name="body"></slot>

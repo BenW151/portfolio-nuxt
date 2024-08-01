@@ -256,7 +256,7 @@
           imgSrc="/images/why-not-adventures/tia.webp" />
         <NuxtLink
           class="underline-out"
-          to="/portfolio/node-one"
+          to="/portfolio"
           aria-label="Portfolio Page"
           >View Next Project</NuxtLink
         >
@@ -341,7 +341,7 @@ useHead({
 
 <style>
 @media (max-width: 767px) {
-  h1 {
+  .why-not-adventures h1 {
     font-size: 16vw;
   }
 }

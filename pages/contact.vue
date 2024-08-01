@@ -85,6 +85,7 @@ useHead({
 
   .contact header .item.paragraph:nth-child(2) {
     grid-column: 6 / 7;
+    grid-row: 2;
   }
 }
 </style>
