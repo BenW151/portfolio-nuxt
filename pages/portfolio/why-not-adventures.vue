@@ -60,6 +60,160 @@
       </LayoutGridContainer>
     </section>
 
+    <section>
+      <LayoutGridContainer>
+        <ImageDefault
+          imageUrl="/images/why-not-adventures/header.png"
+          altText="TODO Replace"
+          class="portfolio-header"
+          rellaxPercentage="0"
+          rellaxSpeed="0" />
+      </LayoutGridContainer>
+    </section>
+
+    <LayoutPortfolioLargeImages
+      :images="[
+        {
+          url: '/images/why-not-adventures/trip-long-screenshot.png',
+          alt: 'Background Image',
+          customClass: 'why-not-destination',
+        },
+        {
+          url: '/images/why-not-adventures/gallery.png',
+          alt: 'Overlay Image 1',
+          customClass: 'why-not-gallery',
+        },
+        {
+          url: '/images/why-not-adventures/image-1.png',
+          alt: 'Overlay Image 2',
+          customClass: 'why-not-itinerary',
+        },
+      ]"
+      title="Visually Appealing, Fully Responsive">
+      <template #body>
+        <p>
+          The site maintains a clean and modern design throughout, ensuring a
+          consistent and engaging user experience. The site is thoughtfully
+          designed with attention to detail, combining visually appealing
+          elements with intuitive navigation. High-quality images,
+          well-structured content, and responsive layouts work together to
+          create an inviting and seamless experience for users. This approach
+          not only enhances the site's aesthetic appeal but also its
+          functionality and usability, reflecting a commitment to delivering
+          top-notch web design.
+        </p>
+      </template>
+    </LayoutPortfolioLargeImages>
+
+    <LayoutPortfolioSection
+      sectionID="branding"
+      imageUrl="/images/why-not-adventures/logo-rectangle.svg"
+      imageAlt="Why Not Adventures Logo"
+      :imageCustomClass="['portfolio-logo']"
+      textPosition="left"
+      title="A Fresh, Modern Appearance">
+      <template #body>
+        <p>
+          I designed a clean and modern logo that captures the essence of
+          exploration and adventure. The logo features a simple yet striking
+          mountain icon, symbolizing the spirit of adventure and the great
+          outdoors. Accompanying the mountain is the company name, presented in
+          a sleek, contemporary font that enhances the logo's overall appeal.
+          This minimalist design ensures the logo is versatile and easily
+          recognizable, aligning perfectly with the brand's identity and vision.
+        </p>
+      </template>
+    </LayoutPortfolioSection>
+
+    <LayoutPortfolioSection
+      sectionID="itinerary"
+      imageUrl="/images/why-not-adventures/image-1.png"
+      imageAlt="TODO REPLACE TEXT"
+      :imageCustomClass="['why-not-itinerary', 'overflow']"
+      textPosition="right"
+      title="A Trip to Remember">
+      <template #body>
+        <p>
+          I created an engaging and visually appealing itinerary section to
+          outline each day's activities. Each day features a large, high-quality
+          image that immerses viewers in the experience. Below the image,
+          detailed text explains the day's activities, providing a clear and
+          enticing overview of what to expect. This layout not only captures the
+          essence of the adventure but also ensures the information is
+          accessible and easy to follow, enhancing the overall user experience.
+        </p>
+      </template>
+    </LayoutPortfolioSection>
+
+    <LayoutPortfolioImageLayover
+      :images="[
+        {
+          url: '/images/why-not-adventures/background-image.webp',
+          alt: 'Background Image',
+          customClass: 'custom-background-class',
+        },
+        {
+          url: '/images/why-not-adventures/gallery.png',
+          alt: 'Overlay Image 1',
+          customClass: 'why-not-gallery',
+        },
+        {
+          url: '/images/why-not-adventures/faq.png',
+          alt: 'Overlay Image 2',
+          customClass: 'portfolio-faq',
+        },
+      ]" />
+
+    <LayoutPortfolioSection
+      sectionID="services"
+      imageUrl="/images/why-not-adventures/who-am-i.png"
+      imageAlt="TODO REPLACE TEXT"
+      :imageCustomClass="['why-not-owner', 'overflow']"
+      textPosition="left"
+      title="A Relatable, Personable Character">
+      <template #body>
+        <p>
+          I designed a dedicated section to introduce the company owner, who
+          will personally lead the tours. The aim is to make the owner relatable
+          and build a connection with potential customers. This section
+          highlights their passion for travel, personal anecdotes, and unique
+          insights, creating an inviting and trustworthy image. By showcasing
+          the owner's personality and expertise, it encourages customers to join
+          the tours, knowing they will be guided by someone genuinely passionate
+          and knowledgeable about the destinations.
+        </p>
+      </template>
+    </LayoutPortfolioSection>
+
+    <LayoutPortfolioSection
+      sectionID="psi"
+      imageUrl="/images/why-not-adventures/psi-score.png"
+      imageAlt="TODO REPLACE TEXT"
+      :imageCustomClass="['portfolio-psi']"
+      textPosition="right"
+      title="High Performance, Available to Everyone">
+      <template #body>
+        <p>
+          I focused on optimizing the website to achieve a perfect 100 score
+          across all categories on Google PageSpeed Insights. This was
+          accomplished through meticulous attention to performance,
+          accessibility, best practices, and SEO. I implemented efficient coding
+          practices, optimized images, leveraged browser caching, and ensured a
+          responsive design. By prioritizing these elements, I not only enhanced
+          the site's loading speed and user experience but also improved its
+          visibility and ranking in search engines, demonstrating my commitment
+          to delivering high-quality, performant websites.
+        </p>
+        <a
+          class="link underline-out-icon"
+          href="https://pagespeed.web.dev/analysis/https-whynotadventures-co-uk/5tj85c4iyr?hl=en-GB&form_factor=desktop"
+          aria-label="PSI Report"
+          target="_blank"
+          ><LucideExternalLink />View Full Report</a
+        >
+      </template>
+    </LayoutPortfolioSection>
+
     <LayoutPortfolioMobile
       :images="[
         {
@@ -91,164 +245,7 @@
           visitors.
         </p>
       </template>
-      ></LayoutPortfolioMobile
-    >
-
-    <section>
-      <LayoutGridContainer>
-        <ImageDefault
-          imageUrl="/images/why-not-adventures/header.png"
-          altText="TODO Replace"
-          class="portfolio-header"
-          rellaxPercentage="0"
-          rellaxSpeed="0" />
-      </LayoutGridContainer>
-    </section>
-
-    <section class="large-images">
-      <LayoutGridContainer>
-        <ImageDefault
-          imageUrl="/images/why-not-adventures/trip-long-screenshot.png"
-          altText="TODO Replace"
-          class="why-not-destination" />
-        <TextParagraphWithTitle subtitleTag="h4">
-          <template #title
-            >Visually Appealing, <br />
-            Fully Responsive
-          </template>
-          <template #body>
-            <p>
-              The site maintains a clean and modern design throughout, ensuring
-              a consistent and engaging user experience. The site is
-              thoughtfully designed with attention to detail, combining visually
-              appealing elements with intuitive navigation. High-quality images,
-              well-structured content, and responsive layouts work together to
-              create an inviting and seamless experience for users. This
-              approach not only enhances the site's aesthetic appeal but also
-              its functionality and usability, reflecting a commitment to
-              delivering top-notch web design.
-            </p>
-          </template>
-        </TextParagraphWithTitle>
-        <ImageDefault
-          imageUrl="/images/why-not-adventures/gallery.png"
-          altText="TODO Replace"
-          class="why-not-gallery" />
-        <ImageDefault
-          imageUrl="/images/why-not-adventures/image-1.png"
-          altText="TODO Replace"
-          class="why-not-itinerary" />
-      </LayoutGridContainer>
-    </section>
-
-    <PortfolioSection
-      sectionID="branding"
-      imageUrl="/images/why-not-adventures/logo-rectangle.svg"
-      imageAlt="Why Not Adventures Logo"
-      :imageCustomClass="['portfolio-logo']"
-      textPosition="left"
-      title="A Fresh, Modern Appearance">
-      <template #body>
-        <p>
-          I designed a clean and modern logo that captures the essence of
-          exploration and adventure. The logo features a simple yet striking
-          mountain icon, symbolizing the spirit of adventure and the great
-          outdoors. Accompanying the mountain is the company name, presented in
-          a sleek, contemporary font that enhances the logo's overall appeal.
-          This minimalist design ensures the logo is versatile and easily
-          recognizable, aligning perfectly with the brand's identity and vision.
-        </p>
-      </template>
-    </PortfolioSection>
-
-    <PortfolioSection
-      sectionID="itinerary"
-      imageUrl="/images/why-not-adventures/image-1.png"
-      imageAlt="TODO REPLACE TEXT"
-      :imageCustomClass="['why-not-itinerary', 'overflow']"
-      textPosition="right"
-      title="A Trip to Remember">
-      <template #body>
-        <p>
-          I created an engaging and visually appealing itinerary section to
-          outline each day's activities. Each day features a large, high-quality
-          image that immerses viewers in the experience. Below the image,
-          detailed text explains the day's activities, providing a clear and
-          enticing overview of what to expect. This layout not only captures the
-          essence of the adventure but also ensures the information is
-          accessible and easy to follow, enhancing the overall user experience.
-        </p>
-      </template>
-    </PortfolioSection>
-
-    <LayoutPortfolioImageLayover
-      :images="[
-        {
-          url: '/images/why-not-adventures/background-image.webp',
-          alt: 'Background Image',
-          customClass: 'custom-background-class',
-        },
-        {
-          url: '/images/why-not-adventures/gallery.png',
-          alt: 'Overlay Image 1',
-          customClass: 'why-not-gallery',
-        },
-        {
-          url: '/images/why-not-adventures/faq.png',
-          alt: 'Overlay Image 2',
-          customClass: 'portfolio-faq',
-        },
-      ]" />
-
-    <PortfolioSection
-      sectionID="services"
-      imageUrl="/images/why-not-adventures/who-am-i.png"
-      imageAlt="TODO REPLACE TEXT"
-      :imageCustomClass="['why-not-owner', 'overflow']"
-      textPosition="left"
-      title="A Relatable, Personable Character">
-      <template #body>
-        <p>
-          I designed a dedicated section to introduce the company owner, who
-          will personally lead the tours. The aim is to make the owner relatable
-          and build a connection with potential customers. This section
-          highlights their passion for travel, personal anecdotes, and unique
-          insights, creating an inviting and trustworthy image. By showcasing
-          the owner's personality and expertise, it encourages customers to join
-          the tours, knowing they will be guided by someone genuinely passionate
-          and knowledgeable about the destinations.
-        </p>
-      </template>
-    </PortfolioSection>
-
-    <PortfolioSection
-      sectionID="psi"
-      imageUrl="/images/why-not-adventures/psi-score.png"
-      imageAlt="TODO REPLACE TEXT"
-      :imageCustomClass="['portfolio-psi']"
-      textPosition="right"
-      title="High Performance, Available to Everyone">
-      <template #body>
-        <p>
-          I focused on optimizing the website to achieve a perfect 100 score
-          across all categories on Google PageSpeed Insights. This was
-          accomplished through meticulous attention to performance,
-          accessibility, best practices, and SEO. I implemented efficient coding
-          practices, optimized images, leveraged browser caching, and ensured a
-          responsive design. By prioritizing these elements, I not only enhanced
-          the site's loading speed and user experience but also improved its
-          visibility and ranking in search engines, demonstrating my commitment
-          to delivering high-quality, performant websites.
-        </p>
-        <a
-          class="link underline-out-icon"
-          href="https://pagespeed.web.dev/analysis/https-portfolio-nuxt-6c3-pages-dev-portfolio-node-one/15ywm0w7vd?hl=en-GB&form_factor=desktop"
-          aria-label="Node One Website"
-          target="_blank"
-          ><LucideExternalLink />View Full Report</a
-        >
-      </template>
-    </PortfolioSection>
+    </LayoutPortfolioMobile>
 
     <section class="end">
       <LayoutGridContainer>
@@ -320,29 +317,6 @@ useHead({
   grid-column: 10 / 16;
 }
 
-.large-images .container .image:nth-child(1) {
-  grid-column-end: 8;
-  grid-row: 1 / 4;
-  margin-left: -500px;
-}
-
-.large-images .container .paragraph-with-title:nth-child(2) {
-  grid-column: 9 / 16;
-  grid-row: 1;
-}
-
-.large-images .container .image:nth-child(3) {
-  grid-column: 9 / 17;
-  grid-row: 2;
-  margin-right: -500px;
-}
-
-.large-images .container .image:nth-child(4) {
-  grid-column: 9 / 17;
-  grid-row: 3;
-  margin-right: -500px;
-}
-
 @media (max-width: 767px) {
   .portfolio .item.paragraph-with-title,
   .portfolio .item.image,
@@ -361,29 +335,6 @@ useHead({
   .end .container a {
     margin-right: auto;
     margin-top: var(--spacing-5);
-  }
-
-  .large-images .container .image:nth-child(1) {
-    grid-column: 1 / 7;
-    grid-row: 2;
-    margin-left: 0;
-  }
-
-  .large-images .container .paragraph-with-title:nth-child(2) {
-    grid-column: 1 / 7;
-    grid-row: 1;
-  }
-
-  .large-images .container .image:nth-child(3) {
-    grid-column: 1 / 7;
-    grid-row: auto;
-    margin-right: 0;
-  }
-
-  .large-images .container .image:nth-child(4) {
-    grid-column: 1 / 7;
-    grid-row: auto;
-    margin-right: 0;
   }
 }
 </style>

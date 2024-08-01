@@ -1,10 +1,6 @@
 <template>
   <section :class="['itinerary-day', textPosition]" :id="sectionID">
     <LayoutGridContainer>
-      <TextSectionLabel
-        v-if="sectionID === 'day1'"
-        labelText="The Plan"
-        id="itinerary-detailed" />
       <ImageDefault
         :imageUrl="imageUrl"
         :imageAlt="imageAlt"
@@ -24,7 +20,6 @@
 
 <script>
 export default {
-  name: "ItineraryDay",
   props: {
     sectionID: {
       type: String,
