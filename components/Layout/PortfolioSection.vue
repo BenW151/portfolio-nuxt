@@ -98,6 +98,11 @@ export default {
   margin-left: -500px;
 }
 
+.image {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 @media (max-width: 767px) {
  /* 
   .right .image,

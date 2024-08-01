@@ -3,7 +3,7 @@
     <Header
       backgroundColor="var(--color-black)"
       title="Portfolio"
-      subtitle="Previous Work"
+      subtitle="Previous Work."
       headerClass="header-large">
       <template #description> </template>
     </Header>

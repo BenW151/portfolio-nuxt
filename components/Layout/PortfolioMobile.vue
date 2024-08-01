@@ -70,8 +70,33 @@ export default {
   border: 2px solid var(--color-white);
 }
 
-@media (max-width: 767px) {
+.image::before {
+  content: "";
+  width: 5vw;
+  height: 1.5vw;
+  background-color: var(--color-black);
+  border-radius: 2vw;
+  position: absolute;
+  top: 1.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
 
+.image::after {
+  content: "";
+  width: 10vw;
+  height: 0.25vw;
+  background-color: var(--color-black);
+  border-radius: 2vw;
+  position: absolute;
+  bottom: 0.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
   .image-1 {
     grid-column: 1 / 4;
   }

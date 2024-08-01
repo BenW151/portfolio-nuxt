@@ -3,7 +3,7 @@
     <Header
       backgroundColor="var(--color-black)"
       title="Contact"
-      subtitle="Have a question? Let me know"
+      subtitle="Have a question? Let me know."
       headerClass="header-large"
       :pageIndexLabels="[
         { title: 'Email', link: 'mailto:contact@benward.io' },

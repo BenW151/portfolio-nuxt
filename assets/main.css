@@ -18,6 +18,7 @@ body {
   --border-radius-box: 5px;
   --color-white: #f2f3f4;
   --color-black: #070707;
+  --color-grey: #555555;
   --font-color-primary: var(--color-white);
   --font-color-secondary: var(--color-black);
   --accent-primary: var(--color-white);

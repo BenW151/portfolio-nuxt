@@ -4,7 +4,7 @@
       imageUrl="/images/why-not-adventures/background-image.webp"
       imageAlt="Mountains of Pakistan"
       title="Why Not Adventures"
-      subtitle="Tour Operator"
+      subtitle="Tour Operator."
       buttonText="View Website"
       buttonUrl="https://whynotadventures.co.uk"
       buttonDescription="View Website"
@@ -314,7 +314,7 @@ useHead({
 
 .portfolio .card,
 .end a {
-  grid-column: 10 / 16;
+  grid-column: 3 / 9;
 }
 
 @media (max-width: 767px) {

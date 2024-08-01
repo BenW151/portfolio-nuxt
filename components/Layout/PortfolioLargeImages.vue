@@ -49,6 +49,7 @@ export default {
   grid-column-end: 8;
   grid-row: 1 / 4;
   margin-left: -500px;
+  margin-bottom: auto;
 }
 
 .paragraph-with-title {
@@ -60,12 +61,14 @@ export default {
   grid-column: 9 / 17;
   grid-row: 2;
   margin-right: -500px;
+  margin-top: var(--spacing-5);
 }
 
 .image-3 {
   grid-column: 9 / 17;
   grid-row: 3;
   margin-right: -500px;
+  margin-top: var(--spacing-5);
 }
 
 @media (max-width: 767px) {

@@ -30,7 +30,7 @@ const props = defineProps({
   top: 0;
   left: 0;
   margin: 0;
-  height: auto;
+  height: fit-content
 }
 
 .image-default img,

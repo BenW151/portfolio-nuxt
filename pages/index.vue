@@ -4,7 +4,7 @@
       imageUrl="/images/index-background.png"
       imageAlt="Laptop with code on desk"
       title="Ben Ward"
-      subtitle="Web Development"
+      subtitle="Web Development."
       buttonText="Contact Me"
       buttonUrl="/contact"
       buttonDescription="Contact Me"
