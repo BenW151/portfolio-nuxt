@@ -436,6 +436,7 @@ useHead({
 
 .contact .get-in-touch h2 {
   font-size: var(--font-size-XXL);
+  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {

@@ -3,32 +3,9 @@
     <Header
       backgroundColor="var(--color-black)"
       title="Contact"
-      subtitle="Have a question? Let me know."
-      headerClass="header-large"
-      :pageIndexLabels="[
-        { title: 'Email', link: 'mailto:contact@benward.io' },
-        { title: 'GitHub', link: 'https://github.com/BenW151' },
-        { title: 'LinkedIn', link: 'https://www.linkedin.com/in/benw151' },
-      ]">
+      subtitle="Get in Touch."
+      headerClass="header-large">
       <template #description>
-        <ListsLinkList
-          :links="[
-            {
-              url: 'https://www.instagram.com/benward.io/',
-              label: 'Instagram',
-              description: 'Instagram',
-            },
-            {
-              url: 'https://linkedin.com/in/benw151',
-              label: 'LinkedIn',
-              description: 'LinkedIn',
-            },
-            {
-              url: 'https://github.com/BenW151',
-              label: 'GitHub',
-              description: 'GitHub',
-            },
-          ]" />
       </template>
     </Header>
 
@@ -58,7 +35,7 @@ useHead({
 </script>
 
 <style>
-.contact header .item.paragraph:nth-child(2) {
+.contact header .paragraph.medium {
   grid-column: 15 / 16;
   grid-row: 1;
   margin-top: auto;
@@ -83,9 +60,10 @@ useHead({
     grid-row: auto;
   }
 
-  .contact header .item.paragraph:nth-child(2) {
-    grid-column: 6 / 7;
+  .contact header .paragraph.medium {
+    grid-column: 1 / 4;
     grid-row: 2;
+    margin-top: 45vw;
   }
 }
 </style>
