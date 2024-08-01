@@ -11,9 +11,9 @@
       headerClass="header-large">
       <template #description>
         <p>
-          Building sleek, scalable, and interactive web experiences. Empowering
-          businesses through engaging and practical designs, built for
-          outstanding performance and significant reach.
+          Specializing in responsive, user-friendly websites that blend
+          aesthetic design with seamless functionality. Focused on delivering
+          tailored web solutions that meet the unique needs of each project.
         </p>
       </template>
     </Header>
@@ -38,15 +38,13 @@
             <template #title>About Me</template>
             <template #body>
               <p>
-                I transitioned from Network Engineering and IT Service Desk to
-                Web Development to merge my technical skills with my passion for
-                design. Self-taught and proficient in modern web technologies
-                like HTML, CSS, and JavaScript, I focus on creating
-                user-friendly and visually appealing websites. I believe in
-                designs where form and function work together seamlessly,
-                ensuring that each project is not only aesthetically pleasing
-                but also highly functional. My aim is to continuously innovate
-                and exceed expectations in every project.
+                My approach to web development is rooted in a passion for
+                crafting digital experiences that are both engaging and
+                efficient. I focus on creating user-friendly and visually
+                appealing websites. I believe in designs where form and function
+                work together seamlessly, ensuring that each project is not only
+                aesthetically pleasing but also highly functional. My aim is to
+                continuously innovate and exceed expectations in every project.
               </p>
             </template>
           </TextParagraphWithTitle>
@@ -92,7 +90,6 @@
                 >Previous Work</NuxtLink
               >
             </template>
-            <template #link-text>View Treatments & Packages</template>
           </TextParagraphWithTitle>
           <Accordion>
             <AccordionItem title="Web Development" index="1">
@@ -152,15 +149,18 @@
                 I bring a solid foundation in web development and design,
                 focused on creating functional and visually appealing digital
                 experiences. I craft responsive, SEO-friendly websites using
-                HTML5 and CSS3, and enhance user interaction with dynamic
-                JavaScript functionalities. With a focus on Vue and Nuxt, I
+                HTML5 and CSS3, enhancing user interaction with dynamic
+                JavaScript functionalities. With expertise in Vue and Nuxt, I
                 develop efficient UI components and manage application state
                 using modern techniques. My proficiency in Figma allows me to
-                create clean, functional design prototypes that align with
-                project goals. Additionally, my design skills ensure layouts and
-                graphics are both visually compelling and practical. Each
-                project demonstrates my ability to merge technical capabilities
-                with creative insights, ensuring innovation and quality.
+                design clean, functional prototypes that align with project
+                goals, ensuring layouts and graphics are both visually
+                compelling and practical. Additionally, I manage web analytics
+                to track and optimize performance and handle Cloudflare domain
+                administration for secure and efficient web hosting. Each
+                project reflects my ability to blend technical skills with
+                creative insights, delivering innovative and high-quality
+                results.
               </p>
             </template>
           </TextParagraphWithTitle>
@@ -204,21 +204,22 @@
                 to bring my technical expertise and problem-solving abilities
                 into a web development role.
               </p>
-              <a
+              <!--<a
                 class="underline-out-icon"
                 href="/ben-ward-cv.pdf"
                 aria-label="Download CV"
                 download=""
                 ><LucideDownload />Download CV</a
-              >
+              >-->
               <h4>Web Developer</h4>
               <h5>benward.io</h5>
-              <h6>April 2023 - Current</h6>
+              <h6>January 2024 - Current</h6>
               <p>
-                With a profound expertise in both web development and design, I
-                bring a comprehensive skill set that encompasses the essentials
-                and complexities of creating aesthetic and functional digital
-                experiences.
+                As a self-taught freelance web developer, I have been dedicated
+                to building responsive and user-friendly websites. My journey
+                has involved honing my skills in front-end development and
+                continuously expanding my knowledge to deliver high-quality web
+                solutions.
               </p>
               <ListsDefaultList
                 title="Key Duties"
@@ -226,26 +227,25 @@
                 :items="[
                   {
                     id: 1,
-                    text: 'Designing and developing websites.',
+                    text: 'Successfully completed a project that involved designing and developing a fully functional website from concept to deployment.',
                   },
                   {
                     id: 2,
-                    text: 'Ensuring excellent website performance and accessibility.',
+                    text: 'Focused on creating intuitive user interfaces and seamless user experiences, ensuring that each project meets both client expectations and modern web standards.',
                   },
                   {
                     id: 3,
-                    text: 'Keeping up to date with new technologies.',
+                    text: 'Continuously learning and applying the latest web development technologies and best practices to stay ahead in a rapidly evolving field.',
                   },
                 ]" />
               <h4>Network Engineer</h4>
               <h5>Hargreaves Lansdown</h5>
               <h6>August 2022 - April 2023</h6>
               <p>
-                I was responsible for configuring, maintaining, and supporting
-                our network infrastructure that serviced 2000+ colleagues and
-                1.6 million clients. I collaborated with IT teams, managed
-                security policies, optimized network performance, and utilized
-                various software tools.
+                In my role as a Network Support Engineer, I played a crucial
+                role in maintaining and optimizing a robust network
+                infrastructure, ensuring seamless connectivity and security for
+                thousands of users and millions of clients.
               </p>
               <ListsDefaultList
                 title="Key Duties"
@@ -253,29 +253,25 @@
                 :items="[
                   {
                     id: 1,
-                    text: 'Firewall policy management for enhanced security.',
+                    text: 'Managed firewall policies and network configurations, contributing to enhanced security and optimized performance across the organization.',
                   },
                   {
                     id: 2,
-                    text: 'Configuration of L2 & L3 switches and F5 LTM.',
+                    text: 'Analyzed network traffic and resolved incidents, demonstrating strong problem-solving skills and the ability to maintain high availability.',
                   },
                   {
                     id: 3,
-                    text: 'Network patching for equipment and data centers.',
-                  },
-                  {
-                    id: 4,
-                    text: 'Utilized networking software tools like SolarWinds, Infoblox, F5 BigIP, Checkpoint, Zscaler, and Juniper.',
+                    text: 'Collaborated with IT teams and third-party contractors, ensuring the smooth implementation and support of complex network solutions using tools like SolarWinds, Infoblox, and F5 BigIP.',
                   },
                 ]" />
               <h4>IT Service Desk Analyst</h4>
               <h5>Hargreaves Lansdown</h5>
               <h6>December 2018 - August 2022</h6>
               <p>
-                I provided efficient first-line support to approximately 2000
-                users. My role included actively participating in new system
-                roll-outs and maintaining a professional and customer-focused
-                approach.
+                In my role at Hargreaves Lansdown, I built extensive expertise
+                in technical support and system administration, with a strong
+                emphasis on delivering user-focused solutions and supporting
+                system roll-outs.
               </p>
               <ListsDefaultList
                 title="Key Duties"
@@ -283,25 +279,25 @@
                 :items="[
                   {
                     id: 1,
-                    text: 'First-line technical support via telephone, email, and face-to-face.',
+                    text: 'Provided first-line technical support to a large user base, enhancing my ability to diagnose and resolve technical issues swiftly and efficiently.',
                   },
                   {
                     id: 2,
-                    text: 'Contribution to new system and software deployments.',
+                    text: 'Played an active role in new system and software deployments, gaining hands-on experience in implementing and managing technical projects.',
                   },
                   {
                     id: 3,
-                    text: 'Administering a wide range of systems, including Active Directory, Microsoft Azure, VMWare Horizon, Exchange Online, and Defender.',
+                    text: 'Documented processes and collaborated with various teams to ensure seamless operations across diverse IT environments, strengthening my skills in maintaining and improving complex systems.',
                   },
                 ]" />
               <h4>Infrastructure Technician</h4>
               <h5>Marsh Corporate</h5>
               <h6>October 2017 - November 2018</h6>
               <p>
-                I provided first-line support for several thousand users across
-                the UK, handling inquiries related to desktops, laptops, and
-                peripherals. I also engaged in second-line tasks, including
-                server administration and site infrastructure migrations.
+                In my role at Marsh Corporate, I developed a solid foundation in
+                IT infrastructure and technical support, which has equipped me
+                with strong problem-solving skills and a deep understanding of
+                the technical aspects behind efficient, user-centered solutions.
               </p>
               <ListsDefaultList
                 title="Key Duties"
@@ -309,19 +305,15 @@
                 :items="[
                   {
                     id: 1,
-                    text: 'First-line technical support through various channels.',
+                    text: 'Provided technical support and troubleshooting across a large user base, enhancing my ability to deliver effective and efficient user-focused solutions.',
                   },
                   {
                     id: 2,
-                    text: 'Contributing to site infrastructure migrations.',
+                    text: 'Contributed to site infrastructure migrations, gaining experience in managing and implementing significant technical projects.',
                   },
                   {
                     id: 3,
-                    text: 'Developing PC images for streamlined setups.',
-                  },
-                  {
-                    id: 4,
-                    text: 'Administering Microsoft Exchange and Citrix desktops.',
+                    text: 'Developed custom PC images and managed server administration, which deepened my understanding of software deployment and configuration, essential for modern web development practices.',
                   },
                 ]" />
             </template>

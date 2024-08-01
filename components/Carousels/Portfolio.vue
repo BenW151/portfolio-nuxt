@@ -102,7 +102,7 @@ const images = [
     link: "/portfolio",
   },
   {
-    src: "/images/why-not-adventures/background-image.webp",
+    src: "/images/index-background.png",
     alt: "Work in Progress",
     subDescription: "Travel Blog",
     link: "/portfolio",
