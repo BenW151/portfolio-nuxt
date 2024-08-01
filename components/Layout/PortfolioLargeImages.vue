@@ -52,7 +52,7 @@ export default {
 }
 
 .paragraph-with-title {
-  grid-column: 9 / 16;
+  grid-column: 9 / 15;
   grid-row: 1;
 }
 

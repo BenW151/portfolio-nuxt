@@ -222,14 +222,14 @@
           customClass: 'portfolio-header',
         },
         {
-          url: '/images/why-not-adventures/header-mobile.png',
+          url: '/images/why-not-adventures/destinations-mobile.png',
           alt: 'Overlay Image 1',
-          customClass: 'portfolio-header',
+          customClass: 'why-not-destinations',
         },
         {
-          url: '/images/why-not-adventures/header-mobile.png',
+          url: '/images/why-not-adventures/itinerary-mobile.png',
           alt: 'Overlay Image 2',
-          customClass: 'portfolio-header',
+          customClass: 'why-not-itinerary',
         },
       ]"
       title="Fully Responsive, Across All Devices">
@@ -313,7 +313,7 @@ useHead({
 }
 
 .portfolio .card,
-.end a, .end h4 {
+.end a {
   grid-column: 10 / 16;
 }
 

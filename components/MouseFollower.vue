@@ -92,6 +92,11 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
+    } else if (classList.includes("why-not-destinations")) {
+      hoveredText.value = "Destinations";
+      hoverClass.value = "show";
+      found = true;
+      break;
     } else if (classList.includes("why-not-itinerary")) {
       hoveredText.value = "Itinerary";
       hoverClass.value = "show";

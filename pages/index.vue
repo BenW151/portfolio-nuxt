@@ -19,7 +19,7 @@
     </Header>
 
     <main>
-      <section id="lead-text">
+      <section class="lead-text">
         <LayoutGridContainer>
           <TextReveal tag="h3" class="item">
             Empowering businesses through engaging and practical designs, built
@@ -31,7 +31,7 @@
         </LayoutGridContainer>
       </section>
 
-      <section id="about">
+      <section class="about">
         <LayoutGridContainer>
           <TextSectionLabel labelText="About" />
           <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
@@ -73,7 +73,7 @@
         </LayoutGridContainer>
       </section>
 
-      <section id="services">
+      <section class="services">
         <LayoutGridContainer>
           <TextSectionLabel labelText="Details" />
           <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
@@ -142,7 +142,7 @@
         </LayoutGridContainer>
       </section>
 
-      <section id="skills">
+      <section class="skills">
         <LayoutGridContainer>
           <TextSectionLabel labelText="Skills" />
           <TextParagraphWithTitle subtitleTag="h3">
@@ -187,7 +187,7 @@
         </LayoutGridContainer>
       </section>
 
-      <section id="experience">
+      <section class="experience">
         <LayoutGridContainer>
           <TextSectionLabel labelText="Experience" />
           <TextParagraphWithTitle subtitleTag="h3">
@@ -329,7 +329,7 @@
         </LayoutGridContainer>
       </section>
 
-      <section id="contact">
+      <section class="contact">
         <LayoutGridContainer>
           <TextSectionLabel labelText="Contact" />
           <NuxtLink
@@ -346,7 +346,7 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward",
+  title: "Ben Ward | Web Development",
   meta: [
     {
       name: "description",
@@ -364,140 +364,119 @@ useHead({
 </script>
 
 <style scoped>
-#lead-text .container {
+.lead-text .container {
   padding-top: 30vh;
   padding-bottom: 30vh;
 }
 
-#lead-text .text-reveal {
+.lead-text .text-reveal {
   font-size: var(--font-size-M);
 }
 
-#lead-text .item,
-#lead-text p {
+.lead-text .item,
+.lead-text p {
   grid-column: 2 / 16;
 }
 
-#about .paragraph-with-title:nth-of-type(1) {
+.about .paragraph-with-title:nth-of-type(1) {
   grid-column: 6 / 14;
   grid-row: 1;
 }
 
-#about .paragraph-with-title:nth-of-type(2) {
+.about .paragraph-with-title:nth-of-type(2) {
   grid-column: 6 / 10;
   grid-row-start: 2;
   padding-top: 0;
 }
 
-#about .paragraph-with-title:nth-of-type(3) {
+.about .paragraph-with-title:nth-of-type(3) {
   grid-column: 10 / 14;
   grid-row-start: 2;
   padding-top: 0;
 }
 
-#services .paragraph-with-title:nth-of-type(1) {
+.services .paragraph-with-title:nth-of-type(1) {
   grid-column: 6 / 14;
   grid-row: 1;
 }
 
-#services .accordion {
+.services .accordion {
   grid-column: 6 / 17;
   grid-row: 2;
   /*height: 40vw;*/
 }
 
-#skills .paragraph-with-title:nth-of-type(1),
-#experience .paragraph-with-title:nth-of-type(1) {
+.skills .paragraph-with-title:nth-of-type(1),
+.experience .paragraph-with-title:nth-of-type(1) {
   grid-column: 6 / 14;
   grid-row: 1;
 }
 
-#experience h4 {
+.experience h4 {
   margin-top: var(--spacing-4);
   margin-bottom: 0;
 }
 
-#experience h5 {
+.experience h5 {
   margin-bottom: 1vh;
 }
 
-#skills .list:nth-child(3) {
+.skills .list:nth-child(3) {
   grid-column: 6 / 9;
   grid-row-start: 2;
 }
 
-#skills .list:nth-child(4) {
+.skills .list:nth-child(4) {
   grid-column: 9 / 12;
   grid-row-start: 2;
 }
 
-#skills .list:nth-child(5) {
+.skills .list:nth-child(5) {
   grid-column: 12 / 15;
   grid-row-start: 2;
 }
 
-#contact .get-in-touch {
+.contact .get-in-touch {
   grid-column: 6 / 17;
   grid-row: 1;
   width: fit-content;
 }
 
-#contact .get-in-touch h2 {
+.contact .get-in-touch h2 {
   font-size: var(--font-size-XXL);
 }
 
 @media (max-width: 767px) {
-  #lead-text .item,
-  #lead-text p {
+  .lead-text .item,
+  .lead-text p {
     grid-column: 1 / 7;
     grid-row: auto;
   }
 
-  #about .item.paragraph-with-title {
+  .about .item.paragraph-with-title {
     grid-column: 1 / 7;
     grid-row: auto;
   }
 
-  #information .item.paragraph-with-title,
-  #information .item.accordion {
+  .services .item.paragraph-with-title:nth-of-type(1),
+  .services .accordion,
+  .skills .item.paragraph-with-title:nth-of-type(1),
+  .contact .get-in-touch,
+  .experience .item.paragraph-with-title:nth-of-type(1) {
     grid-column: 1 / 7;
     grid-row: auto;
   }
 
-  #information .item.image {
-    grid-column: 1 / 7;
-    grid-row: auto;
-    height: 20vh;
-    margin: 0;
-  }
-
-  #information .item.accordion {
-    height: 100vw;
-  }
-
-  #information .item.image:nth-of-type(4) {
-    display: none;
-  }
-
-  #services .item.paragraph-with-title:nth-of-type(1),
-  #services .accordion,
-  #skills .item.paragraph-with-title:nth-of-type(1),
-  #contact .get-in-touch,
-  #experience .item.paragraph-with-title:nth-of-type(1) {
-    grid-column: 1 / 7;
-    grid-row: auto;
-  }
-
-  #skills .item.list {
+  .skills .item.list {
     grid-column: span 2;
     grid-row: auto;
   }
 
-  #experience h5 {
+  .experience h5 {
     margin-bottom: 1vw;
   }
 
-  #contact .get-in-touch h2 {
+  .contact .get-in-touch h2 {
     font-size: 14.5vw;
   }
 }

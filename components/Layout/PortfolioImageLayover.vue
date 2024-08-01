@@ -42,6 +42,8 @@ export default {
   left: 0;
   width: 100%;
   height: 140%;
+  background-size: cover;
+  background-repeat: no-repeat;
   /*  grid-column: 1 / 17;
   grid-row: 1 / 3;
   margin-left: calc(-1 * var(--spacing-5));
@@ -64,7 +66,6 @@ export default {
 }
 
 @media (max-width: 767px) {
-
   .background-image {
     height: 140%;
   }
