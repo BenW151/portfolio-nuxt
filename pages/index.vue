@@ -11,7 +11,7 @@
       headerClass="header-large">
       <template #description>
         <p>
-          Specializing in responsive, user-friendly websites that blend
+          Specialising in responsive, user-friendly websites that blend
           aesthetic design with seamless functionality. Focused on delivering
           tailored web solutions that meet the unique needs of each project.
         </p>
@@ -243,7 +243,7 @@
               <h6>August 2022 - April 2023</h6>
               <p>
                 In my role as a Network Support Engineer, I played a crucial
-                role in maintaining and optimizing a robust network
+                role in maintaining and optimising a robust network
                 infrastructure, ensuring seamless connectivity and security for
                 thousands of users and millions of clients.
               </p>

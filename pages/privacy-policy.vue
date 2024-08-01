@@ -30,7 +30,7 @@
               <li>Providing and improving my website</li>
               <li>Responding to your inquiries</li>
               <li>Sending newsletters or promotional materials</li>
-              <li>Customizing your experience on my website</li>
+              <li>Customising your experience on my website</li>
             </ul>
             <h4>3. Cookies and Tracking Technologies</h4>
             <p>

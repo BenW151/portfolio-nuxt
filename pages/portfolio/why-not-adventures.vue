@@ -116,7 +116,7 @@
         <p>
           I designed a clean and modern logo that captures the essence of
           exploration and adventure. The logo features a simple yet striking
-          mountain icon, symbolizing the spirit of adventure and the great
+          mountain icon, symbolising the spirit of adventure and the great
           outdoors. Accompanying the mountain is the company name, presented in
           a sleek, contemporary font that enhances the logo's overall appeal.
           This minimalist design ensures the logo is versatile and easily
@@ -194,12 +194,12 @@
       title="High Performance, Available to Everyone">
       <template #body>
         <p>
-          I focused on optimizing the website to achieve a perfect 100 score
+          I focused on optimising the website to achieve a perfect 100 score
           across all categories on Google PageSpeed Insights. This was
           accomplished through meticulous attention to performance,
           accessibility, best practices, and SEO. I implemented efficient coding
           practices, optimized images, leveraged browser caching, and ensured a
-          responsive design. By prioritizing these elements, I not only enhanced
+          responsive design. By prioritising these elements, I not only enhanced
           the site's loading speed and user experience but also improved its
           visibility and ranking in search engines, demonstrating my commitment
           to delivering high-quality, performant websites.
