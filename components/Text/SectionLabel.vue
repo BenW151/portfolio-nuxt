@@ -20,6 +20,14 @@ const props = defineProps({
   font-weight: 300;
   grid-column: 1 / 3;
   height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lucide {
+  margin-right: 3px;
+  stroke-width: 1px;
 }
 
 @media (max-width: 767px) {

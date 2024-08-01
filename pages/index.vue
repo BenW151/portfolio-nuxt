@@ -34,7 +34,7 @@
       <section class="about">
         <LayoutGridContainer>
           <TextSectionLabel labelText="About" />
-          <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
+          <TextParagraphWithTitle subtitleTag="h3">
             <template #title>About Me</template>
             <template #body>
               <p>
@@ -50,7 +50,7 @@
               </p>
             </template>
           </TextParagraphWithTitle>
-          <TextParagraphWithTitle subtitleTag="h4" linkUrl="/facilities">
+          <TextParagraphWithTitle subtitleTag="h4">
             <template #title><LucideBoxSelect /> Form</template>
             <template #body>
               <p>
@@ -60,7 +60,7 @@
               </p>
             </template>
           </TextParagraphWithTitle>
-          <TextParagraphWithTitle subtitleTag="h4" linkUrl="/facilities">
+          <TextParagraphWithTitle subtitleTag="h4">
             <template #title><LucideFrame /> Function</template>
             <template #body>
               <p>
@@ -76,7 +76,7 @@
       <section class="services">
         <LayoutGridContainer>
           <TextSectionLabel labelText="Details" />
-          <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
+          <TextParagraphWithTitle subtitleTag="h3">
             <template #title>Services</template>
             <template #body>
               <p>

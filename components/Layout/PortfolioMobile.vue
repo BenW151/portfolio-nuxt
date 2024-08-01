@@ -116,5 +116,21 @@ export default {
     grid-row: auto;
     margin: 0;
   }
+
+  .image {
+    border-radius: 4vw;
+  }
+
+  .image::before {
+    width: 8vw;
+    height: 2.5vw;
+    border-radius: 4vw;
+  }
+
+  .image::after {
+    width: 15vw;
+    height: 0.5vw;
+    border-radius: 4vw;
+  }
 }
 </style>

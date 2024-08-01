@@ -1,7 +1,7 @@
 <template>
   <LayoutGridContainer>
     <TextSectionLabel labelText="Contact" />
-    <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
+    <TextParagraphWithTitle subtitleTag="h3">
       <template #title>Get in Touch</template>
       <template #body>
         <p>
@@ -74,16 +74,13 @@ const submitForm = async () => {
   message.value = "Submitting...";
 
   try {
-    const response = await fetch(
-      "https://contact.benward.io/",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData.value),
-      }
-    );
+    const response = await fetch("https://contact.benward.io/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData.value),
+    });
 
     const result = await response.json();
 

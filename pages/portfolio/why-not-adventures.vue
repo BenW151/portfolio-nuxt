@@ -14,8 +14,8 @@
 
     <section class="overview">
       <LayoutGridContainer>
-        <TextSectionLabel labelText="IT Services" />
-        <TextParagraphWithTitle subtitleTag="h3" linkUrl="/facilities">
+        <TextSectionLabel labelText="Tour Operator" />
+        <TextParagraphWithTitle subtitleTag="h3">
           <template #title
             >Distinctive adventures, unforgettable experiences.</template
           >
