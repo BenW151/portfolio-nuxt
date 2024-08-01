@@ -57,17 +57,6 @@ body {
   flex-direction: column;
   background-color: var(--background-primary);
 }
-/*
-html, body {
-  overflow: scroll;
-  scrollbar-width: none; 
-}
-
-html::-webkit-scrollbar, body::-webkit-scrollbar {
-  display: none;
-}*/
-
-/* For WebKit Browsers */
 
 ::-webkit-scrollbar {
   width: 2px;

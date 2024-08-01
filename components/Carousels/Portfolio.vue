@@ -198,7 +198,6 @@ window.addEventListener("resize", updateIsMobile);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
 }
 
 .swiper-button-next {
