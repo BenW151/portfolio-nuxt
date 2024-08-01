@@ -87,6 +87,11 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
+    } else if (classList.includes("portfolio-about")) {
+      hoveredText.value = "About";
+      hoverClass.value = "show";
+      found = true;
+      break;
     } else if (classList.includes("why-not-owner")) {
       hoveredText.value = "Founder";
       hoverClass.value = "show";

@@ -84,7 +84,7 @@
           customClass: 'why-not-gallery',
         },
         {
-          url: '/images/why-not-adventures/image-1.png',
+          url: '/images/why-not-adventures/itinerary-2.png',
           alt: 'Overlay Image 2',
           customClass: 'why-not-itinerary',
         },
@@ -153,9 +153,9 @@
           customClass: 'custom-background-class',
         },
         {
-          url: '/images/why-not-adventures/gallery.png',
+          url: '/images/why-not-adventures/why-choose.png',
           alt: 'Overlay Image 1',
-          customClass: 'why-not-gallery',
+          customClass: 'portfolio-about',
         },
         {
           url: '/images/why-not-adventures/faq.png',
