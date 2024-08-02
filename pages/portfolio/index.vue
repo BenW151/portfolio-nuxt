@@ -18,7 +18,7 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward - Portfolio",
+  title: "Ben Ward | Portfolio",
   meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
   link: [
     {

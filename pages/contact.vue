@@ -36,7 +36,7 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward - Contact",
+  title: "Ben Ward | Contact",
   meta: [
     {
       name: "description",

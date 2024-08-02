@@ -267,7 +267,7 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward - Why Not Adventures",
+  title: "Ben Ward | Why Not Adventures",
   meta: [
     {
       name: "description",

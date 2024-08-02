@@ -2,7 +2,8 @@
 import { resolve } from "path";
 export default defineNuxtConfig({
   site: {
-    url: 'https://benward.io',
+    url: "https://benward.io",
+    name: "Ben Ward Web Development",
   },
   devtools: { enabled: true },
   alias: {
@@ -13,8 +14,8 @@ export default defineNuxtConfig({
     "nuxt-lucide-icons",
     "@nuxtjs/google-fonts",
     "@nuxt/image",
-    'nuxt-swiper',
-    "@nuxtjs/sitemap"
+    "nuxt-swiper",
+    "@nuxtjs/sitemap",
   ],
   image: {
     format: ["webp"],
@@ -32,40 +33,110 @@ export default defineNuxtConfig({
     },
     display: "swap",
   },
+
   plugins: ["~/plugins/rellax.client.js"],
+
   app: {
+
     pageTransition: { name: "page", appear: true },
+
     head: {
-      title: "Ben Ward - Web Development Services",
+      title: "Ben Ward | Web Development",
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       htmlAttrs: {
         lang: "en",
       },
+      
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1.0" },
         {
           hid: "description",
           name: "description",
-          content: "Offering top-notch web development services to help businesses succeed online.",
+          content:
+            "Offering top-notch web development services to help businesses succeed online.",
         },
-        { name: "keywords", content: "Web, Development, WebDev, Benward, Web Development Services, Ben Ward, Web Development, Web Developer, Developer" },
+        {
+          name: "keywords",
+          content:
+            "Web, Development, WebDev, Benward, Web Development Services, Ben Ward, Web Development, Web Developer, Developer",
+        },
         { name: "theme-color", content: "#000000" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "msapplication-config", content: "/browserconfig.xml" },
-        { property: "og:title", content: "Ben Ward - Web Development Services" },
+        {
+          property: "og:title",
+          content: "Ben Ward | Web Development",
+        },
+        {
+          property: "og:site_name",
+          content: "Ben Ward | Web Development",
+        },
         {
           property: "og:description",
-          content: "Offering top-notch web development services to help businesses succeed online.",
+          content:
+            "Offering top-notch web development services to help businesses succeed online.",
         },
         {
           property: "og:image",
           content: "https://benward.io/images/index-background.png",
         },
         { property: "og:url", content: "https://benward.io/" },
+        {
+          property: "og:locale",
+          content: "en_GB",
+        },
         { name: "twitter:card", content: "summary_large_image" },
       ],
+
+      script: [
+        {
+          type: "application/ld+json",
+          innerHTML: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Ben Ward Web Development",
+            url: "https://benward.io",
+            logo: "https://benward.io/images/logo-black.svg",
+            sameAs: [
+              "https://www.instagram.com/benward.io",
+              "https://www.linkedin.com/company/benward/",
+            ],
+            description:
+              "Offering top-notch web development services to help businesses succeed online.",
+          }),
+        },
+
+        {
+          type: "application/ld+json",
+          innerHTML: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://benward.io/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Portfolio",
+                item: "https://benward.io/portfolio",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Contact",
+                item: "https://benward.io/contact",
+              },
+            ],
+          }),
+        },
+      ],
+
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
         {

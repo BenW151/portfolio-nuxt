@@ -80,7 +80,7 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward - Terms + Conditions",
+  title: "Ben Ward | Terms + Conditions",
   meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
   link: [
     {

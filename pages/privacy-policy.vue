@@ -80,7 +80,7 @@
 
 <script setup>
 useHead({
-  title: "Ben Ward - Privacy Policy",
+  title: "Ben Ward | Privacy Policy",
   meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
   link: [
     {
