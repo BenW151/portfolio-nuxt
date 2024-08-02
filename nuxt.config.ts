@@ -5,11 +5,15 @@ export default defineNuxtConfig({
     url: "https://benward.io",
     name: "Ben Ward Web Development",
   },
+
   devtools: { enabled: true },
+
   alias: {
     assets: "/<rootDir>/assets",
   },
+
   css: ["~/assets/main.css"],
+
   modules: [
     "nuxt-lucide-icons",
     "@nuxtjs/google-fonts",
@@ -17,9 +21,11 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "@nuxtjs/sitemap",
   ],
+
   image: {
     format: ["webp"],
   },
+
   googleFonts: {
     families: {
       Lexend: {
@@ -161,4 +167,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  compatibilityDate: "2024-08-02",
 });

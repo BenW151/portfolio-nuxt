@@ -14,13 +14,13 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/sitemap": "^5.3.2",
     "@vueuse/core": "^10.9.0",
-    "nuxt": "^3.11.2",
     "nuxt-swiper": "^1.2.2",
     "rellax": "^1.12.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
+    "nuxt": "^3.12.4",
     "nuxt-lucide-icons": "^1.0.4",
     "wrangler": "^3.65.1"
   }
