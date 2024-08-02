@@ -204,13 +204,13 @@
           visibility and ranking in search engines, demonstrating my commitment
           to delivering high-quality, performant websites.
         </p>
-        <a
+        <!--<a
           class="link underline-out-icon"
           href="https://pagespeed.web.dev/analysis/https-whynotadventures-co-uk/5tj85c4iyr?hl=en-GB&form_factor=desktop"
           aria-label="PSI Report"
           target="_blank"
           ><LucideExternalLink />View Full Report</a
-        >
+        >-->
       </template>
     </LayoutPortfolioSection>
 

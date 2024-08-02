@@ -54,7 +54,6 @@ export default {
 .image-1 {
   grid-column: 2 / 16;
   grid-row: 1;
-  margin-top: var(--spacing-5);
   margin-bottom: var(--spacing-5);
 }
 
@@ -62,7 +61,6 @@ export default {
   grid-column: 2 / 16;
   grid-row: 2;
   margin-top: var(--spacing-5);
-  margin-bottom: var(--spacing-5);
 }
 
 @media (max-width: 767px) {

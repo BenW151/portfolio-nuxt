@@ -148,7 +148,6 @@ header a.link::after {
 
 .hero-text h2 {
   font-size: var(--font-size-M);
-  margin-top: var(--spacing-1);
 }
 
 .paragraph.medium {
