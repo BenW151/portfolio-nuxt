@@ -46,8 +46,7 @@
               placeholder="Message"
               required></textarea>
           </label>
-          <button class="link underline-out-icon" type="submit">
-            <LucideSend />
+          <button class="link underline-out send" type="submit">
             Submit
           </button>
         </form>

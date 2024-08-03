@@ -11,7 +11,7 @@
       <a
         v-else
         :href="link.url"
-        :class="['link', link.class]"
+        :class="['link', 'external-link', link.class]"
         :aria-label="link.description"
         target="_blank"
         rel="noopener noreferrer">

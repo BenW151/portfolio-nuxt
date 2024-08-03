@@ -1,13 +1,17 @@
 <template>
   <div :class="circleClasses" :style="circleStyle">
-    <span class="circle-text" :class="{ 'is-visible': textVisible }">{{
-      hoveredText
-    }}</span>
+    <span class="circle-text" :class="{ 'is-visible': textVisible }">
+      <component
+        :is="hoveredIconComponent || 'span'"
+        v-if="hoveredIconComponent" />
+      <template v-else>{{ hoveredText }}</template>
+    </span>
   </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
+import { LucideSend, LucideExternalLink } from "lucide-vue-next";
 
 const targetX = ref(0);
 const targetY = ref(0);
@@ -16,6 +20,7 @@ const currentY = ref(0);
 const hoveredText = ref("");
 const hoverClass = ref("");
 const textVisible = ref(false);
+const hoveredIconComponent = ref(null);
 
 const updatePosition = (event) => {
   targetX.value = event.clientX;
@@ -28,99 +33,129 @@ const updatePosition = (event) => {
     const tagName = element.tagName.toLowerCase();
     const classList = Array.from(element.classList);
 
-    if (classList.includes("link")) {
-      hoverClass.value = "link";
-      found = true;
-      break;
-    } else if (classList.includes("accordion-item")) {
+    if (classList.includes("accordion-item")) {
       hoveredText.value = "Read More";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("swiper-button-next")) {
       hoveredText.value = "Next";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("swiper-button-prev")) {
       hoveredText.value = "Previous";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("mouse-follow-show")) {
       hoveredText.value = "View";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("get-in-touch")) {
       hoveredText.value = "Contact Me";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-header")) {
       hoveredText.value = "Header";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-logo")) {
       hoveredText.value = "Logo";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-team")) {
       hoveredText.value = "Team";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-faq")) {
       hoveredText.value = "FAQ";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-psi")) {
       hoveredText.value = "PSI Score";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-services")) {
       hoveredText.value = "Services";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("portfolio-about")) {
       hoveredText.value = "About";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("why-not-owner")) {
       hoveredText.value = "Founder";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("why-not-destinations")) {
       hoveredText.value = "Destinations";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("why-not-itinerary")) {
       hoveredText.value = "Itinerary";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("why-not-gallery")) {
       hoveredText.value = "Gallery";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
       break;
     } else if (classList.includes("why-not-destination")) {
       hoveredText.value = "Destination";
+      hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("external-link")) {
+      hoveredIconComponent.value = LucideExternalLink;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("send")) {
+      hoveredIconComponent.value = LucideSend;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("link")) {
+      hoverClass.value = "link";
       found = true;
       break;
     } else {
       switch (tagName) {
         case "header":
           hoveredText.value = "Scroll";
+          hoveredIconComponent.value = null; // Reset icon
           hoverClass.value = "show";
           found = true;
           break;
@@ -141,9 +176,7 @@ const updatePosition = (event) => {
     element = element.parentElement;
   }
 
-  if (found) {
-    textVisible.value = true;
-  }
+  textVisible.value = found;
 };
 
 const smoothMovement = () => {
@@ -200,12 +233,18 @@ const circleClasses = computed(() => {
   transition: opacity 0.5s ease;
 }
 
-.circle-text.is-visible {
+.lucide {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.circle-text.is-visible,
+.is-visible .lucide {
   opacity: 1;
   transition: opacity 0.5s ease;
 }
 
-/* Additional styles for different hover locations */
 .show {
   opacity: 1;
 }
