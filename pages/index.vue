@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index">
     <Header
       imageUrl="/images/index-background.png"
       imageAlt="Laptop with code on desk"
@@ -211,7 +211,7 @@
                 download=""
                 ><LucideDownload />Download CV</a
               >-->
-              <h4>Web Developer</h4>
+              <h4 class="code">Web Developer</h4>
               <h5>benward.io</h5>
               <h6>January 2024 - Current</h6>
               <p>
@@ -238,7 +238,7 @@
                     text: 'Continuously learning and applying the latest web development technologies and best practices to stay ahead in a rapidly evolving field.',
                   },
                 ]" />
-              <h4>Network Engineer</h4>
+              <h4 class="network">Network Engineer</h4>
               <h5>Hargreaves Lansdown</h5>
               <h6>August 2022 - April 2023</h6>
               <p>
@@ -264,7 +264,7 @@
                     text: 'Collaborated with IT teams and third-party contractors, ensuring the smooth implementation and support of complex network solutions using tools like SolarWinds, Infoblox, and F5 BigIP.',
                   },
                 ]" />
-              <h4>IT Service Desk Analyst</h4>
+              <h4 class="laptop">IT Service Desk Analyst</h4>
               <h5>Hargreaves Lansdown</h5>
               <h6>December 2018 - August 2022</h6>
               <p>
@@ -290,7 +290,7 @@
                     text: 'Documented processes and collaborated with various teams to ensure seamless operations across diverse IT environments, strengthening my skills in maintaining and improving complex systems.',
                   },
                 ]" />
-              <h4>Infrastructure Technician</h4>
+              <h4 class="wrench">Infrastructure Technician</h4>
               <h5>Marsh Corporate</h5>
               <h6>October 2017 - November 2018</h6>
               <p>

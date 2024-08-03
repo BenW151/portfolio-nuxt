@@ -11,10 +11,33 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from "vue";
-import { LucideSend, LucideExternalLink, LucideMail, LucideGlobe, LucideAtSign, LucideCompass, LucideThumbsUp, LucideSun, LucideMoon } from "lucide-vue-next";
+import {
+  LucideRouter,
+  LucideCodeXml,
+  LucideSend,
+  LucideExternalLink,
+  LucideMail,
+  LucideGlobe,
+  LucideAtSign,
+  LucideCompass,
+  LucideThumbsUp,
+  LucideSun,
+  LucideMoon,
+  LucideLaptop,
+  LucideWrench,
+} from "lucide-vue-next";
 
 // Icons for cycling
-const iconsList = [LucideSend, LucideMail, LucideGlobe, LucideMoon, LucideAtSign, LucideCompass, LucideThumbsUp, LucideSun];
+const iconsList = [
+  LucideSend,
+  LucideMail,
+  LucideGlobe,
+  LucideMoon,
+  LucideAtSign,
+  LucideCompass,
+  LucideThumbsUp,
+  LucideSun,
+];
 const currentIconIndex = ref(0);
 let iconInterval = null;
 
@@ -169,6 +192,30 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
+    } else if (classList.includes("network")) {
+      hoveredIconComponent.value = LucideRouter;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("laptop")) {
+      hoveredIconComponent.value = LucideLaptop;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("wrench")) {
+      hoveredIconComponent.value = LucideWrench;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("code")) {
+      hoveredIconComponent.value = LucideCodeXml;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
     } else if (classList.includes("link")) {
       hoverClass.value = "link";
       found = true;
@@ -298,7 +345,8 @@ const circleClasses = computed(() => {
   transition: opacity 0.5s ease;
 }
 
-.show, .wordmark {
+.show,
+.wordmark {
   opacity: 1;
 }
 </style>
