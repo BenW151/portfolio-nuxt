@@ -33,7 +33,12 @@ const updatePosition = (event) => {
     const tagName = element.tagName.toLowerCase();
     const classList = Array.from(element.classList);
 
-    if (classList.includes("accordion-item")) {
+    if (classList.includes("active")) {
+      hoveredIconComponent.value = null; // Reset icon
+      hoverClass.value = "link";
+      found = true;
+      break;
+    } else if (classList.includes("accordion-item")) {
       hoveredText.value = "Read More";
       hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
@@ -58,7 +63,7 @@ const updatePosition = (event) => {
       found = true;
       break;
     } else if (classList.includes("get-in-touch")) {
-      hoveredText.value = "Contact Me";
+      hoveredText.value = "Contact";
       hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "show";
       found = true;
@@ -148,6 +153,10 @@ const updatePosition = (event) => {
       found = true;
       break;
     } else if (classList.includes("link")) {
+      hoverClass.value = "link";
+      found = true;
+      break;
+    } else if (classList.includes("link-list")) {
       hoverClass.value = "link";
       found = true;
       break;

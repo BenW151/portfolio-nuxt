@@ -32,11 +32,11 @@
               travelers.
             </p>
             <a
-              class="link underline-out-icon"
+              class="link underline-out external-link"
               href="https://whynotadventures.co.uk"
               aria-label="Why Not Adventures Website"
               target="_blank"
-              ><LucideExternalLink />View Website</a
+              >View Website</a
             >
           </template>
         </TextParagraphWithTitle>
