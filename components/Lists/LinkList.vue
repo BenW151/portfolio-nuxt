@@ -4,7 +4,7 @@
       <NuxtLink
         v-if="isInternalLink(link.url)"
         :to="link.url"
-        :class="['link', link.class]"
+        :class="['link', link.class, { active: $route.path === link.url }]"
         :aria-label="link.description">
         {{ link.label }}
       </NuxtLink>
@@ -42,4 +42,10 @@ const isInternalLink = (url) => {
 .link-list a {
   margin-bottom: 0;
 }
+
+a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 </style>

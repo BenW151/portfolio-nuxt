@@ -1,28 +1,69 @@
 <template>
   <footer ref="footer">
     <LayoutGridContainer class="footer">
-      <p class="item">Copyright ©2024</p>
-      <NuxtLink
-        class="item footer-contact"
-        :class="{ active: $route.path === '/contact' }"
-        to="/contact"
-        aria-label="Contact Page"
-        >Contact</NuxtLink
-      >
-      <NuxtLink
-        class="item"
-        :class="{ active: $route.path === '/privacy-policy' }"
-        to="/privacy-policy"
-        aria-label="Privacy Policy Page"
-        >Privacy Policy</NuxtLink
-      >
-      <NuxtLink
-        class="item"
-        :class="{ active: $route.path === '/terms-and-conditions' }"
-        to="/terms-and-conditions"
-        aria-label="Terms and Conditions Page"
-        >Terms + Conditions</NuxtLink
-      >
+      <div class="work-with-me">
+        <h5>Work With Me</h5>
+        <p>
+          For new business inquiries and cooperations <br />
+          please reach out to
+          <a
+            href="mailto:contact@benward.io"
+            aria-label="email address"
+            class="underline-out email"
+            >contact@benward.io</a
+          >.
+        </p>
+      </div>
+      <ListsLinkList
+        class="nav-links"
+        :links="[
+          {
+            url: '/',
+            label: 'About',
+            description: 'About Page',
+          },
+          {
+            url: '/portfolio',
+            label: 'Portfolio',
+            description: 'Portfolio Page',
+          },
+          {
+            url: '/contact',
+            label: 'Contact',
+            description: 'Contact Page',
+          },
+          {
+            url: '/terms-and-conditions',
+            label: 'Terms + Conditions',
+            description: 'Terms + Conditions Page',
+          },
+          {
+            url: '/privacy-policy',
+            label: 'Privacy Policy',
+            description: 'Privacy Policy',
+          },
+        ]" />
+      <ListsLinkList
+        class="socials"
+        :links="[
+          {
+            url: 'https://www.instagram.com/benward.io/',
+            label: 'Instagram',
+            description: 'Instagram',
+          },
+          {
+            url: 'https://linkedin.com/in/benw151',
+            label: 'LinkedIn',
+            description: 'LinkedIn',
+          },
+          {
+            url: 'https://github.com/BenW151',
+            label: 'GitHub',
+            description: 'GitHub',
+          },
+        ]" />
+      <p class="wordmark">benward.io</p>
+      <p class="item copyright">Copyright ©2024</p>
     </LayoutGridContainer>
   </footer>
 </template>
@@ -42,7 +83,6 @@ footer {
   align-items: flex-start;
   width: 100%;
   height: 4vw;
-  z-index: 1000;
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
@@ -60,13 +100,6 @@ footer .container {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-}
-
-.footer .item {
-  font-size: var(--font-size-XXS);
-  color: var(--foreground-primary);
-  pointer-events: all;
-  margin-right: auto;
 }
 
 .footer .footer-contact {
@@ -87,24 +120,37 @@ footer .container {
   cursor: pointer;
 }
 
-.footer .item:nth-child(1) {
-  grid-column: 1 / 3;
-  grid-row: 1;
+.copyright {
+  grid-column: 15 / 17;
+  grid-row: 2;
+  margin-top: auto;
 }
 
-.footer .item:nth-child(2) {
-  grid-column: 6 / 8;
+.work-with-me {
+  grid-column: 1 / 6;
   grid-row: 1;
+  margin-bottom: auto;
 }
 
-.footer .item:nth-child(3) {
+.nav-links {
   grid-column: 11 / 13;
   grid-row: 1;
+  margin-bottom: auto;
 }
 
-.footer .item:nth-child(4) {
+.socials {
   grid-column: 15 / 17;
   grid-row: 1;
+  margin-bottom: auto;
+}
+
+.wordmark {
+  grid-column: 1 / 11;
+  grid-row: 2;
+  transform: translateX(-0.5vw);
+  font-size: var(--font-size-XXL);
+  font-family: var(--font-family-primary);
+  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -121,24 +167,30 @@ footer .container {
     font-size: var(--font-size-XS);
   }
 
-  .footer .item:nth-child(1) {
-    grid-column: 1 / 3;
+  .work-with-me {
+    grid-column: 1 / 7;
     grid-row: 1;
   }
 
-  .footer .item:nth-child(2) {
+  .nav-links {
     grid-column: 1 / 3;
     grid-row: 2;
   }
 
-  .footer .item:nth-child(3) {
-    grid-column: 5 / 7;
-    grid-row: 1;
+  .socials {
+    grid-column: 4 / 7;
+    grid-row: 2;
   }
 
-  .footer .item:nth-child(4) {
-    grid-column: 5 / 7;
-    grid-row: 2;
+  .copyright {
+    grid-column: 1 / 7;
+    grid-row: 4;
+  }
+
+  .wordmark {
+    grid-column: 1 / 7;
+    grid-row: 3;
+    font-size: 17vw;
   }
 }
 

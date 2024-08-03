@@ -11,7 +11,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
-import { LucideSend, LucideExternalLink } from "lucide-vue-next";
+import { LucideSend, LucideExternalLink, LucideMail } from "lucide-vue-next";
 
 const targetX = ref(0);
 const targetY = ref(0);
@@ -148,6 +148,12 @@ const updatePosition = (event) => {
       break;
     } else if (classList.includes("send")) {
       hoveredIconComponent.value = LucideSend;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("email")) {
+      hoveredIconComponent.value = LucideMail;
       hoveredText.value = ""; // Clear text
       hoverClass.value = "show";
       found = true;
