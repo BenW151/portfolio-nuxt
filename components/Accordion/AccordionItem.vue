@@ -1,6 +1,6 @@
 <template>
-  <div class="accordion-item" :class="{ active: isActive }">
-    <p class="accordion-title" @click="handleClick">
+  <div class="accordion-item" @click="handleClick" :class="{ active: isActive }">
+    <p class="accordion-title">
       {{ title }}
       <LucideArrowUpRight />
     </p>
@@ -30,7 +30,8 @@ function handleClick() {
 
 <style>
 .accordion-item {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--accent-primary);
+  cursor: pointer;
 }
 
 .accordion-title {
@@ -38,7 +39,6 @@ function handleClick() {
   font-size: var(--font-size-S);
   display: flex;
   align-items: center;
-  cursor: pointer;
   margin-top: var(--spacing-3);
   margin-bottom: var(--spacing-3);
 }
