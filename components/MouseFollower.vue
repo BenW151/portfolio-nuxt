@@ -10,8 +10,13 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from "vue";
-import { LucideSend, LucideExternalLink, LucideMail } from "lucide-vue-next";
+import { ref, computed, onMounted, onUnmounted, watch } from "vue";
+import { LucideSend, LucideExternalLink, LucideMail, LucideGlobe, LucideAtSign, LucideCompass, LucideThumbsUp, LucideSun, LucideMoon } from "lucide-vue-next";
+
+// Icons for cycling
+const iconsList = [LucideSend, LucideMail, LucideGlobe, LucideMoon, LucideAtSign, LucideCompass, LucideThumbsUp, LucideSun];
+const currentIconIndex = ref(0);
+let iconInterval = null;
 
 const targetX = ref(0);
 const targetY = ref(0);
@@ -33,7 +38,13 @@ const updatePosition = (event) => {
     const tagName = element.tagName.toLowerCase();
     const classList = Array.from(element.classList);
 
-    if (classList.includes("active")) {
+    if (classList.includes("wordmark")) {
+      // Set hover class to wordmark
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "wordmark";
+      found = true;
+      break;
+    } else if (classList.includes("active")) {
       hoveredIconComponent.value = null; // Reset icon
       hoverClass.value = "link";
       found = true;
@@ -194,6 +205,23 @@ const updatePosition = (event) => {
   textVisible.value = found;
 };
 
+const startIconCycling = () => {
+  if (!iconInterval) {
+    hoveredIconComponent.value = iconsList[currentIconIndex.value];
+    iconInterval = setInterval(() => {
+      currentIconIndex.value = (currentIconIndex.value + 1) % iconsList.length;
+      hoveredIconComponent.value = iconsList[currentIconIndex.value];
+    }, 200);
+  }
+};
+
+const stopIconCycling = () => {
+  if (iconInterval) {
+    clearInterval(iconInterval);
+    iconInterval = null;
+  }
+};
+
 const smoothMovement = () => {
   currentX.value += (targetX.value - currentX.value) * 0.1;
   currentY.value += (targetY.value - currentY.value) * 0.1;
@@ -207,6 +235,16 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener("mousemove", updatePosition);
+  stopIconCycling(); // Clean up when component is destroyed
+});
+
+// Watch the hoverClass and manage icon cycling based on its value
+watch(hoverClass, (newClass) => {
+  if (newClass === "wordmark") {
+    startIconCycling();
+  } else {
+    stopIconCycling();
+  }
 });
 
 const circleStyle = computed(() => ({
@@ -260,7 +298,7 @@ const circleClasses = computed(() => {
   transition: opacity 0.5s ease;
 }
 
-.show {
+.show, .wordmark {
   opacity: 1;
 }
 </style>
