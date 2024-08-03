@@ -1,19 +1,19 @@
 <template>
   <div class="item paragraph-with-title">
-      <component :is="subtitleTag" class="subtitle">
-        <template v-if="useTextReveal">
-          <TextReveal>
-            <slot name="title">Default Title</slot>
-          </TextReveal>
-        </template>
-        <template v-else>
+    <component :is="subtitleTag" class="subtitle">
+      <template v-if="useTextReveal">
+        <TextReveal>
           <slot name="title">Default Title</slot>
-        </template>
-      </component>
+        </TextReveal>
+      </template>
+      <template v-else>
+        <slot name="title">Default Title</slot>
+      </template>
+    </component>
 
-      <slot name="body">
-        <p class="body">Default paragraph content.</p>
-      </slot>
+    <slot name="body">
+      <p class="body">Default paragraph content.</p>
+    </slot>
   </div>
 </template>
 
@@ -33,13 +33,13 @@ const props = defineProps({
 <style scoped>
 .paragraph-with-title {
   grid-column: span 7;
-  background-color: var(--color-black);
+  background-color: var(--background-primary);
   margin: auto;
   z-index: 5;
 }
 
 @media (max-width: 767px) {
-.paragraph-with-title {
+  .paragraph-with-title {
     grid-column: span 6;
   }
 }

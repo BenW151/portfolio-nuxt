@@ -52,11 +52,11 @@ const props = defineProps({
 
 .image-text-overlay .text-wrapper,
 .image-text-overlay .text-wrapper a.link {
-  color: var(--color-white);
+  color: var(--foreground-primary);
 }
 
 .image-text-overlay .text-wrapper a.link::after {
-  background-color: var(--color-white);
+  background-color: var(--foreground-primary);
 }
 
 .image-text-overlay img,

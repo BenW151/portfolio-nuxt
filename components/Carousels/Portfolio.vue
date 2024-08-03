@@ -88,12 +88,12 @@ const clearHoverDescription = () => {
 };
 
 const images = [
-{
+  {
     src: "/images/why-not-adventures/background-image.webp",
     alt: "Why Not Adventures",
     subDescription: "Tour Provider",
     link: "/portfolio/why-not-adventures",
-    customClass: "mouse-follow-show"
+    customClass: "mouse-follow-show",
   },
   {
     src: "/images/node-one-office.png",
@@ -148,7 +148,7 @@ window.addEventListener("resize", updateIsMobile);
 }
 
 .swiper-scrollbar-drag {
-  background-color: var(--color-white);
+  background-color: var(--foreground-primary);
 }
 
 .swiper-slide a::after,
@@ -179,7 +179,7 @@ window.addEventListener("resize", updateIsMobile);
 
 .custom-scrollbar-progress {
   height: 1px;
-  background-color: var(--color-black);
+  background-color: var(--background-primary);
   transition: width 0.1s ease;
 }
 
@@ -192,7 +192,7 @@ window.addEventListener("resize", updateIsMobile);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
+  color: var(--foreground-primary);
   z-index: 1000;
   cursor: pointer;
   background-position: center;
@@ -238,7 +238,7 @@ window.addEventListener("resize", updateIsMobile);
   left: 0;
   width: 100%;
   padding: var(--spacing-4);
-  color: var(--color-white);
+  color: var(--foreground-primary);
   text-align: left;
   pointer-events: none;
 }

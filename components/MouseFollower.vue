@@ -192,7 +192,7 @@ const circleClasses = computed(() => {
 }
 
 .circle-text {
-  color: var(--font-color-white);
+  color: var(--font-foreground-primary);
   font-size: var(--font-size-XXS);
   white-space: nowrap;
   pointer-events: none;

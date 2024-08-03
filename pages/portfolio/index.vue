@@ -1,7 +1,7 @@
 <template>
   <div class="portfolio">
     <Header
-      backgroundColor="var(--color-black)"
+      backgroundColor="var(--background-primary)"
       title="Portfolio"
       subtitle="Previous Work."
       headerClass="header-large">
@@ -19,7 +19,13 @@
 <script setup>
 useHead({
   title: "Ben Ward | Portfolio",
-  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  meta: [
+    {
+      name: "description",
+      content:
+        "Offering top-notch web development services to help businesses succeed online.",
+    },
+  ],
   link: [
     {
       rel: "canonical",
@@ -44,7 +50,6 @@ const isMobile = ref(window.innerWidth < 768);
 .portfolio .paragraph.medium {
   display: none;
 }
-
 
 @media (max-width: 767px) {
   #carousel .container {

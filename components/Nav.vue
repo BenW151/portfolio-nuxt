@@ -99,12 +99,12 @@ nav.nav-hidden a {
 nav a {
   font-size: var(--font-size-XXS);
   margin: 0 var(--spacing-3);
-  color: var(--color-white);
+  color: var(--foreground-primary);
   pointer-events: all;
 }
 
 nav a::after {
-  background-color: var(--color-white);
+  background-color: var(--foreground-primary);
 }
 
 .nav .nav-item:first-child {

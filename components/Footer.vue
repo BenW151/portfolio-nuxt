@@ -47,7 +47,7 @@ footer {
 }
 
 footer .container {
-  color: var(--color-white);
+  color: var(--foreground-primary);
   padding-bottom: var(--spacing-3);
   padding-top: var(--spacing-3);
   white-space: nowrap;
@@ -64,7 +64,7 @@ footer .container {
 
 .footer .item {
   font-size: var(--font-size-XXS);
-  color: var(--color-white);
+  color: var(--foreground-primary);
   pointer-events: all;
   margin-right: auto;
 }
@@ -257,7 +257,7 @@ footer .footer-main::before {
   content: "";
   width: calc(100% - (2 * var(--spacing-5)));
   height: 1px;
-  background-color: var(--color-white);
+  background-color: var(--foreground-primary);
   opacity: var(--opacity);
   position: absolute;
   top: 0;

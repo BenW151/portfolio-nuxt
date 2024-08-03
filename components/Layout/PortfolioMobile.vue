@@ -67,14 +67,14 @@ export default {
 
 .image {
   border-radius: 2vw;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--foreground-primary);
 }
 
 .image::before {
   content: "";
   width: 5vw;
   height: 1.5vw;
-  background-color: var(--color-black);
+  background-color: var(--background-primary);
   border-radius: 2vw;
   position: absolute;
   top: 1.5%;
@@ -87,7 +87,7 @@ export default {
   content: "";
   width: 10vw;
   height: 0.25vw;
-  background-color: var(--color-black);
+  background-color: var(--background-primary);
   border-radius: 2vw;
   position: absolute;
   bottom: 0.5%;

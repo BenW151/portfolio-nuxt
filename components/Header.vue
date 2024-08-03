@@ -98,11 +98,11 @@ onBeforeUnmount(() => {
 header,
 header a,
 header a .lucide {
-  color: var(--color-white);
+  color: var(--foreground-primary);
 }
 
 header a.link::after {
-  background-color: var(--color-white);
+  background-color: var(--foreground-primary);
 }
 
 .container {

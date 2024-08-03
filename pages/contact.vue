@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <Header
-      backgroundColor="var(--color-black)"
+      backgroundColor="var(--background-primary)"
       title="Contact"
       subtitle="Get in Touch."
       headerClass="header-large">

@@ -104,7 +104,7 @@ textarea {
   border: none;
   outline: none;
   border-bottom: 1px solid grey;
-  color: var(--font-color-primary);
+  color: var(--foreground-primary);
   background-color: transparent;
   position: relative;
   padding-bottom: var(--spacing-3);
@@ -120,7 +120,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-bottom: 1px solid var(--accent-primary);
+  border-bottom: 1px solid var(--foreground-primary);
 }
 
 form button {

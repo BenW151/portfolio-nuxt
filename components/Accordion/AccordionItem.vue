@@ -56,7 +56,7 @@ function handleClick() {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: var(--font-color-primary);
+  background-color: var(--foreground-primary);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
@@ -94,10 +94,8 @@ function handleClick() {
 }
 
 @media (max-width: 767px) {
-
   .accordion .accordion-content {
     width: 100%;
   }
-  
 }
 </style>
