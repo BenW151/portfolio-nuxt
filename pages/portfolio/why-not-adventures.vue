@@ -247,6 +247,15 @@
       </template>
     </LayoutPortfolioMobile>
 
+    <section>
+      <LayoutGridContainer>
+        <ImageDefault
+          imageUrl="/images/why-not-adventures/contact-long-screenshot.png"
+          altText="TODO Replace"
+          class="portfolio-header"/>
+      </LayoutGridContainer>
+    </section>
+
     <section class="end">
       <LayoutGridContainer>
         <TextCard
