@@ -64,7 +64,13 @@ const updatePosition = (event) => {
     if (classList.includes("wordmark")) {
       // Set hover class to wordmark
       hoveredText.value = ""; // Clear text
-      hoverClass.value = "wordmark";
+      hoverClass.value = "icon-cycle";
+      found = true;
+      break;
+    } else if (classList.includes("index-title")) {
+      // Set hover class to wordmark
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "icon-cycle";
       found = true;
       break;
     } else if (classList.includes("active")) {
@@ -287,7 +293,7 @@ onUnmounted(() => {
 
 // Watch the hoverClass and manage icon cycling based on its value
 watch(hoverClass, (newClass) => {
-  if (newClass === "wordmark") {
+  if (newClass === "icon-cycle") {
     startIconCycling();
   } else {
     stopIconCycling();
@@ -346,7 +352,7 @@ const circleClasses = computed(() => {
 }
 
 .show,
-.wordmark {
+.icon-cycle {
   opacity: 1;
 }
 </style>

@@ -14,7 +14,7 @@
       class="background-color rellax"></div>
     <LayoutGridContainer>
       <div class="hero-text item">
-        <TextReveal tag="h1">{{ title }}</TextReveal>
+        <TextReveal :tag="'h1'" :class="titleClass">{{ title }}</TextReveal>
         <TextReveal tag="h2">{{ subtitle }}</TextReveal>
       </div>
       <TextParagraph paragraphSize="medium">
@@ -56,6 +56,7 @@ const props = defineProps({
   headerClass: String,
   backgroundColor: String,
   pageIndexLabels: Array,
+  titleClass: String, // New prop for custom class
 });
 
 const headerRef = ref(null);
@@ -144,6 +145,7 @@ header a.link::after {
 
 .hero-text h1 {
   margin-top: auto;
+  width: fit-content;
 }
 
 .hero-text h2 {
