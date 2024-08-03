@@ -139,7 +139,7 @@ header a.link::after {
 .hero-text {
   grid-column: 1 / 17;
   grid-row-start: 1;
-  height: 80vh;
+  height: 75vh;
 }
 
 .hero-text h1 {
