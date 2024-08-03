@@ -183,7 +183,7 @@
             :items="[
               { id: 1, text: 'Cloudflare' },
               { id: 2, text: 'Figma' },
-              { id: 3, text: 'Web Analytics' },
+              { id: 3, text: 'Analytics' },
             ]" />
         </LayoutGridContainer>
       </section>

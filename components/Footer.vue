@@ -77,7 +77,6 @@ const scrollToTop = () => {
 };
 
 const { windowWidth, isMobile } = useWindowWidth();
-
 </script>
 
 <style scoped>
@@ -173,6 +172,10 @@ footer .container {
     height: 6vh;
   }
 
+  footer::after {
+    width: calc(100% - (2 * var(--spacing-4)));
+  }
+
   .footer {
     align-items: start;
     margin: 0;
@@ -193,13 +196,14 @@ footer .container {
   }
 
   .socials {
-    grid-column: 4 / 7;
+    grid-column: 5 / 7;
     grid-row: 2;
   }
 
   .copyright {
-    grid-column: 1 / 7;
-    grid-row: 4;
+    grid-column: 5 / 7;
+    grid-row: 2;
+    margin-top: auto;
   }
 
   .wordmark {
