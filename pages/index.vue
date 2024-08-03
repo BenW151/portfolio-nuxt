@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <Header
-      imageUrl="/images/index-background.png"
+      imageUrl="/images/index-background.webp"
       imageAlt="Laptop with code on desk"
       title="Ben Ward"
       titleClass="index-title"

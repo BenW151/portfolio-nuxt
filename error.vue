@@ -2,8 +2,8 @@
   <div>
     <Nav />
     <Header
-      imageUrl="/images/infrared-room.png"
-      :title="`${error.statusCode} Error`"
+    imageUrl="/images/index-background.webp"
+    :title="`${error.statusCode} Error`"
       subtitle="This Page Does Not Exist"
       headerClass="header-small"
       buttonText="Go Home"

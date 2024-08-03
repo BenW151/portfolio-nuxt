@@ -93,13 +93,13 @@ const images = [
     customClass: "mouse-follow-show",
   },
   {
-    src: "/images/node-one-office.png",
+    src: "/images/node-one-office.webp",
     alt: "Work in Progress",
     subDescription: "IT Services",
     link: "/portfolio",
   },
   {
-    src: "/images/index-background.png",
+    src: "/images/index-background.webp",
     alt: "Work in Progress",
     subDescription: "Travel Blog",
     link: "/portfolio",
@@ -126,7 +126,6 @@ watch(isMobile, async (newVal, oldVal) => {
     });
   }
 });
-
 </script>
 
 <style>

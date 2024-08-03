@@ -43,7 +43,6 @@ export default defineNuxtConfig({
   plugins: ["~/plugins/rellax.client.js"],
 
   app: {
-
     pageTransition: { name: "page", appear: true },
 
     head: {
@@ -53,7 +52,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      
+
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1.0" },
@@ -86,7 +85,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: "https://benward.io/images/index-background.png",
+          content: "https://benward.io/images/index-background.webp",
         },
         { property: "og:url", content: "https://benward.io/" },
         {

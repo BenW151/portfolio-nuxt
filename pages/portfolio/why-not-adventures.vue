@@ -63,7 +63,7 @@
     <section>
       <LayoutGridContainer>
         <ImageDefault
-          imageUrl="/images/why-not-adventures/header.png"
+          imageUrl="/images/why-not-adventures/header.webp"
           altText="TODO Replace"
           class="portfolio-header"
           rellaxPercentage="0"
@@ -74,17 +74,17 @@
     <LayoutPortfolioLargeImages
       :images="[
         {
-          url: '/images/why-not-adventures/trip-long-screenshot.png',
+          url: '/images/why-not-adventures/trip-long-screenshot.webp',
           alt: 'Background Image',
           customClass: 'why-not-destination',
         },
         {
-          url: '/images/why-not-adventures/gallery.png',
+          url: '/images/why-not-adventures/gallery.webp',
           alt: 'Overlay Image 1',
           customClass: 'why-not-gallery',
         },
         {
-          url: '/images/why-not-adventures/itinerary-2.png',
+          url: '/images/why-not-adventures/itinerary-2.webp',
           alt: 'Overlay Image 2',
           customClass: 'why-not-itinerary',
         },
@@ -129,7 +129,7 @@
 
     <LayoutPortfolioSection
       sectionID="itinerary"
-      imageUrl="/images/why-not-adventures/image-1.png"
+      imageUrl="/images/why-not-adventures/image-1.webp"
       imageAlt="TODO REPLACE TEXT"
       :imageCustomClass="['why-not-itinerary', 'overflow']"
       textPosition="right"
@@ -155,12 +155,12 @@
           customClass: 'custom-background-class',
         },
         {
-          url: '/images/why-not-adventures/why-choose.png',
+          url: '/images/why-not-adventures/why-choose.webp',
           alt: 'Overlay Image 1',
           customClass: 'portfolio-about',
         },
         {
-          url: '/images/why-not-adventures/faq.png',
+          url: '/images/why-not-adventures/faq.webp',
           alt: 'Overlay Image 2',
           customClass: 'portfolio-faq',
         },
@@ -168,7 +168,7 @@
 
     <LayoutPortfolioSection
       sectionID="services"
-      imageUrl="/images/why-not-adventures/who-am-i.png"
+      imageUrl="/images/why-not-adventures/who-am-i.webp"
       imageAlt="TODO REPLACE TEXT"
       :imageCustomClass="['why-not-owner', 'overflow']"
       textPosition="left"
@@ -189,7 +189,7 @@
 
     <LayoutPortfolioSection
       sectionID="psi"
-      imageUrl="/images/why-not-adventures/psi-score.png"
+      imageUrl="/images/why-not-adventures/psi-score.webp"
       imageAlt="TODO REPLACE TEXT"
       :imageCustomClass="['portfolio-psi']"
       textPosition="right"
@@ -219,17 +219,17 @@
     <LayoutPortfolioMobile
       :images="[
         {
-          url: '/images/why-not-adventures/header-mobile.png',
+          url: '/images/why-not-adventures/header-mobile.webp',
           alt: 'Background Image',
           customClass: 'portfolio-header',
         },
         {
-          url: '/images/why-not-adventures/destinations-mobile.png',
+          url: '/images/why-not-adventures/destinations-mobile.webp',
           alt: 'Overlay Image 1',
           customClass: 'why-not-destinations',
         },
         {
-          url: '/images/why-not-adventures/itinerary-mobile.png',
+          url: '/images/why-not-adventures/itinerary-mobile.webp',
           alt: 'Overlay Image 2',
           customClass: 'why-not-itinerary',
         },
@@ -252,7 +252,7 @@
     <section>
       <LayoutGridContainer>
         <ImageDefault
-          imageUrl="/images/why-not-adventures/contact-long-screenshot.png"
+          imageUrl="/images/why-not-adventures/contact-long-screenshot.webp"
           altText="TODO Replace"
           class="portfolio-contact" />
       </LayoutGridContainer>
@@ -319,7 +319,8 @@ useHead({
   grid-row-start: 2;
 }
 
-.portfolio .portfolio-header, .portfolio-contact {
+.portfolio .portfolio-header,
+.portfolio-contact {
   grid-column: 1 / 17;
 }
 
