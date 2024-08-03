@@ -13,6 +13,7 @@
   --color-grey: #555555;
   --foreground-primary: var(--color-white);
   --background-primary: var(--color-black);
+	--accent-primary: var(--color-grey);
 
   /** Other */
   --opacity: 70%;
@@ -85,7 +86,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-grey);
+  background: var(--accent-primary);
 }
 
 element {

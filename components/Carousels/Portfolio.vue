@@ -174,7 +174,7 @@ window.addEventListener("resize", updateIsMobile);
   position: relative;
   width: 20%;
   height: 1px;
-  background-color: var(--color-grey);
+  background-color: var(--accent-primary);
 }
 
 .custom-scrollbar-progress {
