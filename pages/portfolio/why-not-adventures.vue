@@ -114,13 +114,15 @@
       title="A Fresh, Modern Appearance">
       <template #body>
         <p>
-          I designed a clean and modern logo that captures the essence of
-          exploration and adventure. The logo features a simple yet striking
-          mountain icon, symbolising the spirit of adventure and the great
-          outdoors. Accompanying the mountain is the company name, presented in
-          a sleek, contemporary font that enhances the logo's overall appeal.
-          This minimalist design ensures the logo is versatile and easily
-          recognizable, aligning perfectly with the brand's identity and vision.
+          I crafted a cohesive brand identity that reflects the essence of
+          exploration and adventure. This includes a clean and modern logo
+          featuring a simple yet striking mountain icon, symbolising the spirit
+          of adventure and the great outdoors. The logo is complemented by a
+          sleek, contemporary font used for the company name, ensuring a
+          versatile and easily recognisable design. Alongside the logo, the
+          brand's colour palette and typography were carefully selected to
+          create a consistent and engaging visual experience, perfectly aligning
+          with the brand's identity and vision.
         </p>
       </template>
     </LayoutPortfolioSection>
@@ -252,7 +254,7 @@
         <ImageDefault
           imageUrl="/images/why-not-adventures/contact-long-screenshot.png"
           altText="TODO Replace"
-          class="portfolio-header"/>
+          class="portfolio-contact" />
       </LayoutGridContainer>
     </section>
 
@@ -317,7 +319,7 @@ useHead({
   grid-row-start: 2;
 }
 
-.portfolio .portfolio-header {
+.portfolio .portfolio-header, .portfolio-contact {
   grid-column: 1 / 17;
 }
 

@@ -150,6 +150,12 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
+    } else if (classList.includes("portfolio-contact")) {
+      hoveredText.value = "Contact";
+      hoveredIconComponent.value = null; // Reset icon
+      hoverClass.value = "show";
+      found = true;
+      break;
     } else if (classList.includes("why-not-owner")) {
       hoveredText.value = "Founder";
       hoveredIconComponent.value = null; // Reset icon
