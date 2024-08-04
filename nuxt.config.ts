@@ -67,7 +67,7 @@ export default defineNuxtConfig({
           content:
             "Web, Development, WebDev, Benward, Web Development Services, Ben Ward, Web Development, Web Developer, Developer",
         },
-        { name: "theme-color", content: "#000000" },
+        { name: "theme-color", content: "#ffffff" },
         { name: "msapplication-TileColor", content: "#da532c" },
         { name: "msapplication-config", content: "/browserconfig.xml" },
         {
@@ -103,7 +103,7 @@ export default defineNuxtConfig({
             "@type": "Organization",
             name: "Ben Ward Web Development",
             url: "https://benward.io",
-            logo: "https://benward.io/images/logo-black.svg",
+            logo: "https://benward.io/branding/benward-logo-square.webp",
             sameAs: [
               "https://www.instagram.com/benward.io",
               "https://www.linkedin.com/company/benward/",
