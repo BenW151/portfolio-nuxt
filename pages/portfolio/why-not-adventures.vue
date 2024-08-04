@@ -5,11 +5,7 @@
       imageAlt="Mountains of Pakistan"
       title="Why Not Adventures"
       subtitle="Tour Operator."
-      buttonText="View Website"
-      buttonUrl="https://whynotadventures.co.uk"
-      buttonDescription="View Website"
       headerClass="header-large">
-      <template #description> </template>
     </Header>
 
     <section class="overview">
