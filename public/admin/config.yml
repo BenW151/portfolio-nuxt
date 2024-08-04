@@ -1,8 +1,7 @@
 backend:
   name: github
-  repo: benw151/portfolio-nuxt # Replace with your GitHub repo
+  repo: benw151/portfolio-nuxt # Your GitHub repository
   branch: cms-poc # The branch you want to update
-  auth_scope: repo
 
 media_folder: static/img
 public_folder: /img
