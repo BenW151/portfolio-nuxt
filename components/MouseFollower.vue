@@ -25,6 +25,7 @@ import {
   LucideMoon,
   LucideLaptop,
   LucideWrench,
+  LucideTreePalm,
 } from "lucide-vue-next";
 
 // Icons for cycling
@@ -188,6 +189,12 @@ const updatePosition = (event) => {
       break;
     } else if (classList.includes("external-link")) {
       hoveredIconComponent.value = LucideExternalLink;
+      hoveredText.value = ""; // Clear text
+      hoverClass.value = "show";
+      found = true;
+      break;
+    } else if (classList.includes("time")) {
+      hoveredIconComponent.value = LucideTreePalm;
       hoveredText.value = ""; // Clear text
       hoverClass.value = "show";
       found = true;

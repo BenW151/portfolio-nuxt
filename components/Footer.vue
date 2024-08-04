@@ -4,14 +4,21 @@
       <div class="work-with-me">
         <h5>Work With Me</h5>
         <p>
-          For all business inquiries please <br v-if="!isMobile" />
-          contact me at
+          For all inquiries please contact<br />
+          me at
           <a
             href="mailto:contact@benward.io"
             aria-label="email address"
             class="underline-out email"
             >contact@benward.io</a
           >.
+        </p>
+      </div>
+      <div class="location">
+        <h5>Current Location</h5>
+        <p class="time">
+          Melbourne, Australia (AEST) <br />
+          {{ currentTime }} | {{ currentDate }}
         </p>
       </div>
       <ListsLinkList
@@ -76,7 +83,38 @@ const scrollToTop = () => {
   });
 };
 
-const { windowWidth, isMobile } = useWindowWidth();
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const currentTime = ref('')
+const currentDate = ref('')
+
+const updateTime = () => {
+  const optionsTime = { 
+    timeZone: 'Australia/Melbourne', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit', 
+    hourCycle: 'h23' // 24-hour format
+  }
+  const optionsDate = { 
+    timeZone: 'Australia/Melbourne',
+    year: 'numeric', 
+    month: 'long', 
+    day: '2-digit' 
+  }
+  const now = new Date()
+  currentTime.value = now.toLocaleTimeString('en-AU', optionsTime)
+  currentDate.value = now.toLocaleDateString('en-AU', optionsDate)
+}
+
+onMounted(() => {
+  updateTime()
+  const interval = setInterval(updateTime, 1000)
+  
+  onUnmounted(() => {
+    clearInterval(interval)
+  })
+})
 </script>
 
 <style scoped>
@@ -146,8 +184,18 @@ footer .container {
   margin-bottom: auto;
 }
 
-.work-with-me h5 {
+h5 {
   margin-bottom: var(--spacing-1);
+}
+
+.location {
+  grid-column: 6 / 9;
+  grid-row: 1;
+  margin-bottom: auto;
+}
+
+.time {
+  margin-bottom: 0;
 }
 
 .nav-links {
@@ -190,7 +238,12 @@ footer .container {
   }
 
   .work-with-me {
-    grid-column: 1 / 7;
+    grid-column: 1 / 4;
+    grid-row: 1;
+  }
+
+  .location {
+    grid-column: 4 / 7;
     grid-row: 1;
   }
 
@@ -214,6 +267,10 @@ footer .container {
     grid-column: 1 / 7;
     grid-row: 3;
     font-size: 17vw;
+  }
+
+  h5 {
+    margin-bottom: 0;
   }
 }
 
