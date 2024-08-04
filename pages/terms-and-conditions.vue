@@ -161,7 +161,7 @@ useHead({
     {
       name: "description",
       content:
-        "Offering top-notch web development services to help businesses succeed online.",
+        "Understand the terms and conditions that apply when using my website and services.",
     },
   ],
   link: [

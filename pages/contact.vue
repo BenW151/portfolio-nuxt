@@ -41,7 +41,7 @@ useHead({
     {
       name: "description",
       content:
-        "Offering top-notch web development services to help businesses succeed online.",
+"Get in touch to discuss your project or ask any questions."
     },
   ],
   link: [

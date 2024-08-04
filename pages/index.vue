@@ -344,7 +344,7 @@ useHead({
     {
       name: "description",
       content:
-        "Offering top-notch web development services to help businesses succeed online.",
+        "Providing professional web development services focused on creating modern, responsive, and user-friendly websites tailored to your needs.",
     },
   ],
   link: [

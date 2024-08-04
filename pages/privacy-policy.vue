@@ -97,7 +97,7 @@ useHead({
     {
       name: "description",
       content:
-        "Offering top-notch web development services to help businesses succeed online.",
+        "Find out how I protect your privacy and manage your personal information.",
     },
   ],
   link: [

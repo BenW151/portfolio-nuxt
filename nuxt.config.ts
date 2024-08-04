@@ -60,12 +60,12 @@ export default defineNuxtConfig({
           hid: "description",
           name: "description",
           content:
-            "Offering top-notch web development services to help businesses succeed online.",
+            "Providing professional web development services focused on creating modern, responsive, and user-friendly websites tailored to your needs.",
         },
         {
           name: "keywords",
           content:
-            "Web, Development, WebDev, Benward, Web Development Services, Ben Ward, Web Development, Web Developer, Developer",
+            "Web, Development, WebDev, Benward, Web Development Services, Ben Ward, Web Development, Web Developer, Developer, Web Design, Design, WebDesign, SEO",
         },
         { name: "theme-color", content: "#ffffff" },
         { name: "msapplication-TileColor", content: "#da532c" },
@@ -81,7 +81,7 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Offering top-notch web development services to help businesses succeed online.",
+            "Providing professional web development services focused on creating modern, responsive, and user-friendly websites tailored to your needs.",
         },
         {
           property: "og:image",

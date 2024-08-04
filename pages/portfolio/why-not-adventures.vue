@@ -283,7 +283,7 @@ useHead({
     {
       name: "description",
       content:
-        "Offering top-notch web development services to help businesses succeed online.",
+        "Explore one of my recent projects, showcasing a dynamic and user-friendly travel website built to inspire and engage travellers.",
     },
   ],
   link: [

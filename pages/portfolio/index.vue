@@ -23,7 +23,7 @@ useHead({
     {
       name: "description",
       content:
-        "Offering top-notch web development services to help businesses succeed online.",
+        "Explore my web development portfolio, featuring my latest and most impactful projects.",
     },
   ],
   link: [
@@ -33,7 +33,6 @@ useHead({
     },
   ],
 });
-
 </script>
 
 <style>

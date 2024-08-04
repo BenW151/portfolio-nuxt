@@ -146,6 +146,10 @@ footer .container {
   margin-bottom: auto;
 }
 
+.work-with-me h5 {
+  margin-bottom: var(--spacing-1);
+}
+
 .nav-links {
   grid-column: 11 / 13;
   grid-row: 1;
