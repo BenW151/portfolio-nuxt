@@ -6,70 +6,146 @@
           <template #title>Terms + Conditions</template>
           <template #body>
             <p>
-              Thank you for visiting my website. Your privacy is important to
-              me, and I am committed to protecting your personal information.
-              This Privacy Policy is designed to help you understand how I
-              collect, use, and safeguard your information when you visit my
-              website.
+              Thank you for visiting my website. Your trust is important to me,
+              and I am dedicated to providing a transparent and fair experience.
+              These Terms and Conditions are designed to help you understand the
+              rules and guidelines that govern the use of my website and the
+              services I offer.
             </p>
-            <p>Last Updated: 22/05/2024</p>
-            <h4>1. Information I Collect</h4>
+            <p>Last Updated: 04/08/2024</p>
+
+            <h4>1. Introduction</h4>
             <p>
-              I may collect both personally identifiable information (PII) and
-              non-personally identifiable information when you visit my website.
-              PII may include your name, email address, and other information
-              that can be used to identify you personally. Non-personally
-              identifiable information may include your IP address, browser
-              type, and other technical details.
+              Welcome to benward.io ("Company", "we", "our", "us", "me", "I").
+              These Terms and Conditions ("Terms") govern your relationship with
+              benward.io (the "Website") and all services provided by the
+              Company.
             </p>
-            <h4>2. How I Use Your Information</h4>
             <p>
-              I use the information I collect for various purposes, including:
+              By accessing or using our Website and services, you agree to
+              comply with and be bound by these Terms. If you do not agree with
+              any part of these Terms, you must not use our services.
             </p>
-            <ul>
-              <li>Providing and improving my website</li>
-              <li>Responding to your inquiries</li>
-              <li>Sending newsletters or promotional materials</li>
-              <li>Customising your experience on my website</li>
-            </ul>
-            <h4>3. Cookies and Tracking Technologies</h4>
+
+            <h4>2. Services</h4>
             <p>
-              I may use cookies and similar tracking technologies to enhance
-              your experience on my website. You can choose to disable cookies
-              through your browser settings, but please note that some features
-              of my website may not function properly if you do so.
+              We offer web development services, including but not limited to
+              website design, development, and maintenance. The specifics of the
+              services will be detailed in a separate agreement or statement of
+              work ("SOW") provided to the client.
             </p>
-            <h4>4. Third-Party Disclosure</h4>
+
+            <h4>3. Client Obligations</h4>
             <p>
-              I do not sell, trade, or otherwise transfer your personal
-              information to third parties without your consent. However, I may
-              share your information with trusted third parties who assist me in
-              operating my website, conducting my business, or servicing you.
+              <strong>Content and Materials:</strong> The client is responsible
+              for providing all content, logos, images, and any other materials
+              required for the completion of the project, unless otherwise
+              agreed.
             </p>
-            <h4>5. Security Measures</h4>
             <p>
-              I take reasonable precautions to protect your information.
-              However, no data transmission over the internet or electronic
-              storage is completely secure, and I cannot guarantee absolute
-              security.
+              <strong>Timely Feedback:</strong> The client agrees to provide
+              timely feedback and approvals to ensure the project progresses
+              according to the agreed timeline.
             </p>
-            <h4>6. Your Choices</h4>
             <p>
-              You have the right to access, correct, or delete your personal
-              information. You may also choose to opt-out of certain
-              communications. If you have any concerns about your privacy,
-              please contact me using the information provided below.
+              <strong>Legal Compliance:</strong> The client must ensure that all
+              provided content complies with applicable laws and does not
+              infringe on any third-party rights.
             </p>
-            <h4>7. Changes to This Privacy Policy</h4>
+
+            <h4>4. Payment Terms</h4>
             <p>
-              I reserve the right to update my Privacy Policy from time to time.
-              Any changes will be posted on this page with a revised date.
+              <strong>Fees:</strong> Payment terms, including fees and payment
+              schedules, will be outlined in the SOW.
             </p>
-            <h4>8. Contact Information</h4>
             <p>
-              If you have any questions or concerns regarding my Privacy Policy,
-              please contact me at myemail@email.com. By using my website, you
-              consent to the terms outlined in this Privacy Policy
+              <strong>Deposits:</strong> A non-refundable deposit may be
+              required before work commences.
+            </p>
+            <p>
+              <strong>Late Payments:</strong> Any late payments may incur
+              interest at a rate of 5% per month. We reserve the right to pause
+              work or terminate the agreement if payment is not received in a
+              timely manner.
+            </p>
+
+            <h4>5. Revisions and Changes</h4>
+            <p>
+              <strong>Scope of Work:</strong> Any revisions or changes requested
+              by the client that fall outside the original scope of work will be
+              billed additionally at our standard hourly rate.
+            </p>
+            <p>
+              <strong>Revisions:</strong> We offer [X] rounds of revisions as
+              part of the service. Additional revisions will incur additional
+              charges.
+            </p>
+
+            <h4>6. Intellectual Property</h4>
+            <p>
+              <strong>Ownership:</strong> Upon full payment, the client will own
+              the final deliverables. We retain ownership of any pre-existing
+              intellectual property or tools used in the project.
+            </p>
+            <p>
+              <strong>Portfolio Use:</strong> We reserve the right to showcase
+              the completed project in our portfolio and marketing materials
+              unless the client specifically requests otherwise.
+            </p>
+
+            <h4>7. Confidentiality</h4>
+            <p>
+              Both parties agree to keep confidential any proprietary
+              information received during the course of the project. This
+              includes business plans, technical data, and client information.
+            </p>
+
+            <h4>8. Termination</h4>
+            <p>
+              <strong>By the Client:</strong> The client may terminate the
+              project at any time, but will be responsible for payment for all
+              work completed up to the termination date.
+            </p>
+            <p>
+              <strong>By the Company:</strong> We reserve the right to terminate
+              the project if the client breaches these Terms or fails to make
+              timely payments.
+            </p>
+
+            <h4>9. Limitation of Liability</h4>
+            <p>
+              We will not be liable for any indirect, special, or consequential
+              damages arising out of or in connection with the services
+              provided, including but not limited to loss of profits, data, or
+              business opportunities.
+            </p>
+
+            <h4>10. Governing Law</h4>
+            <p>
+              These Terms shall be governed by and construed in accordance with
+              the laws of the United Kingdom, without regard to its conflict of
+              law provisions.
+            </p>
+
+            <h4>11. Amendments</h4>
+            <p>
+              We reserve the right to modify these Terms at any time. Any
+              changes will be effective immediately upon posting on our Website.
+              It is the client's responsibility to review the Terms
+              periodically.
+            </p>
+
+            <h4>12. Contact Information</h4>
+            <p>
+              By using our services, you agree to the terms outlined in these
+              Terms and Conditions. If you have any questions or concerns about
+              these Terms, please contact us at
+              <a
+                href="mailto:contact@benward.io"
+                aria-label="email address"
+                class="underline-out email"
+                >contact@benward.io</a
+              >.
             </p>
           </template>
         </TextParagraphWithTitle>
@@ -81,7 +157,13 @@
 <script setup>
 useHead({
   title: "Ben Ward | Terms + Conditions",
-  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  meta: [
+    {
+      name: "description",
+      content:
+        "Offering top-notch web development services to help businesses succeed online.",
+    },
+  ],
   link: [
     {
       rel: "canonical",

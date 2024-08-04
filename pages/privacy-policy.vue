@@ -12,7 +12,8 @@
               collect, use, and safeguard your information when you visit my
               website.
             </p>
-            <p>Last Updated: 22/05/2024</p>
+            <p>Last Updated: 04/08/2024</p>
+
             <h4>1. Information I Collect</h4>
             <p>
               I may collect both personally identifiable information (PII) and
@@ -26,12 +27,17 @@
             <p>
               I use the information I collect for various purposes, including:
             </p>
-            <ul>
-              <li>Providing and improving my website</li>
-              <li>Responding to your inquiries</li>
-              <li>Sending newsletters or promotional materials</li>
-              <li>Customising your experience on my website</li>
-            </ul>
+            <ListsDefaultList
+              bullets="true"
+              :items="[
+                { id: 1, text: 'Providing and improving my website' },
+                { id: 2, text: 'Responding to your inquiries' },
+                {
+                  id: 3,
+                  text: 'Sending newsletters or promotional materials',
+                },
+                { id: 4, text: 'Customising your experience on my website' },
+              ]" />
             <h4>3. Cookies and Tracking Technologies</h4>
             <p>
               I may use cookies and similar tracking technologies to enhance
@@ -67,9 +73,15 @@
             </p>
             <h4>8. Contact Information</h4>
             <p>
-              If you have any questions or concerns regarding my Privacy Policy,
-              please contact me at myemail@email.com. By using my website, you
-              consent to the terms outlined in this Privacy Policy
+              By using my website, you consent to the terms outlined in this
+              Privacy Policy. If you have any questions or concerns regarding
+              the Privacy Policy, please contact me at
+              <a
+                href="mailto:contact@benward.io"
+                aria-label="email address"
+                class="underline-out email"
+                >contact@benward.io</a
+              >.
             </p>
           </template>
         </TextParagraphWithTitle>
@@ -81,7 +93,13 @@
 <script setup>
 useHead({
   title: "Ben Ward | Privacy Policy",
-  meta: [{ name: "description", content: "Offering top-notch web development services to help businesses succeed online." }],
+  meta: [
+    {
+      name: "description",
+      content:
+        "Offering top-notch web development services to help businesses succeed online.",
+    },
+  ],
   link: [
     {
       rel: "canonical",
