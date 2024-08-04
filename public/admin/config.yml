@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: benw151/portfolio-nuxt # Replace with your GitHub repo
+  branch: cms-poc # The branch you want to update
+  auth_scope: repo
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
