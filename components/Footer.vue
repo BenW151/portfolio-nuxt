@@ -253,12 +253,12 @@ h5 {
   }
 
   .socials {
-    grid-column: 5 / 7;
+    grid-column: 4 / 7;
     grid-row: 2;
   }
 
   .copyright {
-    grid-column: 5 / 7;
+    grid-column: 4 / 7;
     grid-row: 2;
     margin-top: auto;
   }
