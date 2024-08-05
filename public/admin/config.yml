@@ -2,9 +2,8 @@ backend:
   name: github
   repo: benw151/portfolio-nuxt # Your GitHub repository
   branch: cms-poc # The branch you want to update
-  base_url: https://benward-oauth.benward151.workers.dev/
-  auth_endpoint: auth
-
+  base_url: https://cms-poc.portfolio-nuxt-6c3.pages.dev
+  auth_endpoint: /api/auth
 
 media_folder: static/img
 public_folder: /img
