@@ -6,25 +6,23 @@ backend:
   repo: benw151/portfolio-nuxt # Your GitHub repository
   base_url: https://decap-proxy.benward151.workers.dev/
 
-media_folder: static/img
+media_folder: public/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    format: 'frontmatter'
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    format: "frontmatter"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Image URL', name: 'imageUrl', widget: 'string' } # Add this
-      - { label: 'Image Alt Text', name: 'imageAlt', widget: 'string' } # Add this
-      - { label: 'Subtitle', name: 'subtitle', widget: 'string' } # Add this
-      - { label: 'Section Title', name: 'sectionTitle', widget: 'string' } # Add this
-      - { label: 'Section Text', name: 'sectionText', widget: 'markdown' } # Add this
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Image URL", name: "imageUrl", widget: "string" }
+      - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+      - { label: "Section Title", name: "sectionTitle", widget: "string" }
+      - { label: "Section Text", name: "sectionText", widget: "markdown" }

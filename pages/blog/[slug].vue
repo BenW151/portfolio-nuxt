@@ -1,37 +1,29 @@
 <template>
   <div>
     <Header
-      :imageUrl="post.imageUrl"
-      :imageAlt="post.imageAlt"
-      :title="post.title"
-      :subtitle="post.subtitle"
+      imageUrl="/images/index-background.webp"
+      imageAlt="Laptop with code on desk"
+      title="Blog Title"
+      subtitle="Blog Subtitle."
       headerClass="header-large">
     </Header>
 
     <div class="container">
-      <ContentDoc :content="post.bodyText" />
+      <ContentDoc />
     </div>
-
-    <section class="blog-text">
-      <LayoutGridContainer>
-        <TextParagraphWithTitle subtitleTag="h3">
-          <template #title>{{ post.sectionTitle }}</template>
-          <template #body>
-            <p>{{ post.sectionText }}</p>
-          </template>
-        </TextParagraphWithTitle>
-      </LayoutGridContainer>
-    </section>
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ $content, params, error }) {
+    console.log('asyncData is running'); // Check if asyncData is executed
     let post;
     try {
       post = await $content("blog", params.slug).fetch();
+      console.log('Fetched post:', post); // Log the post object
     } catch (e) {
+      console.error('Error fetching post:', e);
       error({ message: "Blog Post not found", statusCode: 404 });
     }
 
@@ -39,13 +31,9 @@ export default {
       post,
     };
   },
+  mounted() {
+    console.log('Component has been mounted'); // Confirm the component is mounting
+  }
 };
 </script>
 
-
-<style scoped>
-.blog-text .paragraph-with-title:nth-of-type(1) {
-  grid-column: 6 / 14;
-  grid-row: 1;
-}
-</style>
