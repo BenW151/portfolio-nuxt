@@ -109,6 +109,12 @@ const updatePosition = (event) => {
       hoverClass.value = "show";
       found = true;
       break;
+    } else if (classList.includes("post-image")) {
+      hoveredText.value = "View";
+      hoveredIconComponent.value = null; // Reset icon
+      hoverClass.value = "show";
+      found = true;
+      break;
     } else if (classList.includes("portfolio-header")) {
       hoveredText.value = "Header";
       hoveredIconComponent.value = null; // Reset icon
