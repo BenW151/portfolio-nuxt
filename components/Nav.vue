@@ -16,6 +16,13 @@
         >Portfolio</NuxtLink
       >
       <NuxtLink
+        class="nav-item text-reveal"
+        to="/blog"
+        :class="{ active: $route.path === '/blog' }"
+        aria-label="Blog Page"
+        >Blog</NuxtLink
+      >
+      <NuxtLink
         class="nav-item text-reveal nav-contact"
         to="/contact"
         :class="{ active: $route.path === '/contact' }"
