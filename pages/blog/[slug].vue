@@ -2,7 +2,7 @@
   <div class="blog">
     <ContentDoc v-slot="{ doc }">
       <article>
-        <!-- Pass the content fields as props to the Header component -->
+        
         <Header
           :imageUrl="doc.imageUrl"
           :imageAlt="doc.imageAlt"
@@ -10,11 +10,15 @@
           :subtitle="doc.subtitle"
           headerClass="header-large" />
 
-        <!-- Render the rest of the content -->
-        <div class="container">
-          <h3>{{ doc.sectionTitle }}</h3>
-          <div v-html="doc.sectionText"></div>
-        </div>
+        <section class="what-to-do">
+          <LayoutGridContainer>
+            <div class="blog-text">
+              <h3>{{ doc.sectionTitle }}</h3>
+              <div v-html="doc.sectionText"></div>
+            </div>
+          </LayoutGridContainer>
+        </section>
+
       </article>
     </ContentDoc>
   </div>
@@ -42,6 +46,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.blog-text {
+  grid-column: 5 / 13;
+}
+
+@media (max-width: 767px) {
+  .blog-text {
+    grid-column: 1 / 7;
+  }
+}
+</style>
 
 <style>
 .blog .paragraph.medium {

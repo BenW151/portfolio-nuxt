@@ -14,7 +14,9 @@
           <!-- Display the image -->
           <img :src="post.imageUrl" :alt="post.imageAlt" class="post-image" />
           <!-- Display the title -->
-          <NuxtLink :to="post._path" class="post-title">{{ post.title }}</NuxtLink>
+          <NuxtLink :to="post._path" class="post-title">{{
+            post.title
+          }}</NuxtLink>
           <p>{{ post.description }}</p>
         </NuxtLink>
       </div>
@@ -36,11 +38,7 @@ const { data: posts } = await useAsyncData("posts", async () => {
 });
 </script>
 
-<style>
-.blog-pages .paragraph.medium {
-  display: none;
-}
-
+<style scoped>
 .post-title {
   font-size: var(--font-size-M);
   font-family: var(--font-family-primary);
@@ -53,17 +51,41 @@ const { data: posts } = await useAsyncData("posts", async () => {
 
 .post-image {
   width: 100%;
-  height: 100%;
+  height: 30vw;
+  object-fit: cover;
 }
 
-.blog-item:nth-child(2n+1) {
+.blog-item:nth-child(2n + 1) {
   grid-column: 1 / 9;
   grid-row: auto;
 }
 
 .blog-item:nth-child(2n) {
-  grid-column: 9 / 16;
+  grid-column: 9 / 17;
   grid-row: auto;
 }
 
+@media (max-width: 767px) {
+  .post-image {
+    height: 60vw;
+  }
+
+  .post-title {
+    margin-bottom: 0;
+  }
+
+  .blog-item:nth-child(2n + 1) {
+    grid-column: 1 / 7;
+  }
+
+  .blog-item:nth-child(2n) {
+    grid-column: 1 / 7;
+  }
+}
+</style>
+
+<style>
+.blog-pages .paragraph.medium {
+  display: none;
+}
 </style>
