@@ -27,3 +27,4 @@ collections:
       - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
       - { label: "Section Title", name: "sectionTitle", widget: "string" }
       - { label: "Section Text", name: "sectionText", widget: "markdown" }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
