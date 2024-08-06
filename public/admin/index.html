@@ -6,8 +6,7 @@
     <title>Content Manager</title>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Token Handling -->
     <script>
       // Extract the token from the URL
       const urlParams = new URLSearchParams(window.location.search);
@@ -15,12 +14,20 @@
 
       // Store the token in localStorage if it exists
       if (token) {
+        console.log('Storing token in localStorage:', token);
         localStorage.setItem('github_token', token);
         // Optionally redirect to clean up the URL
         window.history.replaceState({}, document.title, '/admin');
       } else {
         console.error('No token found in URL.');
       }
+
+      // Log the stored token to confirm it exists
+      console.log('Stored token:', localStorage.getItem('github_token'));
     </script>
+
+    <!-- Include Decap CMS Script -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
   </body>
 </html>
