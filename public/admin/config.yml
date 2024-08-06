@@ -6,7 +6,6 @@ backend:
   repo: benw151/portfolio-nuxt # Your GitHub repository
   base_url: https://decap-proxy.benward151.workers.dev/
 
-
 media_folder: static/img
 public_folder: /img
 
@@ -24,3 +23,8 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Image URL', name: 'imageUrl', widget: 'string' } # Add this
+      - { label: 'Image Alt Text', name: 'imageAlt', widget: 'string' } # Add this
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' } # Add this
+      - { label: 'Section Title', name: 'sectionTitle', widget: 'string' } # Add this
+      - { label: 'Section Text', name: 'sectionText', widget: 'markdown' } # Add this

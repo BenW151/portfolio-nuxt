@@ -1,16 +1,27 @@
 <template>
   <div>
     <Header
-      imageUrl="/images/index-background.webp"
-      imageAlt="Laptop with code on desk"
-      title="Blog Title"
-      subtitle="Blog Subtitle."
+      :imageUrl="post.imageUrl"
+      :imageAlt="post.imageAlt"
+      :title="post.title"
+      :subtitle="post.subtitle"
       headerClass="header-large">
     </Header>
 
     <div class="container">
-      <ContentDoc />
+      <ContentDoc :content="post.bodyText" />
     </div>
+
+    <section class="blog-text">
+      <LayoutGridContainer>
+        <TextParagraphWithTitle subtitleTag="h3">
+          <template #title>{{ post.sectionTitle }}</template>
+          <template #body>
+            <p>{{ post.sectionText }}</p>
+          </template>
+        </TextParagraphWithTitle>
+      </LayoutGridContainer>
+    </section>
   </div>
 </template>
 
@@ -20,9 +31,8 @@ export default {
     let post;
     try {
       post = await $content("blog", params.slug).fetch();
-      // OR const article = await $content(`articles/${params.slug}`).fetch()
     } catch (e) {
-      error({ message: "Blog Post not found" });
+      error({ message: "Blog Post not found", statusCode: 404 });
     }
 
     return {
@@ -31,3 +41,11 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+.blog-text .paragraph-with-title:nth-of-type(1) {
+  grid-column: 6 / 14;
+  grid-row: 1;
+}
+</style>
