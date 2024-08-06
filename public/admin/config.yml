@@ -1,9 +1,10 @@
+site_url: https://cms-poc.benward.io
+search: false
 backend:
   name: github
-  repo: benw151/portfolio-nuxt # Your GitHub repository
   branch: cms-poc # The branch you want to update
-  base_url: https://benward-oauth.benward151.workers.dev
-  auth_endpoint: /auth
+  repo: benw151/portfolio-nuxt # Your GitHub repository
+  base_url: https://decap-proxy.benward151.workers.dev/
 
 
 media_folder: static/img
