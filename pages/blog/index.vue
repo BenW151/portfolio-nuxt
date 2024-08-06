@@ -29,13 +29,17 @@
 const { data: posts } = await useAsyncData("posts", async () => {
   try {
     const content = await queryContent("blog").find();
-    // console.log("Fetched posts:", content);
-    return content;
+    
+    // Sort posts by date, newest first
+    const sortedContent = content.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    return sortedContent;
   } catch (err) {
-    // console.error("Error fetching posts:", err);
+    console.error("Error fetching posts:", err);
     return [];
   }
 });
+
 </script>
 
 <style scoped>

@@ -6,8 +6,8 @@ backend:
   repo: benw151/portfolio-nuxt # Your GitHub repository
   base_url: https://decap-proxy.benward151.workers.dev/
 
-media_folder: public/img
-public_folder: /img
+media_folder: public/images/uploads
+public_folder: /images/uploads
 
 collections:
   - name: "blog"
