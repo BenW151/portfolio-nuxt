@@ -1,9 +1,17 @@
 <template>
   <div class="blog">
+    <!-- Header Placeholder -->
+    <Header
+      v-if="!contentLoaded"
+      backgroundColor="var(--background-primary)"
+      title=""
+      subtitle=""
+      headerClass="header-large" />
     <ContentDoc v-slot="{ doc }">
       <article>
-        
+        <!-- Actual Header -->
         <Header
+          v-if="contentLoaded"
           :imageUrl="doc.imageUrl"
           :imageAlt="doc.imageAlt"
           :title="doc.title"
@@ -18,7 +26,6 @@
             </div>
           </LayoutGridContainer>
         </section>
-
       </article>
     </ContentDoc>
   </div>
@@ -26,23 +33,22 @@
 
 <script>
 export default {
+  data() {
+    return {
+      contentLoaded: false, // State to track content loading
+    };
+  },
   async asyncData({ $content, params, error }) {
-    console.log("asyncData is running"); // Check if asyncData is executed
     let post;
     try {
       post = await $content("blog", params.slug).fetch();
-      console.log("Fetched post:", post); // Log the post object
     } catch (e) {
-      console.error("Error fetching post:", e);
       error({ message: "Blog Post not found", statusCode: 404 });
     }
-
-    return {
-      post,
-    };
+    return { post };
   },
   mounted() {
-    console.log("Component has been mounted"); // Confirm the component is mounting
+    this.contentLoaded = true; // Mark content as loaded when component is mounted
   },
 };
 </script>
@@ -56,11 +62,5 @@ export default {
   .blog-text {
     grid-column: 1 / 7;
   }
-}
-</style>
-
-<style>
-.blog .paragraph.medium {
-  display: none;
 }
 </style>
