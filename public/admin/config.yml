@@ -23,8 +23,35 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Image URL", name: "imageUrl", widget: "string" }
-      - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
-      - { label: "Section Title", name: "sectionTitle", widget: "string" }
-      - { label: "Section Text", name: "sectionText", widget: "markdown" }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Header Image URL", name: "headerImageUrl", widget: "string" }
+      - {
+          label: "Header Image Alt Text",
+          name: "headerImageAlt",
+          widget: "string",
+        }
+      - { label: "What To Do Title", name: "whatToDoTitle", widget: "string" }
+      - { label: "What To Do Text", name: "whatToDoText", widget: "markdown" }
+      - {
+          label: "Where To Stay Title",
+          name: "whereToStayTitle",
+          widget: "string",
+        }
+      - {
+          label: "Where To Stay Text",
+          name: "whereToStayText",
+          widget: "markdown",
+        }
+      - { label: "What To See Title", name: "whatToSeeTitle", widget: "string" }
+      - { label: "What To See Text", name: "whatToSeeText", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Related Posts",
+          name: "relatedPosts",
+          widget: "relation",
+          collection: "blog",
+          search_fields: ["title", "description"],
+          value_field: "_path",
+          display_fields: ["title"],
+          multiple: true,
+          max: "4",
+        }
