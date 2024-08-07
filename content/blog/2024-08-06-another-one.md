@@ -3,7 +3,7 @@ title: Another one
 subtitle: Another one
 description: We the best
 date: 2024-08-06T20:42:00.000Z
-imageUrl: /images/why-not-adventures/background-image.webp
+imageUrl: /images/uploads/attabad-lake.webp
 imageAlt: hello
 sectionTitle: Section
 sectionText: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
