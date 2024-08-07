@@ -12,7 +12,7 @@
       <div v-for="post in posts" :key="post._path" class="blog-item">
         <NuxtLink :to="post._path" class="post-link">
           <!-- Display the image -->
-          <img :src="post.imageUrl" :alt="post.imageAlt" class="post-image" />
+          <img :src="post.headerImageUrl" :alt="post.headerImageUrl" class="post-image" />
           <!-- Display the title -->
           <NuxtLink :to="post._path" class="post-title">{{
             post.title
@@ -29,9 +29,13 @@
 const { data: posts } = await useAsyncData("posts", async () => {
   try {
     const content = await queryContent("blog").find();
-    
-    // Sort posts by date, newest first
-    const sortedContent = content.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Sort posts by date extracted from file names, newest first
+    const sortedContent = content.sort((a, b) => {
+      const dateA = new Date(a._path.split('/').pop().split('-').slice(0, 3).join('-'));
+      const dateB = new Date(b._path.split('/').pop().split('-').slice(0, 3).join('-'));
+      return dateB - dateA;
+    });
 
     return sortedContent;
   } catch (err) {
@@ -39,8 +43,8 @@ const { data: posts } = await useAsyncData("posts", async () => {
     return [];
   }
 });
-
 </script>
+
 
 <style scoped>
 .post-title {
