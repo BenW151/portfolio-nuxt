@@ -1,6 +1,7 @@
 <template>
   <div>
     <MouseFollower v-if="!isMobile" />
+    <NuxtLoadingIndicator color="var(--foreground-primary)"/>
     <Nav />
     <transition name="page" mode="out-in">
       <div :key="$route.path">
