@@ -26,8 +26,6 @@
       <!-- <p v-else>No posts found or failed to load posts.</p>-->
     </LayoutGridContainer>
 
-    <BlogCountryPosts country="france" />
-
   </div>
 </template>
 
@@ -36,8 +34,11 @@ const { data: posts } = await useAsyncData("posts", async () => {
   try {
     const content = await queryContent("blog").find();
 
+    // Filter out destination pages
+    const filteredContent = content.filter(post => !post._path.includes('destinations'));
+
     // Sort posts by date extracted from file names, newest first
-    const sortedContent = content.sort((a, b) => {
+    const sortedContent = filteredContent.sort((a, b) => {
       const dateA = new Date(
         a._path.split("/").pop().split("-").slice(0, 3).join("-")
       );
@@ -54,6 +55,7 @@ const { data: posts } = await useAsyncData("posts", async () => {
   }
 });
 </script>
+
 
 <style scoped>
 .post-title {

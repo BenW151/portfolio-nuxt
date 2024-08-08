@@ -46,3 +46,19 @@ collections:
       - { label: "What To See Title", name: "whatToSeeTitle", widget: "string" }
       - { label: "What To See Text", name: "whatToSeeText", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "destination" # Change this from "country" to "destination"
+    label: "Destinations" # Update the label to reflect the new context
+    folder: "content/blog/destinations" # Updated directory path
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Country", name: "country", widget: "string" }
+      - { label: "Header Image URL", name: "headerImageUrl", widget: "image", allow_multiple: false }
+      - { label: "Header Image Alt Text", name: "headerImageAlt", widget: "string" }

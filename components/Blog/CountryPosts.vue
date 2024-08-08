@@ -35,11 +35,12 @@ const { data: countryPosts } = await useAsyncData(
   async () => {
     const content = await queryContent("blog").find();
 
-    // Filter posts by the country prop
+    // Filter posts by the country prop and exclude 'destinations'
     const filteredContent = content.filter(
       (post) =>
         post.country &&
-        post.country.toLowerCase() === props.country.toLowerCase()
+        post.country.toLowerCase() === props.country.toLowerCase() &&
+        !post._path.includes('destinations') // Exclude items from the 'destinations' directory
     );
 
     return filteredContent;
