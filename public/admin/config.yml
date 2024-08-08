@@ -23,6 +23,7 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Tag", name: "tag", widget: "string" }
       - { label: "Header Image URL", name: "headerImageUrl", widget: "string" }
       - {
           label: "Header Image Alt Text",
