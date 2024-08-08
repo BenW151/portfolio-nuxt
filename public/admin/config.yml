@@ -23,8 +23,9 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Tag", name: "tag", widget: "string" }
-      - { label: "Header Image URL", name: "headerImageUrl", widget: "string" }
+      - { label: "Country", name: "country", widget: "string" }
+      - { label: "Tag", name: "tag", widget: "string", hint: "Must exactly match related pages, case sensitive." }
+      - { label: "Header Image URL", name: "headerImageUrl", widget: "image", allow_multiple: false }
       - {
           label: "Header Image Alt Text",
           name: "headerImageAlt",

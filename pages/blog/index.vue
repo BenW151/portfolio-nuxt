@@ -12,7 +12,10 @@
       <div v-for="post in posts" :key="post._path" class="blog-item">
         <NuxtLink :to="post._path" class="post-link">
           <!-- Display the image -->
-          <img :src="post.headerImageUrl" :alt="post.headerImageUrl" class="post-image" />
+          <img
+            :src="post.headerImageUrl"
+            :alt="post.headerImageUrl"
+            class="post-image" />
           <!-- Display the title -->
           <NuxtLink :to="post._path" class="post-title">{{
             post.title
@@ -22,6 +25,9 @@
       </div>
       <!-- <p v-else>No posts found or failed to load posts.</p>-->
     </LayoutGridContainer>
+
+    <BlogCountryPosts country="france" />
+
   </div>
 </template>
 
@@ -32,8 +38,12 @@ const { data: posts } = await useAsyncData("posts", async () => {
 
     // Sort posts by date extracted from file names, newest first
     const sortedContent = content.sort((a, b) => {
-      const dateA = new Date(a._path.split('/').pop().split('-').slice(0, 3).join('-'));
-      const dateB = new Date(b._path.split('/').pop().split('-').slice(0, 3).join('-'));
+      const dateA = new Date(
+        a._path.split("/").pop().split("-").slice(0, 3).join("-")
+      );
+      const dateB = new Date(
+        b._path.split("/").pop().split("-").slice(0, 3).join("-")
+      );
       return dateB - dateA;
     });
 
@@ -44,7 +54,6 @@ const { data: posts } = await useAsyncData("posts", async () => {
   }
 });
 </script>
-
 
 <style scoped>
 .post-title {
