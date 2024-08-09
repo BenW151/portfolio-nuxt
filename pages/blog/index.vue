@@ -1,6 +1,13 @@
 <template>
   <div class="blog-pages">
     <Header
+      v-if="!contentLoaded"
+      backgroundColor="var(--background-primary)"
+      title=""
+      subtitle=""
+      headerClass="header-large" />
+    <Header
+      v-if="contentLoaded"
       imageUrl="/images/index-background.webp"
       imageAlt="Laptop with code on desk"
       title="Recent Posts"
@@ -35,6 +42,28 @@ useHead({
     },
   ],
 });
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      contentLoaded: false, // State to track content loading
+    };
+  },
+  async asyncData({ $content, params, error }) {
+    let post;
+    try {
+      post = await $content("blog", params.slug).fetch();
+    } catch (e) {
+      error({ message: "Blog Post not found", statusCode: 404 });
+    }
+    return { post };
+  },
+  mounted() {
+    this.contentLoaded = true;
+  },
+};
 </script>
 
 <style scoped>
