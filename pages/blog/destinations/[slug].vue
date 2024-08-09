@@ -29,10 +29,6 @@ import { useRoute } from "nuxt/app";
 const route = useRoute();
 const country = route.params.slug; // Use 'slug' instead of 'country'
 
-// Add console logs to debug
-console.log("Route Params:", route.params);
-console.log("Country from Route:", country);
-
 // Fetch the destination-specific data
 const { data: destinationData } = await useAsyncData(
   `destinationData-${country}`,
@@ -41,16 +37,16 @@ const { data: destinationData } = await useAsyncData(
       .where({ country: country }) // Ensure you're filtering by 'country'
       .findOne();
     
-    console.log("Fetched Destination Data:", content); // Log fetched data
     return content;
   }
 );
 
 const contentLoaded = !!destinationData.value; // Determine if data has been loaded
 
-// Additional log to confirm everything is set up correctly
-console.log("Content Loaded:", contentLoaded);
-console.log("Country Prop:", country);
 </script>
 
-<style scoped></style>
+<style>
+.blog .paragraph.medium {
+  display: none;
+}
+</style>

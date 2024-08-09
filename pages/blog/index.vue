@@ -3,10 +3,12 @@
     <Header
       imageUrl="/images/index-background.webp"
       imageAlt="Laptop with code on desk"
-      title="Blog Pages"
+      title="Recent Posts"
       subtitle="Read My Blog."
       headerClass="header-large">
     </Header>
+
+    <NuxtLink to="/blog/destinations">Destinations</NuxtLink>
 
     <LayoutGridContainer v-if="posts && posts.length">
       <div v-for="post in posts" :key="post._path" class="blog-item">
@@ -15,7 +17,7 @@
           <img
             :src="post.headerImageUrl"
             :alt="post.headerImageUrl"
-            class="post-image" />
+            class="post-image content-image" />
           <!-- Display the title -->
           <NuxtLink :to="post._path" class="post-title">{{
             post.title

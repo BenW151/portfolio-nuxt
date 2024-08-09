@@ -1,14 +1,13 @@
 <template>
   <section class="country-posts">
     <LayoutGridContainer v-if="countryPosts && countryPosts.length">
-      <h3>Posts About {{ country }}</h3>
       <div v-for="post in countryPosts" :key="post._path" class="blog-item">
         <NuxtLink :to="post._path" class="post-link">
           <!-- Display the image -->
           <img
             :src="post.headerImageUrl"
             :alt="post.headerImageAlt"
-            class="post-image" />
+            class="post-image content-image" />
           <!-- Display the title -->
           <NuxtLink :to="post._path" class="post-title">{{
             post.title
@@ -70,13 +69,13 @@ const { data: countryPosts } = await useAsyncData(
   grid-row: 1;
 }
 
-.blog-item:nth-child(2n + 1):not(:nth-child(1)) {
-  grid-column: 9 / 17;
+.blog-item:nth-child(2n + 1) {
+  grid-column: 1 / 9;
   grid-row: auto;
 }
 
 .blog-item:nth-child(2n) {
-  grid-column: 1 / 9;
+  grid-column: 9 / 17;
   grid-row: auto;
 }
 
@@ -95,17 +94,12 @@ const { data: countryPosts } = await useAsyncData(
     margin-bottom: 0;
   }
 
-  .blog-item:nth-child(2n + 1):not(:nth-child(1)) {
+  .blog-item:nth-child(2n + 1) {
     grid-column: 1 / 7;
   }
 
   .blog-item:nth-child(2n) {
     grid-column: 1 / 7;
-  }
-
-  .country-posts h3 {
-    grid-column: 1 / 7;
-    grid-row: 1;
   }
 }
 </style>

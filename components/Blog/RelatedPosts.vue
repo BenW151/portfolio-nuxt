@@ -9,7 +9,7 @@
             <img
               :src="post.headerImageUrl"
               :alt="post.headerImageAlt"
-              class="post-image" />
+              class="post-image content-image" />
             <!-- Display the title -->
             <NuxtLink :to="post._path" class="post-title">{{
               post.title
@@ -100,6 +100,14 @@ const { data: relatedPosts } = await useAsyncData("relatedPosts", async () => {
 }
 
 @media (max-width: 767px) {
+  .blog-item:nth-child(n),
+  .related-posts h3 {
+    grid-column: 1 / 7;
+    grid-row: auto;
+  }
 
+  .post-image {
+    height: auto;
+  }
 }
 </style>

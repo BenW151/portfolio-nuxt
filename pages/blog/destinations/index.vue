@@ -20,7 +20,7 @@
           <img
             :src="destination.headerImageUrl"
             :alt="destination.headerImageAlt"
-            class="destination-image" />
+            class="destination-image content-image" />
           <!-- Display the title -->
           <NuxtLink
             :to="`/blog/destinations/${destination.country}`"
