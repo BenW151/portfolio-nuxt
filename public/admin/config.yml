@@ -23,7 +23,16 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Country", name: "country", widget: "string" }
+      - {
+          label: "Country",
+          name: "country",
+          widget: "relation",
+          collection: "destination",
+          search_fields: ["title"],
+          value_field: "title",
+          display_fields: ["title"],
+          multiple: false,
+        }      
       - { label: "Tag", name: "tag", widget: "string", hint: "Must exactly match related pages, case sensitive." }
       - { label: "Header Image URL", name: "headerImageUrl", widget: "image", allow_multiple: false }
       - {
@@ -46,9 +55,9 @@ collections:
       - { label: "What To See Title", name: "whatToSeeTitle", widget: "string" }
       - { label: "What To See Text", name: "whatToSeeText", widget: "markdown" }
       - { label: "Body", name: "body", widget: "markdown" }
-  - name: "destination" # Change this from "country" to "destination"
-    label: "Destinations" # Update the label to reflect the new context
-    folder: "content/blog/destinations" # Updated directory path
+  - name: "destination"
+    label: "Destinations"
+    folder: "content/blog/destinations"
     format: "frontmatter"
     create: true
     slug: "{{slug}}"
