@@ -121,9 +121,11 @@
             </AccordionItem>
             <AccordionItem title="Blog Configuration" index="4">
               <p>
-                CMS configuration, allowing you to upload new blog posts
-                yourself. Allowing flexibility and on the fly updates without
-                the need for any technical knowledge.
+                Comprehensive blog configuration services, enabling you to
+                easily manage and update your blog content through a
+                user-friendly CMS. This setup allows for seamless content
+                management, ensuring you can make updates on the fly without
+                requiring any technical expertise.
               </p>
             </AccordionItem>
             <AccordionItem title="SEO" index="5">
