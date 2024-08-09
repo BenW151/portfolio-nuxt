@@ -5,7 +5,6 @@
       title="Portfolio"
       subtitle="Previous Work."
       headerClass="header-large">
-      <template #description> </template>
     </Header>
 
     <section id="carousel">

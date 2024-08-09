@@ -28,7 +28,7 @@ function handleClick() {
 }
 </script>
 
-<style>
+<style scoped>
 .accordion-item {
   border-bottom: 1px solid var(--accent-primary);
   cursor: pointer;

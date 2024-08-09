@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .container {
   position: relative;
   width: 100%;

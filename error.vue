@@ -6,11 +6,11 @@
     :title="`${error.statusCode} Error`"
       subtitle="This Page Does Not Exist"
       headerClass="header-small"
-      buttonText="Go Home"
+      buttonText="Back to Home Page"
       buttonUrl="/"
-      buttonDescription="Go Home">
+      buttonDescription="Back to Home Page">
       <template #description>
-        <p>I haven't created this page yet.</p>
+        <p>There was an error.</p>
       </template>
     </Header>
   </div>
@@ -24,7 +24,7 @@ const props = defineProps({
 const handleError = () => clearError({ redirect: "/" });
 
 useHead({
-  title: "Ben Ward - Error",
+  title: "Ben Ward | Error",
   meta: [{ name: "description", content: "My amazing site." }],
 });
 </script>

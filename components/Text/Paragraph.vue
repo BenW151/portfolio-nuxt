@@ -16,7 +16,7 @@ const props = defineProps({
 });
 </script>
 
-<style>
+<style scoped>
 .paragraph.small {
   grid-column: span 4;
 }

@@ -119,7 +119,16 @@
                 powerful brand image that resonates with the target audience.
               </p>
             </AccordionItem>
-            <AccordionItem title="SEO" index="4">
+            <AccordionItem title="Blog Configuration" index="4">
+              <p>
+                Comprehensive blog configuration services, enabling you to
+                easily manage and update your blog content through a
+                user-friendly CMS. This setup allows for seamless content
+                management, ensuring you can make updates on the fly without
+                requiring any technical expertise.
+              </p>
+            </AccordionItem>
+            <AccordionItem title="SEO" index="5">
               <p>
                 SEO services are designed to increase visibility and drive
                 traffic through strategic keyword placement, content
@@ -128,7 +137,7 @@
                 and enhance online presence.
               </p>
             </AccordionItem>
-            <AccordionItem title="Support" index="5">
+            <AccordionItem title="Support" index="6">
               <p>
                 Ongoing support and maintenance services to ensure websites
                 remain up-to-date and perform optimally. This includes regular
