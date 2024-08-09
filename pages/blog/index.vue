@@ -5,59 +5,37 @@
       imageAlt="Laptop with code on desk"
       title="Recent Posts"
       subtitle="Read My Blog."
+      buttonText="Destinations"
+      buttonUrl="/blog/destinations"
+      buttonDescription="Destinations"
       headerClass="header-large">
+      <template #description>
+        <p>View some of my blog posts</p>
+      </template>
     </Header>
 
-    <NuxtLink to="/blog/destinations">Destinations</NuxtLink>
-
-    <LayoutGridContainer v-if="posts && posts.length">
-      <div v-for="post in posts" :key="post._path" class="blog-item">
-        <NuxtLink :to="post._path" class="post-link">
-          <!-- Display the image -->
-          <img
-            :src="post.headerImageUrl"
-            :alt="post.headerImageUrl"
-            class="post-image content-image" />
-          <!-- Display the title -->
-          <NuxtLink :to="post._path" class="post-title">{{
-            post.title
-          }}</NuxtLink>
-          <p>{{ post.description }}</p>
-        </NuxtLink>
-      </div>
-      <!-- <p v-else>No posts found or failed to load posts.</p>-->
-    </LayoutGridContainer>
-
+    <BlogRecentPosts />
   </div>
 </template>
 
 <script setup>
-const { data: posts } = await useAsyncData("posts", async () => {
-  try {
-    const content = await queryContent("blog").find();
-
-    // Filter out destination pages
-    const filteredContent = content.filter(post => !post._path.includes('destinations'));
-
-    // Sort posts by date extracted from file names, newest first
-    const sortedContent = filteredContent.sort((a, b) => {
-      const dateA = new Date(
-        a._path.split("/").pop().split("-").slice(0, 3).join("-")
-      );
-      const dateB = new Date(
-        b._path.split("/").pop().split("-").slice(0, 3).join("-")
-      );
-      return dateB - dateA;
-    });
-
-    return sortedContent;
-  } catch (err) {
-    console.error("Error fetching posts:", err);
-    return [];
-  }
+useHead({
+  title: "Ben Ward | Blog",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Providing professional web development services focused on creating modern, responsive, and user-friendly websites tailored to your needs.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://benward.io/",
+    },
+  ],
 });
 </script>
-
 
 <style scoped>
 .post-title {
@@ -102,11 +80,5 @@ const { data: posts } = await useAsyncData("posts", async () => {
   .blog-item:nth-child(2n) {
     grid-column: 1 / 7;
   }
-}
-</style>
-
-<style>
-.blog-pages .paragraph.medium {
-  display: none;
 }
 </style>
