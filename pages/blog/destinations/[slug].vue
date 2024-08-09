@@ -43,6 +43,22 @@ const { data: destinationData } = await useAsyncData(
 
 const contentLoaded = !!destinationData.value; // Determine if data has been loaded
 
+useHead({
+  title: "Ben Ward | Slug",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Providing professional web development services focused on creating modern, responsive, and user-friendly websites tailored to your needs.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://benward.io/",
+    },
+  ],
+});
 </script>
 
 <style>

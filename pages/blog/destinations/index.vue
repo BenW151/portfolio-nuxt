@@ -52,6 +52,23 @@ const { data: destinations } = await useAsyncData("destinations", async () => {
     return [];
   }
 });
+
+useHead({
+  title: "Ben Ward | Destinations",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Providing professional web development services focused on creating modern, responsive, and user-friendly websites tailored to your needs.",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://benward.io/",
+    },
+  ],
+});
 </script>
 
 <style scoped>
